@@ -20,7 +20,9 @@ Query syntax (combinable):
   french OR greek      group separated by OR, and all words in a group must match (AND, space = AND).
   french AND lourdes OR greek AND athens      AND binds tighter than OR; there are no parentheses.
                        With AND/OR the coverage is not applied, the score is just the sum over fields.
-  name:hill            search in a single field only (name, fullname, tagline, lastrace, bio); name:"graham hill"
+  name:hill            search in a single field only (name, fullname, tagline, lastrace, bio, seasons); name:"graham hill"
+  seasons:champion     seasons text, e.g. "1968 F1 World Championship - champion" (a season won by the driver
+                       carries the word champion): seasons:"1968 champion" / seasons:champion
   team:ferrari         filter: drove for a team whose name contains all the words (team:"red bull")
   nationality:british  filter: nationality (exact match)
   gender:female        filter: gender (male|female, also men/women)
@@ -57,10 +59,10 @@ STAT_RE = re.compile(
 GENDER_RE = re.compile(r'gender:(?:"([^"]+)"|(\S+))', re.IGNORECASE)
 GENDER_ALIAS = {"male": "male", "m": "male", "man": "male", "men": "male",
                 "female": "female", "f": "female", "woman": "female", "women": "female"}
-FIELD_RE = re.compile(r'\b(name|fullname|tagline|lastrace|bio):(?:"([^"]+)"|(\S+))', re.IGNORECASE)
+FIELD_RE = re.compile(r'\b(name|fullname|tagline|lastrace|bio|seasons):(?:"([^"]+)"|(\S+))', re.IGNORECASE)
 # query field name -> index field name
 FIELD_ALIAS = {"name": "name", "fullname": "full_name", "tagline": "tagline",
-               "lastrace": "last_race", "bio": "bio"}
+               "lastrace": "last_race", "bio": "bio", "seasons": "seasons"}
 OPS = {">": lambda a, b: a > b, ">=": lambda a, b: a >= b,
        "<": lambda a, b: a < b, "<=": lambda a, b: a <= b, "=": lambda a, b: a == b}
 STAT_ORDER = ("starts", "wins", "poles", "podiums")
@@ -78,7 +80,7 @@ def read_jsonl(path):
 # tokenizer of the free-text part of the query: operators, field:value, "phrases", plain words
 ITEM_RE = re.compile(
     r'(?P<op>\b(?:AND|OR)\b)'
-    r'|(?P<field>\b(?:name|fullname|tagline|lastrace|bio)):(?:"(?P<fq>[^"]+)"|(?P<fw>\S+))'
+    r'|(?P<field>\b(?:name|fullname|tagline|lastrace|bio|seasons)):(?:"(?P<fq>[^"]+)"|(?P<fw>\S+))'
     r'|"(?P<phrase>[^"]+)"|(?P<word>\S+)', re.IGNORECASE)
 
 
@@ -383,7 +385,7 @@ def show(results, level, as_json=False):
         if level == "series":
             sid = shown[0]
             st = doc["series"][sid]
-            yrs = f"{st['year_from']}-{st['year_to']}" if st.get("year_from") else "?"
+            yrs = f"{min(st['years'])}-{max(st['years'])}" if st.get("years") else "?"
             print(f"{head}  {doc['series_names'][sid]} ({yrs})  {fmt_stats(st)}")
             print(f"{'':14}{doc['url']}")
         else:

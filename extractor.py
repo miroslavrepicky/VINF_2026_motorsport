@@ -1,16 +1,22 @@
 """
-Driver page extractor (Motor Sport Magazine database) -> JSONL.
+Driver page extractor (Motor Sport Magazine database) -> ONE JSONL file.
 Regex + stdlib only (html.unescape just decodes entities), no HTML parsers.
 
 Input:  data/html/database_drivers_<slug>.html
-Incremental: existing records in the output files are kept; a driver found in the HTML is
-overwritten if it is already there (its series rows are replaced too), otherwise appended.
-Use --rebuild to build the files from scratch. Statistics and problems describe the current run only.
+Output: data/drivers.jsonl        one line per driver (the ONLY data file)
+        data/extract_stats.json   extraction statistics + the full list of problems
 
-Output: data/drivers.jsonl           one line per driver
-        data/driver_series.jsonl     one line per (driver, series)
-        data/extract_stats.json      extraction statistics
-        data/extract_problems.jsonl  every problem found (one line per problem)
+Wide format: every driver has the statistics columns of EVERY series that exists in the data set,
+named  s__<series_id>__<stat>  (stat = starts, wins, poles, podiums, years). A series the driver
+never took part in has the value null in all of its columns. "years" is the list of all years
+(the range 'Years in Database' is expanded: 1958 - 1962 -> [1958, 1959, 1960, 1961, 1962]).
+`series_names` = {series_id: name} only for the series the driver took part in.
+`seasons` = every row of the 'Championship Seasons' table, e.g. "1968 F1 World Championship - champion"
+(the suffix is added when the Position of that season is 1).
+
+Incremental: existing records are kept; a driver found in the HTML is overwritten, otherwise appended.
+The set of series columns is recomputed on every run, so new series add columns to all records.
+Use --rebuild to build the file from scratch (needed once after the change from the old multi-file format).
 """
 import argparse
 import datetime
@@ -71,6 +77,17 @@ BIO_BLOCK_RE = re.compile(r'<(p|h3|h4)\b[^>]*>(.*?)</\1>', FLAGS)
 TEAMS_SECTION_RE = re.compile(r'id="teams">(.*?)</section>', FLAGS)
 TEAM_RE = re.compile(r'/database/teams/[^/"]+/">([^<]+)</a>')
 TAG_RE = re.compile(r'<[^>]+>')
+
+# 'Championship Seasons' table: one <tr> per season (extra entrants of a season have an empty first cell)
+SEASONS_SECTION_RE = re.compile(r'id="championship-seasons">(.*?)</section>', FLAGS)
+ROW_RE = re.compile(r'<tr class="database-table__row[^"]*">(.*?)</tr>', FLAGS)
+CELL_RE = re.compile(r'<td[^>]*>(.*?)</td>', FLAGS)
+POSITION_CELL = 6              # Season | Entrant | Starts | Poles | Podiums | Wins | Position | Points | Results
+CHAMPION_SUFFIX = " - champion"   # appended to the season when the position is 1 (use " - winner" if preferred)
+
+# wide format of the series statistics
+SERIES_COLS = ("starts", "wins", "poles", "podiums", "years")
+COL_PREFIX = "s__"
 
 
 # ---------- helper functions ----------
@@ -161,9 +178,47 @@ def vital_text(label, raw):
     return f"{label}: {v}" if v else None
 
 
+def col(sid, stat):
+    """Name of the column holding statistic `stat` of series `sid`."""
+    return f"{COL_PREFIX}{sid}__{stat}"
+
+
+def expand_years(year_from, year_to):
+    """(1958, 1962) -> [1958, ..., 1962]; (1960, None) -> [1960]; no start year -> None."""
+    if year_from is None:
+        return None
+    year_to = year_from if year_to is None else year_to
+    lo, hi = sorted((year_from, year_to))
+    return list(range(lo, hi + 1))
+
+
+def extract_seasons(text):
+    """All seasons of the 'Championship Seasons' table as strings; position 1 adds the champion suffix."""
+    sec = SEASONS_SECTION_RE.search(text)
+    out = []
+    for row in ROW_RE.findall(sec.group(1)) if sec else []:
+        cells = CELL_RE.findall(row)
+        if len(cells) <= POSITION_CELL:
+            continue                                   # hidden / spacer row
+        season = clean(cells[0])
+        if not season:
+            continue                                   # continuation row (another entrant of the same season)
+        out.append(season + (CHAMPION_SUFFIX if clean(cells[POSITION_CELL]) == "1" else ""))
+    return out
+
+
+def normalize_record(rec, all_sids):
+    """Fixed column layout: the base fields followed by every series column (null where missing)."""
+    out = {k: v for k, v in rec.items() if not k.startswith(COL_PREFIX)}
+    for sid in all_sids:
+        for stat in SERIES_COLS:
+            out[col(sid, stat)] = rec.get(col(sid, stat))
+    return out
+
+
 # ---------- extraction of a single page ----------
 def extract_page(text):
-    """Return (driver_dict, [series_dict]) or (None, []) if this is not a driver page."""
+    """Return (driver_dict incl. series columns and seasons, [series_dict for the statistics]) or (None, [])."""
     m = CANONICAL_RE.search(text)
     n = NAME_RE.search(text)
     if m:
@@ -243,18 +298,22 @@ def extract_page(text):
         years_count = int(y.group(1)) if y else None
         year_from = int(y.group(2)) if y and y.group(2) else None
         year_to = int(y.group(3)) if y and y.group(3) else year_from
+        years = expand_years(year_from, year_to)
         series.append({
-            "driver_id": slug,
             "series_id": sid,
             "series_name": names.get(sid),
-            "years_count": years_count,
-            "year_from": year_from,
-            "year_to": year_to,
+            "years_count": years_count,      # only for the statistics (compared with len(years))
+            "years": years,
             "starts": num_field(block, "Starts"),
             "wins": num_field(block, "Wins"),
             "poles": num_field(block, "Poles"),
             "podiums": num_field(block, "Podiums"),
         })
+    driver["seasons"] = extract_seasons(text)
+    driver["series_names"] = {s["series_id"]: s["series_name"] or s["series_id"] for s in series}
+    for s in series:
+        for stat in SERIES_COLS:
+            driver[col(s["series_id"], stat)] = s[stat]
     return driver, series
 
 
@@ -272,23 +331,24 @@ def main():
     files = sorted(glob.glob(os.path.join(args.input, args.pattern)))
     os.makedirs(args.out, exist_ok=True)
     drivers_path = os.path.join(args.out, "drivers.jsonl")
-    series_path = os.path.join(args.out, "driver_series.jsonl")
 
-    # existing data (incremental mode): driver_id -> record, driver_id -> [series rows]
-    drivers_db, series_db = {}, {}
+    # existing data (incremental mode): driver_id -> record
+    drivers_db = {}
     if not args.rebuild:
         drivers_db = {d["driver_id"]: d for d in read_jsonl(drivers_path)}
-        for s in read_jsonl(series_path):
-            series_db.setdefault(s["driver_id"], []).append(s)
-        print(f"Loaded existing data: {len(drivers_db)} drivers, "
-              f"{sum(len(v) for v in series_db.values())} series rows.")
+        print(f"Loaded existing data: {len(drivers_db)} drivers.")
+        if any("series_names" not in d for d in drivers_db.values()):
+            print("WARNING: the file contains records in the old format (no series_names); "
+                  "run with --rebuild to regenerate everything.")
 
     st = Counter()                 # extraction statistics (of this run only)
     series_counter = Counter()     # number of drivers per series id
     problems = []
     seen = set()                   # driver ids already processed in this run (duplicate protection)
 
+    counter = 0
     for path in files:
+        counter += 1
         st["files"] += 1
         with open(path, "r", encoding="utf-8") as f:
             text = f.read()
@@ -307,6 +367,8 @@ def main():
         st["with_bio" if drv["_real_bio"] else "without_bio"] += 1   # only a real bio, not the born/died text
         st["with_born_died_text"] += 1 if drv["bio"] and not drv["_real_bio"] else 0
         st["with_series" if series else "without_series"] += 1
+        st["with_seasons" if drv["seasons"] else "without_seasons"] += 1
+        st["champion_seasons"] += sum(x.endswith(CHAMPION_SUFFIX) for x in drv["seasons"])
         st["with_teams" if drv["teams"] else "without_teams"] += 1
         st["with_nationality" if drv["nationality"] else "without_nationality"] += 1
         st["with_last_race" if drv["last_race_slug"] else "without_last_race"] += 1
@@ -328,6 +390,10 @@ def main():
             series_counter[s["series_id"]] += 1
             if None in (s["starts"], s["wins"], s["poles"], s["podiums"]):
                 st["series_rows_with_null_stat"] += 1
+            if s["years"] is None:
+                st["series_without_years"] += 1
+            elif s["years_count"] != len(s["years"]):
+                st["series_years_with_gaps"] += 1   # the range has more years than 'Years in Database' counts
         st["series_rows"] += len(series)
 
         # remove the helper fields (they were only needed for the statistics above)
@@ -342,15 +408,13 @@ def main():
         drv.pop("_died_raw")
         # an existing driver is overwritten in place (keeps its position), a new one is appended
         drivers_db[drv["driver_id"]] = drv
-        series_db[drv["driver_id"]] = series     # the old series rows of this driver are replaced
+        print(counter)
 
-    # write the merged data (atomically, so a crash cannot corrupt the existing files)
-    write_jsonl(drivers_path, drivers_db.values())
-    ordered = [s for did in drivers_db for s in series_db.get(did, [])]
-    ordered += [s for did, rows in series_db.items() if did not in drivers_db for s in rows]   # orphan rows are kept
-    write_jsonl(series_path, ordered)
+    # one column set for everybody: every series that occurs anywhere gets its columns in every record
+    all_sids = sorted({sid for d in drivers_db.values() for sid in d.get("series_names", {})})
+    write_jsonl(drivers_path, (normalize_record(d, all_sids) for d in drivers_db.values()))
     st["total_drivers_in_file"] = len(drivers_db)
-    st["total_series_rows_in_file"] = len(ordered)
+    st["series_columns_groups"] = len(all_sids)
 
     n = st["drivers"] or 1
     stats = dict(st)
@@ -360,18 +424,13 @@ def main():
         round(st["series_rows"] / st["with_series"], 2) if st["with_series"] else 0)
     stats["top_series"] = series_counter.most_common(15)
     stats["distinct_series"] = len(series_counter)
-    stats["problems_sample"] = problems[:30]
     stats["problems_total"] = len(problems)
-
-    # full list of problems (with the file name) - one line per problem
-    with open(os.path.join(args.out, "extract_problems.jsonl"), "w", encoding="utf-8") as f:
-        for pr in problems:
-            f.write(json.dumps(pr, ensure_ascii=False) + "\n")
+    stats["problems"] = problems          # the full list (file name, driver, issue, raw value)
 
     with open(os.path.join(args.out, "extract_stats.json"), "w", encoding="utf-8") as f:
         json.dump(stats, f, ensure_ascii=False, indent=2)
 
-    print(json.dumps(stats, ensure_ascii=False, indent=2))
+    print(json.dumps({k: v for k, v in stats.items() if k != "problems"}, ensure_ascii=False, indent=2))
 
 
 if __name__ == "__main__":

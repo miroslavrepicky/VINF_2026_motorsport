@@ -1,12 +1,16 @@
 """
-Custom indexer: builds two on-disk inverted indexes from drivers.jsonl + driver_series.jsonl.
+Custom indexer: builds two on-disk inverted indexes from the single file drivers.jsonl.
 No IR libraries, no databases, no lemmatization. Stdlib only. Searching lives in searcher.py.
 
-    python3 indexer.py --drivers data/drivers.jsonl --series data/driver_series.jsonl --out data/index
+    python3 indexer.py --drivers data/drivers.jsonl --out data/index
+
+drivers.jsonl is in the wide format made by extractor.py (columns s__<series_id>__<stat>, null for series
+the driver did not take part in). The per-series rows of the series-level index are rebuilt from those
+columns: a series counts as "taken part" when it is listed in `series_names`.
 
 Output:
   <out>/drivers/   1 document = 1 driver          (fields: name, full_name, nationality, teams,
-                                                    series, tagline, last_race, bio, gender)
+                                                    series, seasons, tagline, last_race, bio, gender)
   <out>/series/    1 document = 1 driver+series   (fields: name, full_name, nationality, series)
 
 Every field has its OWN inverted index (own df, own idf, own vector lengths):
@@ -34,7 +38,7 @@ from tokenizer import normalize, tokenize
 # field weight at search time: document score = sum of weight_of_field * score_in_field
 DRIVER_WEIGHTS = {
     "name": 5.0, "full_name": 3.0, "nationality": 3.0, "teams": 2.0,
-    "series": 2.0, "tagline": 2.0, "last_race": 1.0, "bio": 1.0, "gender": 2.0,
+    "series": 2.0, "seasons": 2.0, "tagline": 2.0, "last_race": 1.0, "bio": 1.0, "gender": 2.0,
 }
 SERIES_WEIGHTS = {"name": 5.0, "full_name": 3.0, "nationality": 3.0, "series": 5.0, "gender": 2.0}
 # gender is indexed as text together with common words, so a query like "female" / "women" finds women
@@ -61,9 +65,23 @@ def idf_smooth(n, df):
     return math.log10(1 + n / df)
 
 
+COL_PREFIX = "s__"
+
+
+def series_rows(drv):
+    """(series_names, {series_id: {starts, wins, poles, podiums, years}}) from the wide columns of a driver record."""
+    names = drv.get("series_names") or {}
+    rows = {}
+    for sid in names:
+        row = {st: drv.get(f"{COL_PREFIX}{sid}__{st}") for st in STATS}
+        row["years"] = drv.get(f"{COL_PREFIX}{sid}__years") or []
+        rows[sid] = row
+    return names, rows
+
+
 def series_stats(row):
-    """Pick the statistics and year range of one driver_series row."""
-    return {k: row.get(k) for k in (*STATS, "years_count", "year_from", "year_to")}
+    """Pick the statistics and the list of years of one series row."""
+    return {**{k: row.get(k) for k in STATS}, "years": row.get("years") or []}
 
 
 def career_totals(rows):
@@ -174,22 +192,14 @@ def write_index(entries, weights, out_dir, use_stopwords):
 def main():
     ap = argparse.ArgumentParser(description="Custom indexer (per-field inverted index, TF)")
     ap.add_argument("--drivers", default="data/drivers.jsonl", help="input file with drivers")
-    ap.add_argument("--series", default="data/driver_series.jsonl", help="input file with per-series statistics")
     ap.add_argument("--out", default="data/index", help="output folder of the index")
     ap.add_argument("--no-stopwords", action="store_true", help="do not remove stopwords while tokenizing")
     args = ap.parse_args()
     use_sw = not args.no_stopwords
 
-    # group the per-series rows by driver
-    rows_by_driver = defaultdict(list)
-    if os.path.exists(args.series):
-        for s in read_jsonl(args.series):
-            rows_by_driver[s["driver_id"]].append(s)
-
     driver_entries, series_entries = [], []
     for drv in read_jsonl(args.drivers):
-        rows = rows_by_driver.get(drv["driver_id"], [])
-        names = {r["series_id"]: (r.get("series_name") or r["series_id"]) for r in rows}
+        names, rows = series_rows(drv)
         base = {
             "driver_id": drv["driver_id"], "name": drv.get("name"), "url": drv.get("url"),
             "nationality": drv.get("nationality"), "gender": drv.get("gender"),
@@ -202,19 +212,19 @@ def main():
             "name": drv.get("name") or "", "full_name": drv.get("full_name") or "",
             "nationality": drv.get("nationality") or "",
             "teams": " ".join(drv.get("teams") or []), "series": " ".join(names.values()),
+            "seasons": " ".join(drv.get("seasons") or []),
             "tagline": drv.get("tagline") or "", "last_race": drv.get("last_race_name") or "",
             "bio": drv.get("bio") or "",
             "gender": GENDER_TEXT.get((drv.get("gender") or "").lower(), ""),
         }
         driver_entries.append((
             {**base, "series_names": names,
-             "series": {r["series_id"]: series_stats(r) for r in rows},
-             "career": career_totals(rows)},
+             "series": {sid: series_stats(r) for sid, r in rows.items()},
+             "career": career_totals(rows.values())},
             field_counters(fields, use_sw)))
 
         # --- (driver, series)-level documents ---
-        for r in rows:
-            sid = r["series_id"]
+        for sid, r in rows.items():
             fields = {
                 "name": drv.get("name") or "", "full_name": drv.get("full_name") or "",
                 "nationality": drv.get("nationality") or "", "series": names[sid],
