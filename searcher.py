@@ -20,11 +20,17 @@ Query syntax (combinable):
   french OR greek      group separated by OR, and all words in a group must match (AND, space = AND).
   french AND lourdes OR greek AND athens      AND binds tighter than OR; there are no parentheses.
                        With AND/OR the coverage is not applied, the score is just the sum over fields.
-  name:hill            search in a single field only (name, fullname, tagline, lastrace, bio, seasons); name:"graham hill"
+  name:hill            search in a single field only (name, fullname, tagline, lastrace, bio, seasons, lead, titles,
+                       awards, relatives, categories, bornplace, diedplace); name:"graham hill"
   seasons:champion     seasons text, e.g. "1968 F1 World Championship - champion" (a season won by the driver
                        carries the word champion): seasons:"1968 champion" / seasons:champion
   team:ferrari         filter: drove for a team whose name contains all the words (team:"red bull")
-  nationality:british  filter: nationality (exact match)
+  nationality:british  filter: nationality, compared as a normalized key (England / UK / GBR all mean british)
+  source:wiki_only     filter: where the record comes from: both (MSM + Wikipedia) | msm_only | wiki_only
+  discipline:motorcycle  filter: discipline of the wiki page (car | motorcycle | both); a free-text word works too
+  confidence:high      filter: confidence of the MSM <-> wiki link (high | medium | low), only for source both
+  born_place:...       text fields of the Wikipedia part: bornplace, diedplace, lead, titles, awards, relatives,
+                       categories, e.g. bornplace:Monza, titles:champion
   gender:female        filter: gender (male|female, also men/women)
   series:f2            filter: series by id (f2, f1, indycars) or by words of its name (series:"international f2")
   wins>20              filter on a statistic (starts|wins|poles|podiums; > >= < <= =):
@@ -48,6 +54,7 @@ import re
 from bisect import bisect_left, bisect_right
 from collections import Counter, defaultdict
 
+from matching import nat_set
 from tokenizer import normalize, tokenize
 
 # ---------- query syntax ----------
@@ -57,12 +64,18 @@ SERIES_RE = re.compile(r'series:(?:"([^"]+)"|(\S+))', re.IGNORECASE)
 STAT_RE = re.compile(
     r'(?:\b([a-z0-9][a-z0-9\-]*)\.)?\b(starts|wins|poles|podiums)\s*(>=|<=|>|<|=)\s*(\d+)', re.IGNORECASE)
 GENDER_RE = re.compile(r'gender:(?:"([^"]+)"|(\S+))', re.IGNORECASE)
+SOURCE_RE = re.compile(r'\bsource:(\w+)', re.IGNORECASE)
+DISCIPLINE_RE = re.compile(r'\bdiscipline:(\w+)', re.IGNORECASE)
+CONFIDENCE_RE = re.compile(r'\bconfidence:(\w+)', re.IGNORECASE)
 GENDER_ALIAS = {"male": "male", "m": "male", "man": "male", "men": "male",
                 "female": "female", "f": "female", "woman": "female", "women": "female"}
-FIELD_RE = re.compile(r'\b(name|fullname|tagline|lastrace|bio|seasons):(?:"([^"]+)"|(\S+))', re.IGNORECASE)
+_FIELDS = "name|fullname|tagline|lastrace|bio|seasons|lead|titles|awards|relatives|categories|bornplace|diedplace"
+FIELD_RE = re.compile(rf'\b({_FIELDS}):(?:"([^"]+)"|(\S+))', re.IGNORECASE)
 # query field name -> index field name
 FIELD_ALIAS = {"name": "name", "fullname": "full_name", "tagline": "tagline",
-               "lastrace": "last_race", "bio": "bio", "seasons": "seasons"}
+               "lastrace": "last_race", "bio": "bio", "seasons": "seasons", "lead": "lead", "titles": "titles",
+               "awards": "awards", "relatives": "relatives", "categories": "categories",
+               "bornplace": "born_place", "diedplace": "died_place"}
 OPS = {">": lambda a, b: a > b, ">=": lambda a, b: a >= b,
        "<": lambda a, b: a < b, "<=": lambda a, b: a <= b, "=": lambda a, b: a == b}
 STAT_ORDER = ("starts", "wins", "poles", "podiums")
@@ -80,7 +93,7 @@ def read_jsonl(path):
 # tokenizer of the free-text part of the query: operators, field:value, "phrases", plain words
 ITEM_RE = re.compile(
     r'(?P<op>\b(?:AND|OR)\b)'
-    r'|(?P<field>\b(?:name|fullname|tagline|lastrace|bio|seasons)):(?:"(?P<fq>[^"]+)"|(?P<fw>\S+))'
+    rf'|(?P<field>\b(?:{_FIELDS})):(?:"(?P<fq>[^"]+)"|(?P<fw>\S+))'
     r'|"(?P<phrase>[^"]+)"|(?P<word>\S+)', re.IGNORECASE)
 
 
@@ -93,13 +106,16 @@ def parse_query(query, use_stopwords=True):
     a match of at least one term is enough, the score is multiplied by the query coverage.
     Filters (team:, nationality:, gender:, series:, wins>...) always apply as AND.
     """
-    f = {"teams": [], "nationality": [], "gender": [], "series": [], "stats": []}
+    f = {"teams": [], "nationality": [], "gender": [], "series": [], "stats": [],
+         "source": [], "discipline": [], "confidence": []}
     for m in TEAM_RE.finditer(query):
         f["teams"].append(tokenize(m.group(1) or m.group(2), False))
     for m in NAT_RE.finditer(query):
-        f["nationality"].append(normalize(m.group(1) or m.group(2)).strip())
+        f["nationality"].append(sorted(nat_set(m.group(1) or m.group(2))))
     for m in GENDER_RE.finditer(query):
         f["gender"].append(GENDER_ALIAS.get((m.group(1) or m.group(2)).strip().lower(), "?"))
+    for key, rx in (("source", SOURCE_RE), ("discipline", DISCIPLINE_RE), ("confidence", CONFIDENCE_RE)):
+        f[key] = [m.group(1).lower() for m in rx.finditer(query)]
     for m in SERIES_RE.finditer(query):
         raw = (m.group(1) or m.group(2)).strip()
         f["series"].append((raw.lower(), tokenize(raw, False)))
@@ -108,7 +124,7 @@ def parse_query(query, use_stopwords=True):
                            m.group(2).lower(), m.group(3), int(m.group(4))))
     # what remains after removing the filters is the free-text part
     text = query
-    for rx in (STAT_RE, SERIES_RE, GENDER_RE, NAT_RE, TEAM_RE):
+    for rx in (STAT_RE, SERIES_RE, GENDER_RE, NAT_RE, TEAM_RE, SOURCE_RE, DISCIPLINE_RE, CONFIDENCE_RE):
         text = rx.sub(" ", text)
 
     def build(stop):
@@ -176,6 +192,7 @@ class Index:
             flt = json.load(f)
         self.f_teams, self.f_nat = flt["teams"], flt["nationality"]
         self.f_gender = flt["gender"]
+        self.f_attr = {k: flt.get(k, {}) for k in ("source", "discipline", "confidence")}   # value -> [doc_id]
         self.f_sid, self.f_stok = flt["series_id"], flt["series_tokens"]
         # statistics: key -> (sorted values, document ids)
         self.f_stats = {k: ([v for v, _ in rows], [i for _, i in rows])
@@ -198,8 +215,11 @@ class Index:
         for want in f["teams"]:
             lists = [self.f_teams.get(t) for t in want]
             sets.append(set.intersection(*map(set, lists)) if want and all(l is not None for l in lists) else set())
-        for nat in f["nationality"]:
-            sets.append(set(self.f_nat.get(nat, [])))
+        for nat in f["nationality"]:                  # any of the normalized keys of the query value
+            sets.append({i for k in nat for i in self.f_nat.get(k, ())})
+        for key in ("source", "discipline", "confidence"):
+            for want in f[key]:
+                sets.append(set(self.f_attr[key].get(want, [])))
         for g in f["gender"]:
             sets.append(set(self.f_gender.get(g, [])))
         for raw, toks in f["series"]:
@@ -233,8 +253,12 @@ class Index:
             if not want or not any(set(want) <= tt for tt in self.team_tokens[d]):
                 return False, []
         for nat in f["nationality"]:
-            if normalize(doc["nationality"] or "").strip() != nat:
+            if not set(nat) & set(doc.get("nat_keys") or ()):
                 return False, []
+        for key in ("source", "discipline", "confidence"):
+            for want in f[key]:
+                if (doc.get(key) or "").lower() != want:
+                    return False, []
         for g in f["gender"]:
             if (doc.get("gender") or "").lower() != g:
                 return False, []
@@ -376,12 +400,14 @@ def show(results, level, as_json=False):
             print(json.dumps({"rank": rank, "score": None if score is None else round(score, 6),
                               "driver_id": doc["driver_id"], "name": doc["name"],
                               "nationality": doc["nationality"], "born_date": doc["born_date"],
+                              "source": doc.get("source"), "discipline": doc.get("discipline"),
                               "url": doc["url"], "career": doc["career"],
                               "series": {r: doc["series"][r] for r in shown}}, ensure_ascii=False))
             continue
         sc = f"{score:8.4f}" if score is not None else "       -"
         head = (f"{rank:>2}. {sc}  {doc['name']}  [{doc['nationality'] or '?'}, "
-                f"{doc['born_date'] or '?'}]")
+                f"{doc['born_date'] or '?'}]  <{doc.get('source', '?')}"
+                f"{'/' + doc['discipline'] if doc.get('discipline') else ''}>")
         if level == "series":
             sid = shown[0]
             st = doc["series"][sid]

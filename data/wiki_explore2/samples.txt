@@ -1,0 +1,1628 @@
+===== [champ car driver] Eddie Rickenbacker =====
+{{Infobox Champ Car driver
+ | embed             = yes
+ | Total_Champ_Races = 42
+ | Years_In_Champ    = 5
+ | Best_Champ_Pos    = 3rd ([[1916 AAA Championship Car season|1916]])
+ | First_Champ_Race  = [[1912 AAA Championship Car season|1912]] [[1912 Indianapolis 500|Indianapolis 500]] ([[Indianapolis Motor Speedway|Indianapolis]])
+ | Last_Champ_Race   = [[1916 AAA Championship Car season|1916]] Championship Award &lt;br/&gt; Sweepstakes ([[South Los Angeles|Ascot Speedway]])
+ | First_Champ_Win   = [[1914 AAA Championship Car season|1914]] Sioux City 300 ([[North Sioux City, South Dakota|Sioux City]])
+ | Last_Champ_Win    = [[1916 AAA Championship Car season|1916]] Championship Award &lt;br/&gt; Sweepstakes ([[South Los Angeles|Ascot Speedway]])
+ | Champ_Wins        = 7
+ | Champ_Podiums     = 14
+ | Champ_Poles       = 0
+}}
+
+===== [champ car driver] Scott Dixon =====
+{{Infobox Champ Car driver|embed=yes
+| nationality        = {{flagicon|NZL}} New Zealander
+| birth_name         = Scott Ronald Glyndwr Dixon
+| birth_date         = {{Birth date and age|df=yes|1980|07|22}}
+| birth_place        = [[Brisbane]], Queensland, Australia
+| nick-name          = The Iceman
+| Total_IRL_Races    = 437
+| Years_In_IRL       = 26
+| IRL_Car_Team       = No. 6 ([[Arrow McLaren]])
+| Best_IRL_Pos       = 1st ([[2003 IndyCar Series|2003]], [[2008 IndyCar Series|2008]], [[2013 IndyCar Series|2013]], [[2015 IndyCar Series|2015]], [[2018 IndyCar Series|2018]], [[2020 IndyCar Series|2020]])
+| First_IRL_Race     = [[2003 IndyCar Series|2003]] [[Grand Prix of Miami (open wheel racing)|Toyota Indy 300]] ([[Homestead–Miami Speedway|Homestead]])
+| Last_IRL_Race      = {{Latest IndyCar}}
+| First_IRL_Win      = [[2003 IndyCar Series|2003]] [[Grand Prix of Miami (open wheel racing)|Toyota Indy 300]] ([[Homestead–Miami Speedway|Homestead]])
+| Last_IRL_Win       = [[2025 IndyCar Series|2025]] [[2025 Honda Indy 200|Honda Indy 200]] ([[Mid-Ohio Sports Car Course|Mid-Ohio]])
+| IRL_Wins           = 59 &lt;!-- This is Dixon's INDYCAR Series wins. Do NOT add his Champ Car wins to this total --&gt;
+| IRL_Podiums        = 144
+| IRL_Poles          = 32
+| Total_Champ_Races  = 39
+| Years_In_Champ     = 2
+| Best_Champ_Pos     = 8th ([[2001 CART season|2001]])
+| First_Champ_Race   = [[2001 CART season|2001 Tecate/Telmex Grand Prix of Monterrey]] ([[Fundidora Park raceway|Monterrey]])
+| Last_Champ_Race    = [[2002 Gran Premio Telmex-Gigante]] ([[Autódromo Hermanos Rodríguez|Mexico City]])
+| First_Champ_Win    = [[2001 Lehigh Valley Grand Prix]] ([[Nazareth Speedway|Nazareth]])
+| Last_Champ_Win     =
+| Champ_Wins         = 1 &lt;!-- This is Dixon's Champ Car wins. Do NOT add his INDYCAR Series wins to this total --&gt;
+| Champ_Podiums      = 3
+| Champ_Poles        = 0
+| module2            = {{Infobox Le Mans driver|embed=yes
+| years       = [[2016 24 Hours of Le Mans|2016]]–[[2024 24 Hours of Le Mans|2024]]
+| teams     = [[Chip Ganassi Racing|Ford Chip Ganassi Team USA]], [[Chip Ganassi Racing|Cadillac Racing]]
+| best_finish = 4th ([[2023 24 Hours of Le Mans|2023]])
+| class_wins  = 
+}}
+| module3            = {{Infobox racing driver|embed=yes
+| racing_licence     = [[File:FIA Platinum Driver.png|12px]] [[FIA Platinum Categorisation|FIA Platinum]]
+| prev_series        = NZ [[Formula Vee]]&lt;br /&gt;NZ [[Formula Ford]]&lt;br /&gt;Australian [[Formula Holden]]&lt;br /&gt;[[Indy Lights]]&lt;br /&gt;[[Championship Auto Racing Teams|CART]] Champ Car
+| prev_series_years  = 1994&lt;br /&gt;1995–1996&lt;br /&gt;1997–1998&lt;br /&gt;1999–2000&lt;br /&gt;2001–2002
+| titles             = {{plainlist|
+* NZ [[Formula Vee]] (1994 Class II)
+* NZ [[Formula Ford]] (1995 Class II, 1996 Class I)
+* [[Australian Drivers' Championship]] ([[1998 Australian Drivers' Championship|1998]])
+* [[Indy Lights]] ([[2000 Indy Lights season|2000]])
+* [[IndyCar Series]] ([[2003 IndyCar Series|2003]], [[2008 IndyCar Series|2008]], [[2013 IndyCar Series|2013]], [[2015 IndyCar Series|2015]], [[2018 IndyCar Series|2018]], [[2020 IndyCar Series|2020]])
+* [[IndyCar Series#Seasons|IndyCar Series Oval Trophy]] ([[2011 IndyCar Series|2011]])
+* '''Major victories'''
+* [[24 Hours of Daytona]] ([[2006 24 Hours of Daytona|2006]], [[2015 24 Hours of Daytona|2015]], [[2020 24 Hours of Daytona|2020]])
+* [[Indianapolis 500]] ([[2008 Indianapolis 500|2008]])
+* [[Petit Le Mans]] ([[2020 Petit Le Mans|2020]], [[2024 Petit Le Mans|2024]])}}
+| awards             = [[Jim Clark]] Trophy&lt;br /&gt;[[IndyCar Rookie of the Year|CART Rookie of the Year]]&lt;br /&gt;[[Bruce McLaren]] Trophy&lt;br /&gt;NZ Sportsman of the Year &lt;br /&gt; MotorSport &lt;!--yes, it is MotorSport, not MotorSports--&gt;New Zealand Wall of Fame inductee&lt;br /&gt;[[New Zealand Order of Merit]]
+| award_years        = 1999, 2001, 2004, 2019&lt;br /&gt;[[2001 CART FedEx Championship Series|2001]]&lt;br /&gt;2003, 2008&lt;br /&gt;2008, 2013&lt;br /&gt;2009&lt;br /&gt;2019
+}}}}
+
+===== [champ car driver] Greg Moore (racing driver) =====
+{{Infobox Champ Car driver
+|name               = Greg Moore
+|image              = Greg Moore CART Race car driver.jpg
+|caption            = Moore in 1996
+|nationality        = {{flagicon|CAN}} Canadian
+|birth_name         = Gregory William Moore
+|birth_date         = {{birth date|1975|04|22}}
+|birth_place        = [[New Westminster, British Columbia]], Canada
+|death_date         = {{Death date and age|1999|10|31|1975|04|22}}
+|death_place        = [[Fontana, California]], United States
+|death_cause        = [[Blunt force trauma]] due to [[List of racing drivers who died in racing crashes|racing accident]]
+|height             = {{height|ft=5|in=11|abbr=on}}&lt;ref name=IROCProfile&gt;{{cite web|title=Greg Moore: IROC 1999 Driver Spec Sheet|url=http://irocracing.com/gmoore99.htm|publisher=International Race of Champions|date=1999|access-date=May 19, 2019|archive-url=https://web.archive.org/web/19991003103709/http://irocracing.com/gmoore99.htm|archive-date=October 3, 1999|url-status=dead}}&lt;/ref&gt;&lt;ref name=TSNObit&gt;{{Cite web|title=TSN.ca's Tribute to Greg Moore|url=http://tsn.ca/racing/cart/mooreobit.asp|url-status=dead|archive-url=https://web.archive.org/web/20000415140453/http://tsn.ca/racing/cart/mooreobit.asp|archive-date=April 15, 2000|access-date=November 15, 2020|publisher=[[The Sports Network]]}}&lt;/ref&gt;
+|weight             = {{convert|160|lb|kg|abbr=on}}&lt;ref name=IROCProfile/&gt;
+|achievements       = 1995 [[Firestone Indy Lights|Indy Lights]] champion
+|awards             = 
+|years              = 1996–1999
+|Total_Champ_Races  = 72
+|Years_In_Champ     = 4
+|Champ_Car_Team     = [[Forsythe/Pettit Racing|Forsythe Racing]]
+|Best_Champ_Pos     = 5th ([[1998 CART season|1998]])
+|First_Champ_Race   = [[1996 IndyCar season|1996]] [[Marlboro Grand Prix of Miami]] ([[Homestead–Miami Speedway|Homestead]])
+|Last_Champ_Race    = [[1999 CART season|1999]] [[1999 Marlboro 500|Marlboro 500]] ([[California Speedway|California]])
+|First_Champ_Win    = [[1997 CART season|1997]] [[Milwaukee Miller Lite 200]] ([[Milwaukee Mile|Milwaukee]])
+|Last_Champ_Win     = [[1999 CART season|1999]] [[Marlboro Grand Prix of Miami]] ([[Homestead–Miami Speedway|Homestead]])
+|Champ_Wins         = 5
+|Champ_Podiums      = 17
+|Champ_Poles        = 5
+ |module1         = {{Infobox person|child=yes
+ |signature       = Tanda Tangan Greg Moore.png
+ |signature_alt   = Greg Moore signature}}
+}}
+
+===== [champ car driver] Takuma Sato =====
+{{Infobox Champ Car driver
+| embed           = yes
+| Total_IRL_Races = 221
+| Years_In_IRL    = 15
+| IRL_Car_Team    = No. 75 ([[Rahal Letterman Lanigan Racing]])
+| Previous_Year   = 
+| Prev_IRL_Pos    = 
+| Best_IRL_Pos    = 7th &lt;small&gt;([[2020 IndyCar Series|2020]])&lt;/small&gt;
+| First_IRL_Race  = [[2010 IndyCar Series|2010]] [[2010 São Paulo Indy 300|São Paulo Indy 300]]
+| Last_IRL_Race   = [[2025 IndyCar Series|2025]] [[2025 Indianapolis 500|Indianapolis 500]]
+| First_IRL_Win   = [[2013 IndyCar Series|2013]] [[2013 Toyota Grand Prix of Long Beach|Toyota Grand Prix of Long Beach]]
+| Last_IRL_Win    = [[2020 IndyCar Series|2020]] [[2020 Indianapolis 500|Indianapolis 500]]
+| IRL_Wins        = 6
+| IRL_Podiums     = 14
+| IRL_Poles       = 10
+}}
+
+===== [champ car driver] Cristiano da Matta =====
+{{Infobox Champ Car driver
+|name              = Cristiano da Matta
+|image             = Cdmlb06.jpg
+|caption           = Da Matta at the [[2006 Toyota Grand Prix of Long Beach|2006 Grand Prix of Long Beach]]
+|nationality       = {{flagicon|BRA}} Brazilian
+|birth_name        = Cristiano Monteiro da Matta
+|birth_date        = {{birth date and age|1973|9|19|df=y}}
+|birth_place       = [[Belo Horizonte]], [[Minas Gerais]], [[Brazil]]
+|achievements      = 2002 [[Championship_Auto_Racing_Teams|CART FedEx Championship Series]] Champion
+|awards            = 
+|years             = 1999–2002, 2005–2006
+|Total_Champ_Races = 101
+|Years_In_Champ    = 6
+|Champ_Car_Team    = Arciero-Wells&lt;br&gt;PPI Motorsports&lt;br&gt;Newman-Haas&lt;br&gt;PKV Racing&lt;br&gt;Dale Coyne Racing&lt;br&gt;RuSPORT
+|Best_Champ_Pos    = 1st - [[2002 CART season|2002]]
+|First_Champ_Race  = [[1999 CART season|1999]] [[Marlboro Grand Prix of Miami]] ([[Homestead–Miami Speedway|Homestead]])
+|Last_Champ_Race   = [[2006 Champ Car season|2006]] [[2006 Canary Foundation Grand Prix of San Jose|Grand Prix of San Jose]] ([[San Jose, California|Streets of San Jose]])
+|First_Champ_Win   = [[2000 CART season|2000]] [[Peak Antifreeze &amp; Motor Oil Indy 300|Target Grand Prix of Chicago]] (Cicero, IL)
+|Last_Champ_Win    = [[2005 Champ Car season|2005]] [[2005 G.I. Joe's Champ Car Grand Prix of Portland|Grand Prix of Portland]] ([[Portland International Raceway|Portland Raceway]])
+|Champ_Wins        = 12
+|Champ_Podiums     = 20
+|Champ_Poles       = 7
+|module            =
+{{Infobox F1 driver
+| embed         = yes
+| years         = {{F1|2003}}–{{F1|2004}}
+| teams         = [[Toyota F1|Toyota]]
+| races         = 28
+| championships = 0
+| wins          = 0
+| podiums       = 0
+| poles         = 0
+| fastest_laps  = 0
+| points        = 13
+| first_race    = [[2003 Australian Grand Prix]]
+| first_win     = 
+| last_win      = 
+| last_race     = [[2004 German Grand Prix]]
+}}
+}}
+
+===== [f1 driver] Jack Brabham =====
+{{Infobox F1 driver
+| embed         = yes
+| nationality   = {{flagicon|AUS}} [[Formula One drivers from Australia|Australian]]
+| years         = {{F1|1955}}–{{F1|1970}}
+| teams         = [[Cooper Car Company|Cooper]], ''privateer'' [[Maserati in motorsport|Maserati]], [[Rob Walker Racing Team|Walker]], [[Brabham]]
+| races         = 128 (126 starts)
+| championships = 3 ({{F1|1959}}, {{F1|1960}}, {{F1|1966}})
+| wins          = 14
+| podiums       = 31
+| points        = 253 (261){{efn|name=&quot;droppedpoints&quot;}}
+| poles         = 13
+| fastest_laps  = 12
+| first_race    = [[1955 British Grand Prix]]
+| first_win     = [[1959 Monaco Grand Prix]]
+| last_win      = [[1970 South African Grand Prix]]
+| last_race     = [[1970 Mexican Grand Prix]]
+}}
+
+===== [f1 driver] Michael Schumacher =====
+{{Infobox F1 driver
+| embed         = yes
+| nationality   = {{flagicon|GER}} [[Formula One drivers from Germany|German]]
+| years         = {{F1|1991}}–{{F1|2006}}, {{F1|2010}}–{{F1|2012}}
+| teams         = [[Jordan Grand Prix|Jordan]], [[Benetton Formula|Benetton]], [[Scuderia Ferrari|Ferrari]], [[Mercedes-Benz in Formula One|Mercedes]]
+| races         = 308 (306 starts)
+| championships = 7 ({{F1|1994}}, {{F1|1995}}, {{F1|2000}}, {{F1 |2001}}, {{F1|2002}}, {{F1|2003}}, {{F1|2004}})
+| wins          = 91
+| podiums       = 155
+| points        = 1566
+| poles         = 68
+| fastest_laps  = 77
+| first_race    = {{F1GP||1991 Belgian}}
+| first_win     = {{F1GP||1992 Belgian}}
+| last_win      = {{F1GP||2006 Chinese}}
+| last_race     = {{F1GP||2012 Brazilian}}
+}}
+
+===== [f1 driver] Alain Prost =====
+{{Infobox F1 driver|embed=yes 
+| nationality   = {{flagicon|FRA|1974}} [[Formula One drivers from France|French]]
+| years         = {{F1|1980}}–{{F1|1991}}, {{F1|1993}}
+| teams         = [[McLaren]], [[Renault in Formula One|Renault]], [[Scuderia Ferrari|Ferrari]], [[Williams Racing|Williams]]
+| races         = 202 (199 starts)
+| championships = 4 ({{F1|1985}}, {{F1|1986}}, {{F1|1989}}, {{F1|1993}})
+| wins          = 51
+| podiums       = 106
+| points        = 768.5 (798.5){{efn|name=&quot;droppedpoints&quot;}}
+| poles         = 33
+| fastest_laps  = 41
+| first_race    = [[1980 Argentine Grand Prix]]
+| first_win     = [[1981 French Grand Prix]]
+| last_win      = [[1993 German Grand Prix]]
+| last_race     = [[1993 Australian Grand Prix]]
+}}
+
+===== [f1 driver] Riccardo Patrese =====
+{{Infobox F1 driver
+| embed         = yes
+| nationality   = {{flagicon|ITA}} [[Formula One drivers from Italy|Italian]]
+| years         = {{F1|1977}}–{{F1|1993}}
+| teams         = [[Shadow Racing Cars|Shadow]], [[Arrows (F1)|Arrows]], [[Brabham]], [[Alfa Romeo in Formula One|Alfa Romeo]], [[Williams Grand Prix Engineering|Williams]], [[Benetton Formula|Benetton]]
+| races         = 257 (256 starts)
+| championships = 0
+| wins          = 6
+| points        = 281
+| podiums       = 37
+| poles         = 8
+| fastest_laps  = 13
+| first_race    = [[1977 Monaco Grand Prix]]
+| first_win     = [[1982 Monaco Grand Prix]]
+| last_win      = [[1992 Japanese Grand Prix]]
+| last_race     = [[1993 Australian Grand Prix]]
+}}
+
+===== [f1 driver] Niki Lauda =====
+{{Infobox F1 driver
+| embed         = yes
+| nationality   = {{Flag icon|Austria}} [[Formula One drivers from Austria|Austrian]]
+| years         = {{F1|1971}}–{{F1|1979}}, {{F1|1982}}–{{F1|1985}}
+| teams         = [[March Engineering|March]], [[BRM]], [[Scuderia Ferrari|Ferrari]], [[Brabham]], [[McLaren]]
+| races         = 177 (171 starts) &lt;!-- StatsF1 lists 180 participations for Lauda, out of which AUT-76, NED-76, and CAN-77 are actually non-appearances --&gt;
+| championships = 3 ({{F1|1975}}, {{F1|1977}}, {{F1|1984}})
+| wins          = 25
+| podiums       = 54
+| poles         = 24
+| fastest_laps  = 24
+| points        = 420.5
+| first_race    = [[1971 Austrian Grand Prix]]
+| first_win     = [[1974 Spanish Grand Prix]]
+| last_win      = [[1985 Dutch Grand Prix]]
+| last_race     = [[1985 Australian Grand Prix]]
+}}
+
+===== [le mans driver] Paul Newman =====
+{{Infobox Le Mans driver
+| name=
+| image=
+| nationality=
+| years=[[1979 24 Hours of Le Mans|1979]]
+| teams=Dick Barbour Racing
+| best_finish=2nd &lt;small&gt;([[1979 24 Hours of Le Mans|1979]])&lt;/small&gt;
+| class_wins=1 &lt;small&gt;([[1979 24 Hours of Le Mans|1979]])&lt;/small&gt;}}
+
+===== [le mans driver] Fabien Barthez =====
+{{Infobox Le Mans driver
+| name = Fabien Barthez
+| image = Fabien Barthez Driver of Panis Barthez Competition's Ligier JS P2 Nissan (27190696776).jpg
+| caption = Barthez in 2016
+| nationality = {{flagicon|FRA}} French
+| years = {{24hLM|2014}} – {{24hLM|2017}}
+| teams = [[Auto Sport Promotion|ASP]], [[Olivier Panis|Panis Barthez]]
+| best_finish = 12th &lt;small&gt;([[2016 24 Hours of Le Mans|2016]])&lt;/small&gt;
+| class_wins = 0
+{{Infobox racing driver|embed=yes
+| racing_licence = [[File:FIA Bronze Driver.png|12px]] FIA Bronze
+}}
+}}
+
+===== [le mans driver] Nick Mason =====
+{{Infobox Le Mans driver
+| name        = Nick Mason
+| image       = Bugatti 35 B - Nick Mason 15.08.1981.jpg
+| caption     = Mason in 1981
+| nationality = {{Flagicon|UK}} British
+| years       = 1979–80, 1982–84
+| teams     = Dorset Racing Associates&lt;br /&gt;[[EMKA Racing|EMKA Productions]]&lt;br /&gt;[[Dome (constructor)|Dome Racing]]&lt;br /&gt;[[GTi Engineering]]
+| best_finish = 18th &lt;small&gt;([[1979 24 Hours of Le Mans|1979]])&lt;/small&gt;
+| class_wins  = 0
+}}
+
+===== [le mans driver] Eddie Jordan =====
+{{Infobox Le Mans driver|embed=yes
+| years            = {{24hLM|1981}}
+| teams            = [[EMKA Racing|EMKA]]
+| best_finish      = DNF &lt;small&gt;({{24hLM|1981}})&lt;/small&gt;
+| class_wins       = 0
+}}
+
+===== [le mans driver] Adrian Newey =====
+{{Infobox Le Mans driver|embed=yes
+| years            = {{24hLM|2007}}
+| teams          = [[AF Corse]]
+| best_finish      = 22nd &lt;small&gt;({{24hLM|2007}})&lt;/small&gt;
+| class_wins       = 0
+}}
+
+===== [motocross rider] Jeremy McGrath =====
+{{Infobox Motocross rider
+| name          = Jeremy McGrath
+| image         = JeremyMcGrathCrandon2009 (cropped2).jpg
+| caption       = McGrath signing autographs in 2009
+| nationality   = American 
+| birth_date    = {{birth-date and age|November 19, 1971}}
+| birth_place   = [[San Francisco]], [[California]], U.S.
+| years         = 1989–2006
+| teams         = {{plainlist|
+* •[[Kawasaki Heavy Industries Motorcycle &amp; Engine|Kawasaki]]
+* •[[Honda]]
+* •[[Suzuki]]
+* •[[Yamaha Motor Company|Yamaha]]
+}}
+| races         =
+| championships = {{plainlist|
+* •1991 AMA Supercross 125cc West
+* •1992 AMA Supercross 125cc West
+* •1993 AMA Supercross 250cc
+* •1994 AMA Supercross 250cc
+* •1995 AMA Supercross 250cc
+* •1995 AMA Motocross 250cc
+* •1996 AMA Supercross 250cc
+* •1998 AMA Supercross 250cc
+* •1999 AMA Supercross 250cc
+* •2000 AMA Supercross 250cc
+}}
+| wins          = {{plainlist|
+* •AMA 125cc Supercross: 13
+* •AMA 125cc Motocross: 2
+* •AMA 250cc Supercross: 72
+* •AMA 250cc Motocross: 15
+* Total: 102
+}}
+| medaltemplates   = {{Medal|Comp|[[Summer X Games]]}}
+{{Medal|Country|{{USA}}}}
+{{Medal|Gold|[[X Games X|2004 Los Angeles]] |Moto X Step Up}}
+{{Medal|Silver|[[X Games XI|2005 Los Angeles]] |Supermoto}}
+{{Medal|Silver|[[X Games XII|2006 Los Angeles]] |Moto X Step Up}}
+{{Medal|Silver|[[X Games XIV|2008 Los Angeles]] |Moto X Racing}}
+{{Medal|Bronze|[[X Games X|2004 Los Angeles]] |Supermoto}}
+}}
+
+===== [motocross rider] Jim Pomeroy (motorcyclist) =====
+{{Infobox Motocross rider
+| name          = Jim Pomeroy
+| image         = MX Spanish GP 250cc 19730408 Jim Pomeroy and OPB after winning the first moto.png
+| caption       = Jim Pomeroy and Oriol Puig Bultó (right) just after Pomeroy won the first moto of the 1973 250cc Spanish Motocross Grand Prix, held at the Circuit del Vallès on April 8.
+| nationality   = [[United States|American]]
+| birth_date    = {{birth date|df=y|1952|11|16}}
+| birth_place   = [[Sunnyside, Washington]], U.S.
+| death_date    = {{death date and age|df=y|2006|8|6|1952|11|16}}
+| death_place   = [[Tampico, Washington]], U.S.
+| years         = 1970 - 1980
+| teams         = [[Bultaco]], [[Honda]], [[Beta (motorcycle manufacturer)|Beta]]
+| races         = 
+| championships = 
+| wins          = 6
+}}
+
+===== [motocross rider] Donny Schmit =====
+{{Infobox Motocross rider
+| name          = Donny Schmit
+| image         =
+| caption       =
+| nationality   = [[United States|American]]
+| birth_date    = {{birth date|1967|1|17}}
+| birth_place   = [[Minneapolis]], Minnesota
+| death_date    = {{death date and age|1996|1|19|1967|1|17}}
+| death_place   = [[Coon Rapids, Minnesota]]
+| years         = 1986–1995
+| teams         = [[Kawasaki Heavy Industries Motorcycle &amp; Engine|Kawasaki]], [[Suzuki]], [[Honda]]
+| races         =
+| championships = AMA 125cc Western SX - 1986{{-}}FIM 125cc - 1990{{-}}FIM 250cc - 1992
+| wins          = 15
+}}
+
+===== [motocross rider] John Dowd (motorcyclist) =====
+{{Infobox Motocross rider
+| name          = John Dowd
+| image         =
+| caption       =
+| nationality   = [[Americans|American]]
+| birth_date    = {{birth-date and age|August 10, 1965}}
+| birth_place   = [[Chicopee, Massachusetts]], U.S.
+| death_date    = 
+| death_place   = 
+| years         = 1987 - 2013
+| teams         = [[Suzuki]], [[Honda]], [[Kawasaki Heavy Industries Motorcycle &amp; Engine|Kawasaki]], [[Yamaha Motor Company|Yamaha]], [[KTM]]
+| races         =
+| championships = 
+| wins          = 
+}}
+
+===== [motocross rider] Stefan Everts =====
+{{Infobox Motocross rider
+| name          = Stefan Everts
+| image         = Stefan Everts.jpg
+| caption       = Everts in 2008
+| nationality   = [[Belgium|Belgian]]
+| birth_date    = {{birth-date and age|25 November 1972}}
+| birth_place   = [[Neeroeteren, Belgium]]
+| death_date    = 
+| death_place   = 
+| years         = 1988 - 2006
+| teams         = [[Suzuki]], [[Honda]], [[Yamaha Motor Company|Yamaha]], [[Kawasaki motorcycles|Kawasaki]], [[Husqvarna Motorcycles|Husqvarna]]
+| races         =
+| championships = 125cc- 1991&lt;br/&gt;250cc- 1995, 1996, 1997&lt;br/&gt;500cc- 2001, 2002&lt;br/&gt;
+•MX1: 2003, 2004, 2005, 2006
+| wins          = 101
+| First GP win  = 1991, GP of Hungary, 125cc
+}}
+
+===== [motorcycle racer] Alex Barros =====
+{{Infobox motorcycle racer
+| name                 = Alex Barros
+| image                = Barros Jerez2004.jpg
+| image_size           = 
+| alt                  = 
+| caption              = Barros aboard the [[Honda RC211V]] in Jerez 2004
+| birth_date           = {{Birth date and age|1970|10|18}}
+| birth_place          = [[São Paulo]], Brazil
+&lt;!-- start of 1st series/championship section --&gt;
+| series1                  = MotoGP World Championship
+| series_link1             = MotoGP World Championship
+| active_years1            = {{MGP|2002}}–{{MGP|2005}}, {{MGP|2007}}
+| championships1           = 0
+| starts1                  = 82
+| wins1                    = 3
+| podiums1                 = 14
+| poles1                   = 2
+| fastest_laps1            = 6
+| points1                  = 732
+| teams1                   = {{ubl|[[Honda]] ({{MGP|2002}}, {{MGP|2004}}–{{MGP|2005}})|[[Yamaha Motor Company|Yamaha]] ({{MGP|2003}})|[[Ducati]] ({{MGP|2007}})}}
+| last_season1             = 10th (115 pts)
+| last_season_year1        = 2007
+&lt;!-- end of 1st series/championship section --&gt;
+&lt;!-- start of 2nd series/championship section --&gt;
+| series2                  = 500cc World Championship
+| series_link2             = Grand Prix motorcycle racing
+| active_years2            =  {{MGP|1990}}–{{MGP|2001}}
+| championships2           = 0
+| starts2                  = 163
+| wins2                    = 4
+| podiums2                 = 18
+| poles2                   = 3
+| fastest_laps2            = 8
+| points2                  = 1,347
+| teams2                   = {{ubl|[[Cagiva]] ({{MGP|1990}}–{{MGP|1992}})|[[Suzuki]] ({{MGP|1993}}–{{MGP|1994}})|[[Honda]] ({{MGP|1995}}–{{MGP|2001}})}}
+| last_season2             = 4th (182 pts)
+| last_season_year2        = 2001
+&lt;!-- end of 2nd series/championship section --&gt;
+&lt;!-- start of 3rd series/championship section --&gt;
+| series3                  = 250cc World Championship 
+| series_link3             = Grand Prix motorcycle racing
+| active_years3            = {{MGP|1988}}–{{MGP|1989}}
+| championships3           = 0
+| starts3                  = 14
+| wins3                    = 0
+| podiums3                 = 0
+| poles3                   = 0
+| fastest_laps3            = 0
+| points3                  = 30
+| teams3                   = [[Yamaha Motor Company|Yamaha]]
+| last_season3             = 18th (30 pts)
+| last_season_year3        = 1989
+&lt;!-- end of 3rd series/championship section --&gt;
+&lt;!-- start of 4th series/championship section --&gt;
+| series4                  = 80cc World Championship 
+| series_link4             = Grand Prix motorcycle racing
+| active_years4            = {{MGP|1986}}–{{MGP|1987}}
+| championships4           = 0
+| starts4                  = 17
+| wins4                    = 0
+| podiums4                 = 0
+| poles4                   = 0
+| fastest_laps4            = 0
+| points4                  = 14
+| teams4                   = [[Rieju]], Autisa, [[Casal]], Arbizu
+| last_season4             = 17th (8 pts)
+| last_season_year4        = 1987
+&lt;!-- end of 4th series/championship section --&gt;
+&lt;!-- start of 5th series/championship section --&gt;
+| series5                  = Superbike World Championship
+| series_link5             = Superbike World Championship
+| active_years5            = {{SBK|2006}}
+| championships5           = 0
+| starts5                  = 24
+| wins5                    = 1
+| podiums5                 = 6
+| poles5                   = 8
+| fastest_laps5            = 2
+| points5                  = 246
+| manufacturer5            = [[Honda]]
+| last_season5             = 6th (246 pts)
+| last_season_year5        = 2006
+&lt;!-- end of 5th series/championship section --&gt;
+}}
+
+===== [motorcycle racer] Mat Mladin =====
+{{Infobox motorcycle racer
+| name              = Mathew Mladin
+| image             = Mat Mladin 2009-07-25.jpg
+| caption           = 
+| nickname          = Mat
+| nationality       = [[Australia]]n
+| birth_date        = {{birth date and age|df=yes|1972|03|10}}
+| birth_place       = [[Oakdale, New South Wales]], [[Australia]]
+| website           = 
+| Bike number       = 
+| championships     = [[AMA Superbike Championship|AMA Superbike Champion]] 1999, 2000, 2001, {{AMASB|2003}}, {{AMASB|2004}}, {{AMASB|2005}}, [[2009 AMA Pro American Superbike Championship|2009]]
+| awards            = AMA [[Motorcycle Hall of Fame]] inductee (2024)
+| series1           = AMA Superbike Championship
+| series_link1      = AMA Superbike Championship
+| active_years1     = 1996-2009
+| championships1    = 7 (1999, 2000, 2001, {{AMASB|2003}}, {{AMASB|2004}}, {{AMASB|2005}}, [[2009 AMA Pro American Superbike Championship|2009]])
+| wins1             = 83 (AMA Superbike record)
+| poles1            = 50 (AMA Superbike record)
+| last_season1      = 1st (10 wins/ 453 pts)
+| last_season_year1 = 2009
+| vertical_stats1   = yes
+| series2           = 500cc Grand Prix Motorcycle Championship
+| series_link2      = Grand Prix motorcycle racing
+| active_years2     = 1993
+| championships2    = 0
+| starts2           = 11
+| wins2             = 0
+| podiums2          = 0
+| poles2            = 0
+| fastest_laps2     = 0
+| points2           = 45
+| teams2            = [[Cagiva|Cagiva Team]] [[Giacomo Agostini|Agostini]]
+| last_season2      = 13th (45 pts)
+| last_season_year2 = 1993
+}}
+
+===== [motorcycle racer] Eric Bostrom =====
+{{Infobox motorcycle racer
+| name              = Eric Bostrom
+| image             = 
+| caption           = 
+| nationality       = {{Flag|USA|name=American}}
+| birth_date         = {{Birth date and age|1976|11|19}}
+| birth_place        = [[San Francisco, California]], [[United States]]
+| series1                  = AMA Superbike Championship
+| series_link1             = AMA Superbike Championship
+| active_years1  = [[2004 AMA Superbike Championship|2004]]–[[2005 AMA Superbike Championship|2005]], [[2007 AMA Superbike Championship|2007]]–[[2008 AMA Superbike Championship|2008]], [[2010 AMA Pro American Superbike Championship|2010]]–[[2011 AMA Pro American Superbike Championship|2011]]
+| teams1 =[[Ducati]], [[Yamaha Motor Company|Yamaha]], [[Suzuki]], [[Kawasaki Heavy Industries|Kawasaki]] 
+| championships1 =0 
+| starts1   =78
+| wins1     =4
+| podiums1       =11
+| poles1         =0
+| fastest_laps1  =1
+| points1  =1645
+| last_season_year1   =2011
+| last_season1 =29th
+}}
+
+===== [motorcycle racer] Josh Herrin =====
+{{Infobox motorcycle racer
+| name              = Josh Herrin
+| image             = Josh Herrin 2014.jpg
+| caption           = Herrin in 2014
+| birth_date         = {{Birth date and age|1990|05|23}}
+| birth_place        = [[Glendale, California]], U.S.
+| current_team      =  Rahal Ducati Moto
+| bike_number       = 2
+| championships     = {{ubl|[[AMA Superbike Championship]] (2013, 2024)|[[2022 MotoAmerica Supersport Championship|MotoAmerica Supersport Championship]] (2022)}}
+| series1                  = AMA/MotoAmerica Superbike Championship
+| series_link1             = AMA Superbike Championship
+| active_years1            = 2012-2013, 2019-
+| championships1           = 2 (2013, 2024)
+| starts1                  = 151
+| wins1                    = 21
+| podiums1                 = 57
+| poles1                   = 9
+| fastest_laps1            = 11
+| points1                  = 1,542
+| teams1                   = [[Yamaha Motor Company|Yamaha]], [[Suzuki]], [[BMW]], [[Ducati]]
+| last_season1             = 2nd (7 wins/346 pts)
+| last_season_year1        = 2025
+| series2                  = AMA/MotoAmerica Supersport Championship
+| series_link2             = AMA Supersport Championship
+| active_years2            = 2006-2008, 2022
+| championships2           = 1 ([[2022 MotoAmerica Supersport Championship|2022]])
+| starts2                  = 
+| first_race2              = 
+| last_race2               = 
+| wins2                    = 
+| first_win2               = 
+| last_win2                = 
+| podiums2                 = 
+| poles2                   = 
+| fastest_laps2            = 
+| points2                  = 
+| current_team2            = 
+| manufacturer2            = 
+| engine2                  = 
+| previous_teams2          = 
+| teams2                   = 
+| best_season2             = 
+| best_season_year2        = 
+| delink_best_season_year2 = 
+| last_season2             = 
+| last_season_year2        = 
+| delink_last_season_year2 = 
+| vertical_stats2          = 
+| series3                  = Moto2 World Championship
+| series_link3             = Moto2 World Championship
+| active_years3            = {{MGP|2014}}
+| championships3           = 0
+| starts3                  = 10
+| first_race3              = 
+| last_race3               = 
+| wins3                    = 0
+| first_win3               = 
+| last_win3                = 
+| podiums3                 = 0
+| poles3                   = 0
+| fastest_laps3            = 0
+| points3                  = 0
+| current_team3            = 
+| manufacturer3            = 
+| engine3                  = 
+| previous_teams3          = 
+| teams3                   = [[Sepang Racing Team|Caterham]] [[Eskil Suter|Suter]]
+| best_season3             = 
+| best_season_year3        = 
+| delink_best_season_year3 = 
+| last_season3             = NC (0 pts)
+| last_season_year3        = 2014
+| delink_last_season_year3 = 
+| vertical_stats3          = 
+}}
+
+===== [motorcycle racer] Daniel Falzon =====
+{{Infobox motorcycle racer
+| name                     = Daniel Falzon
+| image                    = Daniel Falzon.jpg
+| nationality              = {{flagicon|AUS}}
+| death_date               = 
+| birth_date               = {{Birth date and age|df=yes|1994|03|16}}
+| birth_place              = [[Adelaide, South Australia]], [[Australia]]
+| current_team             = Yamaha Racing Team
+| bike_number              = 25
+| website                  = [http://www.jondanielsracing.com.au www.jondanielsracing.com.au]
+| series1                  = Australian Superbike Championship
+| series_link1             = Australian Superbike Championship
+| active_years1            = 2015
+| championships1           = 0
+| starts1                  = 10
+| wins1                    = 0
+| podiums1                 = 5
+| poles1                   = 0
+| fastest_laps1            = 1
+| points1                  = 163
+| manufacturer1            = Yamaha
+| last_season1             = 2nd (163 pts)
+| last_season_year1        = 2015
+| delink_last_season_year1 = yes
+| series2                  = Australian Supersport 600 Championship
+| series_link2             = 
+| active_years2            = 2013-2014
+| championships2           = 2
+| starts2                  = 16
+| wins2                    = 7
+| podiums2                 = 13
+| poles2                   = 6
+| fastest_laps2            = 3
+| points2                  = 340
+| manufacturer2            = Yamaha
+| last_season2             = 1st (3 wins/93 pts)
+| last_season_year2        = 2014
+}}
+
+===== [motorcycle rider] Jock Taylor =====
+{{Infobox motorcycle rider
+| name             = Jock Taylor 
+| image            = File:Jock Taylor cropped.JPG
+| caption          = Taylor aboard his Fowler Yamaha outfit in 1979 at a guest-appearance when opening a motorcycle shop at [[Derby]], prior to [[Darley Moor Airfield#Race track|''Stars at Darley'']], a nearby race meeting held annually where a selection of higher-level motorcycle racers compete in a local club event 
+| nationality      = [[United Kingdom|British]]
+| birth_name       = John Robert Taylor
+| birth_date       = {{Birth date|df=yes|1954|03|09}}
+| birth_place      = [[Pencaitland]], [[East Lothian]], Scotland
+| death_date       = {{Death date and age|df=yes|1982|08|15|1954|03|09}}
+| death_place      = Imatra Circuit, Finland
+| GP Active years  = 1978–1982
+| GP Teams         = 1 Fowlers of Bristol
+| GP Championships = 1 &lt;small&gt;({{MGP|1980}})&lt;/small&gt;
+| GP Race Starts   = 
+| GP Race Wins     = 
+| GP Podiums       = 
+| GP Total Points  = 
+| GP Poles         = 
+| GP Fastest laps  = 
+}}
+
+===== [motorcycle rider] Mick Doohan =====
+{{Infobox motorcycle rider | embed=yes
+| GP Active years  = [[1989 Grand Prix motorcycle racing season|1989]]–[[1999 Grand Prix motorcycle racing season|1999]]
+| GP Last season   =
+| GP Teams         = [[Honda]]
+| GP Championships = 5&lt;br&gt;500cc: [[1994 Grand Prix motorcycle racing season|1994]], [[1995 Grand Prix motorcycle racing season|1995]], [[1996 Grand Prix motorcycle racing season|1996]], [[1997 Grand Prix motorcycle racing season|1997]], [[1998 Grand Prix motorcycle racing season|1998]]
+| GP Race Starts   = 137
+| GP Race Wins     = 54
+| GP Podiums       = 95
+| GP Total Points  = 2283
+| GP Poles         = 58
+| GP Fastest laps  = 46
+| GP First win     = [[1990 Grand Prix motorcycle racing season|1990]] 500cc [[Hungarian motorcycle Grand Prix|Hungarian Grand Prix]]
+| GP Last win      = [[1998 Grand Prix motorcycle racing season|1998]] 500cc [[Argentine motorcycle Grand Prix|Argentine Grand Prix]]
+| GP First race    = [[1989 Grand Prix motorcycle racing season|1989]] 500cc [[Japanese motorcycle Grand Prix|Japanese Grand Prix]]
+| GP Last race     = [[1999 Grand Prix motorcycle racing season|1999]] 500cc [[Japanese motorcycle Grand Prix|Japanese Grand Prix]]
+}}
+
+===== [motorcycle rider] Libero Liberati =====
+{{Infobox motorcycle rider
+|image= Libero Liberati 1957.jpg
+|caption       = Liberati racing in 1957
+| name             = Libero Liberati 
+| nationality      = Italian
+|birth_date      = {{birth date|df=yes|1926|9|20}}
+|birth_place     = [[Terni]], [[Kingdom of Italy]]
+|death_date      = {{death date and age|df=yes|1962|3|5|1926|9|20}}
+|death_place     = [[Terni]], Italy
+| GP Active years  = [[1952 Grand Prix motorcycle racing season|1952]]–[[1953 Grand Prix motorcycle racing season|1953]], [[1955 Grand Prix motorcycle racing season|1955]] – [[1957 Grand Prix motorcycle racing season|1957]], [[1959 Grand Prix motorcycle racing season|1959]]
+| GP Last season   = 
+| GP Teams         = [[Gilera]], [[Moto Morini|Morini]]
+| GP Championships = 500cc- [[1957 Grand Prix motorcycle racing season|1957]]
+| GP Race Starts   = 15
+| GP Race Wins     = 6
+| GP Podiums       = 14
+| GP Total Points  = 741
+| GP Poles         = N/A
+| GP Fastest laps  = 3
+| GP First win     = [[1956 Grand Prix motorcycle racing season|1956]] 350cc Nations Grand Prix 
+| GP Last win      = [[1957 Grand Prix motorcycle racing season|1957]] 500cc Nations Grand Prix
+| GP First race    = [[1952 Grand Prix motorcycle racing season|1952]] 500cc [[Swiss motorcycle Grand Prix|Swiss Grand Prix]] 
+| GP Last race     = [[1959 Grand Prix motorcycle racing season|1959]] 250cc [[German motorcycle Grand Prix|West German Grand Prix]] 
+}}
+
+===== [motorcycle rider] Valentino Rossi =====
+{{Infobox motorcycle rider
+| name                 = Valentino Rossi
+| image                = File:Valentino Rossi 2024 WEC Fuji 6.jpg
+| caption              = Rossi at the [[2024 6 Hours of Fuji|2024 6 Hours WEC Fuji]]
+| nationality          = Italian
+| birth_date           = {{birth date and age|df=yes|1979|02|16}}
+| birth_place          = [[Urbino]], Italy
+| Bike number          = 46 (retired in honour in the [[MotoGP]] class)
+| website              = {{URL|http://www.valentinorossi.com}}
+| MotoGP Active years  = {{MGP|2000}}–{{MGP|2021|MotoGP}}
+| MotoGP Manufacturers = [[Honda]] ({{MGP|2000}}–{{MGP|2003}})&lt;br /&gt; [[Yamaha Motor Company|Yamaha]] ({{MGP|2004}}–{{MGP|2010}}, {{MGP|2013|MotoGP}}–{{MGP|2021|MotoGP}})&lt;br /&gt; [[Ducati]] ({{MGP|2011}}–{{MGP|2012}})
+| MotoGP Championships = 7 ({{MGP|2001}}, {{MGP|2002}}, {{MGP|2003}}, {{MGP|2004}}, {{MGP|2005}}, {{MGP|2008}}, {{MGP|2009}})
+| MotoGP Last season   = 2021
+| MotoGP Last position = 18th (44 pts)
+| MotoGP Race Starts   = 372
+| MotoGP Race Wins     = 89
+| MotoGP Podiums       = 199
+| MotoGP Poles         = 55
+| MotoGP Fastest laps  = 76
+| MotoGP Total Points  = 5415
+| 250 Active years     = {{MGP|1998}}–{{MGP|1999}}
+| 250 Championships    = 1 ({{MGP|1999}})
+| 250 Manufacturers    = [[Aprilia]]
+| 250 Race Starts      = 30
+| 250 Race Wins        = 14
+| 250 Podiums          = 21
+| 250 Poles            = 5
+| 250 Fastest laps     = 11
+| 250 Total Points     = 510
+| 250 Last season      = 1999
+| 250 Last position    = 1st (309 pts)
+| 125 Active years     = {{MGP|1996}}–{{MGP|1997}}
+| 125 Championships    = 1 ({{MGP|1997}})
+| 125 Manufacturers    = Aprilia
+| 125 Race Starts      = 30
+| 125 Race Wins        = 12
+| 125 Podiums          = 15
+| 125 Poles            = 5
+| 125 Fastest laps     = 9
+| 125 Total Points     = 432
+| 125 Last season      = 1997
+| 125 Last position    = 1st (321 pts)
+| module1              = {{Infobox person
+| child         = yes
+| signature     = ValeYellow46 Signature.png
+| signature_alt = Valentino Rossi signature
+}}
+| module2              = {{Infobox racing driver
+| embed             = yes
+| current_series    = [[FIA World Endurance Championship]]
+| first_year        = [[2024 FIA World Endurance Championship|2024]]
+| current_team      = [[Team WRT]]
+| racing_licence    = [[File:FIA Silver Driver.png|12px]] FIA Silver {{small|(2012–2026)}}&lt;br&gt;[[File:FIA Gold Driver.png|12px]] [[FIA Gold Categorisation|FIA Gold]] {{small|(2027–)}}&lt;ref&gt;{{cite web|url=https://www.dailysportscar.com/2026/10/05/provisional-2027-fia-driver-categorisations-released-rossi-promoted-to-gold.html|title=Provisional 2027 FIA Driver Categorisations Released; Rossi Promoted To Gold|website=Dailysportscar|last1=Wane|first1=Ewan|last2=Goodwin|first2=Graham|last3=Kilbey|first3=Stephen|date=5 October 2026|access-date=5 October 2026}}&lt;/ref&gt;
+| years_active      = 2024–present
+| car_number        = 46
+| former_teams      = 
+| starts            = 14
+| championships     = 0
+| wins              = 0
+| podiums           = 5
+| poles             = 1
+| fastest_laps      = 0
+| best_finish       = 2nd
+| year              = 2024
+| last_finish       = 
+| prev_series       = [[Monza Rally Show]]&lt;br&gt;[[World Rally Championship]]&lt;br&gt;[[Blancpain Endurance Series]]&lt;br&gt;[[Gulf 12 Hours]]&lt;br&gt;[[24H Series]]&lt;br&gt;[[Intercontinental GT Challenge]]&lt;br&gt;[[Le Mans Cup|Le Mans Cup – GT3]]
+| prev_series_years = [[1998 Monza Rally Show|1998]]–[[2018 Monza Rally Show|2018]]&lt;br&gt;[[2002 World Rally Championship|2002]], [[2006 World Rally Championship|2006]], [[2008 World Rally Championship|2008]]&lt;br&gt;[[2012 Blancpain Endurance Series|2012]]&lt;br&gt;[[2019 Gulf 12 Hours|2019]]–[[2023 Gulf 12 Hours|2023]]&lt;br&gt;[[2023 24H GT Series|2023]]&lt;br&gt;[[2023 Intercontinental GT Challenge|2023]]&lt;br&gt;[[2023 Le Mans Cup|2023]]
+| titles            = Monza Rally Show
+| title_years       = 2006–2007, 2012, 2015–2018
+}}
+}}
+
+===== [motorcycle rider] Barry Sheene =====
+{{Infobox motorcycle rider
+| name             = Barry Sheene&lt;br&gt;&lt;small&gt;{{nobold|{{post-nominals|country=GBR|MBE|size=90%}}}}&lt;/small&gt;
+| image            = Barry Sheene winner.jpg
+| caption          = Sheene in 1975
+| nationality      = British
+| birth_date       = {{Birth date|1950|9|11|df=yes}}
+| birth_place      = [[London]], England
+| death_date       = {{Death date and age|2003|3|10|1950|9|11|df=yes}}
+| death_place      = [[Gold Coast, Queensland]], Australia
+| GP Active years  = [[1970 Grand Prix motorcycle racing season|1970]]–[[1984 Grand Prix motorcycle racing season|1984]]
+| GP Last season   =
+| GP Teams         = [[Suzuki]], [[Yamaha Motor Company|Yamaha]]
+| GP Championships = {{unbulleted list
+  | [[Formula 750]] – [[1973 Formula 750 season|1973]]
+  | 500cc – [[1976 Grand Prix motorcycle racing season|1976]], [[1977 Grand Prix motorcycle racing season|1977]]
+ }}
+| GP Race Starts   = 104
+| GP Race Wins     = 23
+| GP Podiums       = 52
+| GP Total Points  =
+| GP Poles         = 18
+| GP Fastest laps  = 20
+| GP First win     = [[1971 Grand Prix motorcycle racing season|1971]] 125cc [[Belgian motorcycle Grand Prix|Belgian Grand Prix]]
+| GP Last win      = [[1981 Swedish motorcycle Grand Prix|1981 500cc Swedish Grand Prix]]
+| GP First race    = [[1970 Grand Prix motorcycle racing season|1970]] 125cc [[Spanish motorcycle Grand Prix|Spanish Grand Prix]]
+| GP Last race     = [[1984 San Marino motorcycle Grand Prix|1984 500cc San Marino Grand Prix]]
+}}
+
+===== [nascar driver] Dale Earnhardt =====
+{{Infobox NASCAR driver
+|name               = Dale Earnhardt
+|image              = Dale Earnhardt visits Langley AFB.jpg
+|caption            = Earnhardt in 2000
+|birth_name         = &lt;!-- only use if different from name --&gt;
+|birth_date         = {{Birth date|1951|4|29}}
+|birth_place        = [[Kannapolis, North Carolina]], U.S.
+|death_date         = {{Death date and age|2001|2|18|1951|4|29}}
+|death_place        = [[Daytona Beach, Florida]], U.S.&lt;ref name=&quot;EarnhardtCrash&quot;&gt;{{cite news|last=Brinster|first=Dick|date=February 19, 2001|title=Dale Earnhardt dies in crash on final lap of Daytona 500|agency=Associated Press|url=https://news.google.com/newspapers?id=kPMwAAAAIBAJ&amp;pg=2760,1972698&amp;dq=dale+earnhardt+crash|access-date=September 19, 2010|archive-date=April 23, 2021|archive-url=https://web.archive.org/web/20210423172406/https://news.google.com/newspapers?id=kPMwAAAAIBAJ&amp;pg=2760%2C1972698&amp;dq=dale+earnhardt+crash|url-status=live}}&lt;/ref&gt;
+|death_cause        = [[Basilar skull fracture]] sustained from [[Death of Dale Earnhardt|2001 Daytona 500 crash]]
+|height             = {{convert|6|ft|1|in|cm|abbr=on}}
+|weight             = {{convert|195|lb|kg stlb|abbr=on}}
+|achievements       = {{ubl|[[1980 NASCAR Winston Cup Series|1980]], [[1986 NASCAR Winston Cup Series|1986]], [[1987 NASCAR Winston Cup Series|1987]], [[1990 NASCAR Winston Cup Series|1990]], [[1991 NASCAR Winston Cup Series|1991]], [[1993 NASCAR Winston Cup Series|1993]], [[1994 NASCAR Winston Cup Series|1994 Winston Cup Series]] [[List of NASCAR Sprint Cup Series champions|Champion]]|Tied with [[Richard Petty]] and [[Jimmie Johnson]] for most [[NASCAR Cup Series]] Championships (7)|[[IROC XIV|1990]], [[IROC XIX|1995]], [[IROC XXIII|1999]], [[IROC XXIV|2000]] [[International Race of Champions|IROC Champion]] |[[1998 Daytona 500]] winner as driver|[[2001 Daytona 500]] winner as owner{{efn|[[Michael Waltrip]] won seconds after Earnhardt's [[Death of Dale Earnhardt|fatal crash]]}}|1995 [[Brickyard 400]] winner|1987, 1989, 1990 [[Southern 500 (1950–2004)|Southern 500]] winner|1986, [[1992 Coca-Cola 600|1992]], 1993 [[Coca-Cola 600]] winner|1990, 1994, 1999, [[2000 Winston 500]] winner|[[NASCAR All-Star Race|The Winston]] winner ([[1987 The Winston|1987]], [[1990 The Winston|1990]], [[1993 The Winston|1993]])|Led [[Sprint Cup Series|Winston Cup Series]] in wins in [[1987 NASCAR Winston Cup Series|1987]] and [[1990 NASCAR Winston Cup Series|1990]]|Led [[Sprint Cup Series|Winston Cup Series]] in poles in [[1990 NASCAR Winston Cup Series|1990]]|Winner of the first ever [[Xfinity Series|Budweiser Late Model Sportsman Series]] race in 1982}}
+|awards             = {{ubl|[[1979 NASCAR Winston Cup Series|1979 Winston Cup Series]] [[NASCAR Rookie of the Year|Rookie of the Year]]|Named one of [[NASCAR's 50 Greatest Drivers]] (1998)|[[2001 NASCAR Winston Cup Series|2001 Winston Cup Series]] [[NASCAR's Most Popular Driver Award|Most Popular Driver]] (posthumously)|[[Motorsports Hall of Fame of America|Motorsports Hall of Fame Inductee]] (2002)|[[International Motorsports Hall of Fame]] Inductee (2006)|[[NASCAR Hall of Fame]] (2010 - Inaugural Class)|Named one of [[NASCAR's 75 Greatest Drivers]] (2023)}}
+|Total_Cup_Races    = 676
+|Years_In_Cup       = 27
+|Prev_Cup_Pos       = 57th
+|Previous_Year      = 2001
+|Best_Cup_Pos       = 1st ([[1980 NASCAR Winston Cup Series|1980]], [[1986 NASCAR Winston Cup Series|1986]], [[1987 NASCAR Winston Cup Series|1987]], [[1990 NASCAR Winston Cup Series|1990]], [[1991 NASCAR Winston Cup Series|1991]], [[1993 NASCAR Winston Cup Series|1993]], [[1994 NASCAR Winston Cup Series|1994]])
+|First_Cup_Race     = [[1975 World 600]] ([[Charlotte Motor Speedway|Charlotte]])
+|Last_Cup_Race      = [[2001 Daytona 500]] ([[Daytona International Speedway|Daytona]])
+|First_Cup_Win      = [[1979 Southeastern 500]] ([[Bristol International Speedway|Bristol]])
+|Last_Cup_Win       = [[2000 Winston 500]] ([[Talladega Superspeedway|Talladega]])
+|Cup_Wins           = 76
+|Cup_Top_Tens       = 428
+|Cup_Poles          = 22
+|Total_Busch_Races  = 136
+|Years_In_Busch     = 13
+|Best_Busch_Pos     = 21st ([[1982 NASCAR Budweiser Late Model Sportsman Series|1982]])
+|First_Busch_Race   = [[1982 NASCAR Budweiser Late Model Sportsman Series|1982]] [[Goody's 300]] ([[Daytona International Speedway|Daytona]])
+|Last_Busch_Race    = [[1994 NASCAR Busch Series|1994]] [[All Pro 300]] ([[Charlotte Motor Speedway|Charlotte]])
+|First_Busch_Win    = [[1982 NASCAR Budweiser Late Model Sportsman Series|1982]] [[Goody's 300]] ([[Daytona International Speedway|Daytona]])
+|Last_Busch_Win     = [[1994 NASCAR Busch Series|1994]] [[Goody's 300]] ([[Daytona International Speedway|Daytona]])
+|Busch_Wins         = 21
+|Busch_Top_Tens     = 75
+|Busch_Poles        = 7
+|module1            = {{Infobox person|embed=yes
+|signature          = Tandatangan DaleEarnhardt.png
+|signature_alt      = Dale Earnhardt signature}}
+}}
+
+===== [nascar driver] Richard Petty =====
+{{Infobox NASCAR driver
+|image              = Richard Petty Las Vegas Fall 2024.jpg
+|caption            = Petty at [[Las Vegas Motor Speedway]] in 2024
+|birth_name         = &lt;!-- only use if different from name --&gt;
+|birth_date         = {{Birth date and age|1937|07|02}}
+|birth_place        = [[Level Cross, Randolph County, North Carolina|Level Cross, North Carolina]], U.S.
+|achievements       = [[1964 NASCAR Grand National Series|1964]], [[1967 NASCAR Grand National Series|1967]], [[NASCAR Cup Series|Grand National Series]] [[List of NASCAR Cup Series champions|Champion]]&lt;br /&gt;[[1971 NASCAR Winston Cup Series|1971]], [[1972 NASCAR Winston Cup Series|1972]], [[1974 NASCAR Winston Cup Series|1974]], [[1975 NASCAR Winston Cup Series|1975]], [[1979 NASCAR Winston Cup Series|1979 Winston Cup Series]] [[List of NASCAR Cup Series champions|Champion]]&lt;br /&gt;[[1964 Daytona 500|1964]], [[1966 Daytona 500|1966]], [[1971 Daytona 500|1971]], [[1973 Daytona 500|1973]], [[1974 Daytona 500|1974]], [[1979 Daytona 500|1979]], [[1981 Daytona 500]] [[Daytona 500#List of Daytona 500 winners|Winner]]&lt;br /&gt;1967 [[Southern 500]] [[Southern 500#Past winners|Winner]]&lt;br /&gt;[[1975 World 600|1975]], [[1977 World 600]] [[Coca-Cola 600#Past winners|Winner]]&lt;br /&gt;[[1983 Winston 500]] Winner&lt;br /&gt;'''Records:'''&lt;br /&gt;All-Time Wins Leader in [[NASCAR Cup Series]] (200)&lt;br /&gt;Tied with [[Dale Earnhardt]] and [[Jimmie Johnson]] for most [[NASCAR Cup Series]] Championships (7)&lt;br /&gt;All-Time Poles Leader in [[NASCAR Cup Series]] (123)&lt;br /&gt;Holds record for most [[NASCAR Cup Series]] wins in a season (27 in 1967)&lt;br /&gt;Holds record for most consecutive [[NASCAR Cup Series]] wins (10 in 1967)&lt;br/&gt;Most all time wins at [[Daytona International Speedway]] (10)
+|awards             = 1959 [[Grand National Series]] [[NASCAR Rookie of the Year|Rookie of the Year]]&lt;br /&gt;[[NASCAR's Most Popular Driver Award|NASCAR's Most Popular Driver]] (1962, 1964, 1968, [[1970 NASCAR Grand National Series|1970]], [[1974 NASCAR Winston Cup Series|1974]], [[1975 NASCAR Winston Cup Series|1975]], [[1976 NASCAR Winston Cup Series|1976]], [[1977 NASCAR Winston Cup Series|1977]], [[1978 NASCAR Winston Cup Series|1978]])&lt;br /&gt;[[Motorsports Hall of Fame of America]] (1989)&lt;br /&gt;[[International Motorsports Hall of Fame]] (1997)&lt;br /&gt;[[NASCAR Hall of Fame]] (2010)&lt;br&gt;[[Diecast Hall of Fame]] (2011)&lt;br /&gt;Named one of [[NASCAR's 50 Greatest Drivers]] (1998)&lt;br /&gt;Named one of [[NASCAR's 75 Greatest Drivers]] (2023)&lt;br /&gt;[[File:Presidential Medal of Freedom.svg|10px]] [[Presidential Medal of Freedom]] (1992)&lt;br /&gt;[[North Carolina Award]] (2026)
+|Total_Cup_Races    = 1,184
+|Years_In_Cup       = 35
+|Best_Cup_Pos       = 1st (1964, 1967, [[1971 NASCAR Winston Cup Series|1971]], [[1972 NASCAR Winston Cup Series|1972]], [[1974 NASCAR Winston Cup Series|1974]], [[1975 NASCAR Winston Cup Series|1975]], [[1979 NASCAR Winston Cup Series|1979]])
+|First_Cup_Race     = [[1958 Jim Mideon 500]] ([[Exhibition Stadium|Toronto]])
+|First_Cup_Win      = [[1960 NASCAR Grand National Series|1960]] untitled race (Southern States)
+|Last_Cup_Win       = [[1984 Firecracker 400]] ([[Daytona International Speedway|Daytona]])
+|Last_Cup_Race      = [[1992 Hooters 500]] ([[Atlanta Motor Speedway|Atlanta]])
+|Cup_Wins           = 200
+|Cup_Top_Tens       = 712
+|Cup_Poles          = 123
+|Total_Conv_Races   = 15
+|Years_In_Conv      = 2
+|Best_Conv_Pos      = 4th ([[1959 NASCAR Convertible Division season|1959]])
+|First_Conv_Race    = [[1958 NASCAR Convertible Division season|1958]] Race No. 14 ([[Columbia Speedway|Columbia]])
+|Last_Conv_Race     = [[1959 NASCAR Convertible Division season|1959]] Race No. 14 ([[Greenville-Pickens Speedway|Greenville-Pickens]])
+|First_Conv_Win     = [[1959 NASCAR Convertible Division season|1959]] Race No. 13 ([[Columbia Speedway|Columbia]])
+|Conv_Wins          = 1
+|Conv_Top_Tens      = 8
+|Conv_Poles         = 10
+}}
+
+===== [nascar driver] Dale Earnhardt Jr. =====
+{{Infobox NASCAR driver
+| name               = Dale Earnhardt Jr.
+| image              = Dale Earnhardt Jr., 2025 Fall Phoenix 4.jpg
+| caption            = Earnhardt Jr. at [[Phoenix Raceway]] in 2025
+| birth_name         = Ralph Dale Earnhardt Jr.&lt;ref name=&quot;Official&quot;&gt;{{cite web |title=DaleJr.com {{!}} Official Website of Dale Earnhardt Jr. |url=https://www.dalejr.com/about/biography/default.aspx |website=www.dalejr.com |access-date=March 20, 2022 |archive-date=March 1, 2022 |archive-url=https://web.archive.org/web/20220301163200/https://www.dalejr.com/about/biography/default.aspx |url-status=live }}&lt;/ref&gt;
+| birth_date         = {{birth date and age|1974|10|10}}
+| birth_place        = [[Kannapolis, North Carolina]], U.S.
+| height             = {{Height|ft=6|in=0}}
+| weight             = {{convert|178|lb|kg|abbr=on}}
+| achievements       = '''As Driver''':&lt;br&gt;[[1998 NASCAR Busch Series|1998]], [[1999 NASCAR Busch Series|1999]] [[NASCAR Busch Series]] Champion&lt;br&gt;[[2004 Daytona 500|2004]], [[2014 Daytona 500|2014]] [[Daytona 500]] Winner&lt;br&gt;[[2000 The Winston]] Winner&lt;br&gt;[[2003 Budweiser Shootout|2003]], [[2008 Budweiser Shootout|2008]] [[Budweiser Shootout]] Winner&lt;br&gt;[[2003 NASCAR Winston Cup Series|2003]], [[2004 NASCAR Nextel Cup Series|2004]], [[2008 NASCAR Sprint Cup Series|2008]], [[2015 NASCAR Sprint Cup Series|2015]], [[2016 NASCAR Sprint Cup Series|2016]] [[Can-Am Duel]] Winner&lt;br&gt;'''Records''':&lt;br&gt;4 straight wins at [[Talladega Superspeedway]] (Fall 2001–Spring 2003)&lt;br&gt;'''As Car Owner''':&lt;br&gt;[[2004 NASCAR Busch Series|2004]], [[2005 NASCAR Busch Series|2005]], [[2014 NASCAR Nationwide Series|2014]], [[2017 NASCAR Xfinity Series|2017]], [[2018 NASCAR Xfinity Series|2018]], [[2024 NASCAR Xfinity Series|2024]] [[NASCAR O'Reilly Auto Parts Series]] Champion (outright)&lt;br&gt;2020 [[NASCAR Local Racing Series]] Champion (outright)&lt;br&gt;[[2017 CARS Tour|2017]], [[2022 CARS Tour|2022]], [[2023 CARS Tour|2023]] [[CARS Tour|CARS Late Model Stock Car Tour]] Champion (outright)
+| awards             = [[Bill France Sr.|Bill France]] Award of Excellence (2017)&lt;br&gt;Texas Motorsports Hall of Fame (2017)&lt;br&gt;[[NASCAR Hall of Fame]] (2021)&lt;ref&gt;{{Cite web |last=Albert |first=Zack |date=June 16, 2020 |title=Earnhardt Jr., Stefanik, Farmer elected to Hall of Fame's Class of 2021 |url=https://www.nascar.com/news-media/2020/06/16/nascar-hall-of-fame-class-of-2021-inductees-announcement/ |access-date=June 18, 2020 |website=[[NASCAR]] |archive-date=June 17, 2020 |archive-url=https://web.archive.org/web/20200617211326/https://www.nascar.com/news-media/2020/06/16/nascar-hall-of-fame-class-of-2021-inductees-announcement/ |url-status=live }}&lt;/ref&gt;&lt;br&gt;[[2003 NASCAR Winston Cup Series|2003]]–[[2017 Monster Energy NASCAR Cup Series|2017 Cup Series]] [[NASCAR's Most Popular Driver Award|Most Popular Driver]] (15 times)&lt;br&gt;[[1999 NASCAR Busch Series|1999 Busch Series]] [[NASCAR's Most Popular Driver Award|Most Popular Driver]]&lt;br&gt;Named one of [[NASCAR's 75 Greatest Drivers]] (2023)
+| Total_Cup_Races    = 631
+| Years_In_Cup       = 19
+| Prev_Cup_Pos       = 21st
+| Previous_Year      = 2017
+| Best_Cup_Pos       = 3rd ([[2003 NASCAR Winston Cup Series|2003]])
+| First_Cup_Race     = [[1999 NASCAR Winston Cup Series|1999]] [[1999 Coca-Cola 600|Coca-Cola 600]] ([[Charlotte Motor Speedway|Charlotte]])
+| Last_Cup_Race      = [[2017 Monster Energy NASCAR Cup Series|2017]] [[2017 Ford EcoBoost 400|Ford EcoBoost 400]] ([[Homestead–Miami Speedway|Homestead]])
+| First_Cup_Win      = [[2000 NASCAR Winston Cup Series|2000]] [[2000 DirecTV 500|DirecTV 500]] ([[Texas Motor Speedway|Texas]])
+| Last_Cup_Win       = [[2015 NASCAR Sprint Cup Series|2015]] [[2015 Quicken Loans Race for Heroes 500|Quicken Loans Race for Heroes 500]] ([[Phoenix International Raceway|Phoenix]])
+| Cup_Wins           = 26
+| Cup_Top_Tens       = 260
+| Cup_Poles          = 15
+| Total_Busch_Races  = 147
+| Years_In_Busch     = 28
+| Busch_Car_Team     =
+| Prev_Busch_Pos     = 55th
+| Prev_Busch_Year    = 2024
+| Best_Busch_Pos     = 1st ([[1998 NASCAR Busch Series|1998]], [[1999 NASCAR Busch Series|1999]])
+| First_Busch_Race   = [[1996 NASCAR Busch Series|1996]] [[Carolina Pride / Advance Auto Parts 250]] ([[Myrtle Beach Speedway|Myrtle Beach]])
+| Last_Busch_Race    = [[2024 NASCAR Xfinity Series|2024]] [[2024 Food City 300|Food City 300]] ([[Bristol Motor Speedway|Bristol]])
+| First_Busch_Win    = [[1998 NASCAR Busch Series|1998]] [[My Bariatric Solutions 300|Coca-Cola 300]] ([[Texas Motor Speedway|Texas]])
+| Last_Busch_Win     = [[2016 NASCAR Xfinity Series|2016]] [[2016 ToyotaCare 250|ToyotaCare 250]] ([[Richmond International Raceway|Richmond]])
+| Busch_Wins         = 24
+| Busch_Top_Tens     = 96
+| Busch_Poles        = 10
+| updated            = September 20, 2024
+| module1            = {{Infobox person|embed=yes
+| signature          = Dale jr sig.png
+| signature_alt      = Dale Jr signature
+}}}}
+
+===== [nascar driver] Marty Robbins =====
+{{Infobox NASCAR driver|embed=yez
+| Total_Cup_Races    = 35
+| Years_In_Cup       = 13
+| Best_Cup_Pos       = 48th ([[1974 NASCAR Winston Cup Series|1974]])
+| First_Cup_Race     = [[1966 NASCAR Grand National Series|1966]] [[1966 Nashville 400]] ([[Nashville Fairgrounds Speedway|Nashville]])
+| Last_Cup_Race      = [[1982 NASCAR Winston Cup Series|1982]] [[AdvoCare 500 (Atlanta)|Atlanta Journal 500]] ([[Atlanta Motor Speedway|Atlanta]])
+| Cup_Wins           = 0
+| Cup_Top_Tens       = 6
+| Cup_Poles          = 0
+| Total_GNEast_Races = 1
+| Years_In_GNEast    = 1
+| Best_GNEast_Pos    = 
+| First_GNEast_Race  = [[1972 NASCAR Grand National East Series|1972]] Gamecock 200 ([[Columbia Speedway|Columbia]])
+| Last_GNEast_Race   = 
+| GNEast_Wins        = 0
+| GNEast_Top_Tens    = 1
+| GNEast_Poles       = 0
+| Total_ARCA_Races   = 1
+| Years_In_ARCA      = 1
+| ARCA_Car_Team      = 
+| Best_ARCA_Pos      = 72nd ([[ARCA Menards Series|1981]])
+| First_ARCA_Race    = [[ARCA Menards Series|1981]] [[General Tire 200 (Talladega)|Talladega ARCA 200]] ([[Talladega Superspeedway|Talladega]])
+| Last_ARCA_Race     = 
+| First_ARCA_Win     =
+| Last_ARCA_Win      = 
+| ARCA_Wins          = 0
+| ARCA_Top_Tens      = 0
+| ARCA_Poles         = 0
+|updated            = September 6, 2026
+}}
+
+===== [nascar driver] Bobby Labonte =====
+{{Infobox NASCAR driver
+| name              = Bobby Labonte 
+| image             = Bobby Labonte at Talladega 01 (cropped).JPG
+| caption           = Labonte at [[Talladega Superspeedway]] in 2015
+| birth_name        = Robert Allen Labonte
+| birth_date        = {{birth date and age|1964|05|08}} 
+| birth_place       = [[Corpus Christi, Texas]], U.S.
+| Achievements      = [[2000 NASCAR Winston Cup Series|2000 Winston Cup Series]] Champion&lt;br&gt;[[1991 NASCAR Busch Series|1991 Busch Series]] Champion&lt;br&gt;[[IROC XXV|2001]] [[International Race of Champions|IROC]] Champion&lt;br&gt;[[1995 NASCAR Winston Cup Series|1995]] [[Coca-Cola 600]] Winner&lt;br&gt;[[2000 NASCAR Winston Cup Series|2000]] [[Brickyard 400]] Winner&lt;br&gt; [[2000 NASCAR Winston Cup Series|2000]] [[Southern 500 (1950-2004)|Southern 500]] Winner&lt;br&gt;Oldest winner of a [[Superstar Racing Experience]] race (58 years, 2 months, and 1 day old at [[Nashville Fairgrounds Speedway]] in [[2022 SRX Series|2022]])
+| awards            = [[NASCAR Hall of Fame]] (2020)&lt;br /&gt;Named one of [[NASCAR's 75 Greatest Drivers]] (2023)
+| Total_Cup_Races   = 729
+| Years_In_Cup      = 25
+| Best_Cup_Pos      = 1st ([[2000 NASCAR Winston Cup Series|2000]]) 
+| First_Cup_Race    = [[1991 NASCAR Winston Cup Series|1991]] [[AAA 400 Drive for Autism|Budweiser 500]] ([[Dover International Speedway|Dover]]) 
+| Last_Cup_Race     = [[2016 Hellmann's 500]] ([[Talladega Superspeedway|Talladega]])
+| First_Cup_Win     = [[1995 NASCAR Winston Cup Series|1995]] [[Coca-Cola 600]] ([[Lowe's Motor Speedway|Charlotte]]) 
+| Last_Cup_Win      = [[2003 Ford 400]] ([[Homestead–Miami Speedway|Homestead]])
+| Cup_Wins          = 21
+| Cup_Top_Tens      = 203
+| Cup_Poles         = 26
+| Total_Busch_Races = 203
+| Years_In_Busch    = 20
+| Best_Busch_Pos    = 1st ([[1991 NASCAR Busch Series|1991]])
+| First_Busch_Race  = [[1982 NASCAR Budweiser Late Model Sportsman Series|1982]] [[Autumn 150]] ([[Martinsville Speedway|Martinsville]]) 
+| Last_Busch_Race   = [[2016 NASCAR Xfinity Series|2016]] [[PowerShares QQQ 300]] ([[Daytona International Speedway|Daytona]])
+| First_Busch_Win   = [[1991 NASCAR Busch Series|1991]] [[Budweiser 250]] ([[Bristol Motor Speedway|Bristol]]) 
+| Last_Busch_Win    = [[2007 NASCAR Busch Series|2007]] [[Aaron's 312]] ([[Talladega Superspeedway|Talladega]]) 
+| Busch_Wins        = 10
+| Busch_Top_Tens    = 100 
+| Busch_Poles       = 10 
+| Total_Truck_Races = 10
+| Years_In_Truck    = 5
+| Best_Truck_Pos    = 36th ([[2005 NASCAR Craftsman Truck Series|2005]])
+| First_Truck_Race  = [[1996 NASCAR Craftsman Truck Series|1996]] [[GM Goodwrench/AC Delco 300]] ([[Phoenix International Speedway|Phoenix]])
+| Last_Truck_Race   = [[2007 NASCAR Craftsman Truck Series|2007]] [[Michigan 200]] ([[Michigan International Speedway|Michigan]])
+| First_Truck_Win   = [[2005 NASCAR Craftsman Truck Series|2005]] [[Kroger 250]] ([[Martinsville Speedway|Martinsville]])
+| Truck_Wins        = 1
+| Truck_Top_Tens    = 5
+| Truck_Poles       = 0
+| updated           = February 3, 2022
+}}
+
+===== [racing driver] Tazio Nuvolari =====
+{{Infobox racing driver
+| name        = Tazio Nuvolari
+| image       = TazioNuvolari.jpg
+| image_size  = 
+| caption     = Nuvolari at the Belgrade Grand Prix in 1939
+| nationality = {{flagicon|ITA|1861}} Italian
+| birth_name  = Tazio Giorgio Nuvolari
+| birth_date  = {{Birth date|1892|11|16|df=y}}
+| birth_place = [[Castel d'Ario]], Kingdom of Italy
+| death_date  = {{Death date and age|1953|08|11|1892|11|16|df=y}}
+| death_place = [[Mantua]], Italy
+| titles      = [[Association Internationale des Automobile Clubs Reconnus|AIACR]] [[AIACR European Championship|European Drivers' Championship]] ([[1932 Grand Prix season|1932]]) &lt;br /&gt; '''Major victories''' &lt;br /&gt; [[Monaco Grand Prix]] ([[1932 Monaco Grand Prix|1932]]) &lt;br /&gt; [[24 Hours of Le Mans]] ([[1933 24 Hours of Le Mans|1933]]) &lt;br /&gt; [[Vanderbilt Cup]] ([[1936 Vanderbilt Cup|1936]])
+| module1     =
+{{Infobox racing driver
+  | embed         = yes
+  | last_series   = [[European Championship (auto racing)|European Championship]] career
+  | years_active  = [[1931 Grand Prix season|1931]]–[[1932 Grand Prix season|1932]], [[1935 Grand Prix season|1935]]–[[1939 Grand Prix season|1939]]
+  | teams         = [[Alfa Romeo in motorsport|Alfa Romeo]], [[Scuderia Ferrari|Ferrari]], [[Auto Union]]
+  | championships = 1 &lt;small&gt;([[1932 Grand Prix season|1932]])&lt;/small&gt;
+  | starts        = 26
+  | wins          = 4
+  | poles         = 0
+  | podiums       = 7
+  | fastest_laps  = 4
+  | module2       =
+{{Infobox Champ Car driver
+  | embed             = yes
+  | Total_Champ_Races = 2
+  | Years_In_Champ    = 2
+  | Best_Champ_Pos    = 5th ([[1936 AAA Championship Car season|1936]])
+  | First_Champ_Race  = [[1936 AAA Championship Car season|1936]] [[1936 Vanderbilt Cup|Vanderbilt Cup]] ([[Roosevelt Raceway|Westbury]])
+  | Last_Champ_Race   = [[1937 AAA Championship Car season|1937]] [[1937 Vanderbilt Cup|Vanderbilt Cup]] ([[Roosevelt Raceway|Westbury]])
+  | First_Champ_Win   = [[1936 AAA Championship Car season|1936]] [[1936 Vanderbilt Cup|Vanderbilt Cup]] ([[Roosevelt Raceway|Westbury]])
+  | Champ_Wins        = 1
+  | Champ_Podiums     = 1
+  | Champ_Poles       = 0
+  | module3           =
+{{Infobox Le Mans driver
+  | embed       = yes
+  | years       = {{24hLM|1933}}
+  | teams       = ''[[Raymond Sommer|Sommer]]''
+  | best_finish = 1st &lt;small&gt;({{24hLM|1933}})&lt;/small&gt;
+  | class_wins  = 1 &lt;small&gt;({{24hLM|1933}})&lt;/small&gt;
+}}
+}}
+}}
+}}
+
+===== [racing driver] Arie Luyendyk =====
+{{Infobox racing driver
+| name              = Arie Luyendyk
+| image             = Arie Luyendyk 2010 Indy 500 Practice Day 7.JPG
+| caption           = Luyendyk in 2010
+| birth_name        = Arie Luijendijk
+| birth_date        = {{birth date and age|1953|09|21|df=y}}
+| birth_place       = [[Sommelsdijk]], [[South Holland]], Netherlands
+| death_date        = 
+| death_place       = 
+| titles            = '''Major victories''' &lt;br/&gt; [[12 Hours of Sebring]] ([[1989 12 Hours of Sebring|1989]]) &lt;br/&gt; [[Indianapolis 500]] ([[1990 Indianapolis 500|1990]], [[1997 Indianapolis 500|1997]]) &lt;br/&gt; [[24 Hours of Daytona]] ([[1998 24 Hours of Daytona|1998]])
+| awards            = [[Indycar Series]] Most Popular Driver
+| award_years = 1996–97, 1998
+| module1 = 
+  {{Infobox Champ Car driver|embed=yes
+  | Total_Champ_Races = 141
+  | Years_In_Champ    = 13
+  | Best_Champ_Pos    = 6th ([[1991 CART season|1991]])
+  | First_Champ_Race  = [[1984 CART season|1984]] [[Grand Prix of Road America|Provimi Veal 200]] ([[Road America]])
+  | Last_Champ_Race   = [[1997 CART season|1997]] [[1997 Marlboro 500|Marlboro 500]] ([[California Speedway|Fontana]])
+  | First_Champ_Win   = [[1990 CART season|1990]] [[1990 Indianapolis 500|Indianapolis 500]] ([[Indianapolis Motor Speedway|Indianapolis]])
+  | Last_Champ_Win    = [[1991 CART season|1991]] [[Bosch Spark Plug Grand Prix]] ([[Nazareth Speedway|Nazareth]])
+  | Champ_Wins        = 3
+  | Champ_Podiums     = 13
+  | Champ_Poles       = 1
+| module2 = 
+  {{Infobox Champ Car driver|embed=yes
+  | Total_IRL_Races   = 28
+  | Years_In_IRL      = 7
+  | Best_IRL_Pos      = 6th ([[1996–97 Indy Racing League|1997]])
+  | First_IRL_Race    = [[1996 Indy Racing League|1996]] [[Walt Disney World Speedway|Indy 200 at Walt Disney World]] ([[Walt Disney World Speedway|Orlando]])
+  | Last_IRL_Race     = [[2002 Indy Racing League|2002]] [[2002 Michigan Indy 400|Michigan Indy 400]] ([[Michigan International Speedway|Michigan]])
+  | First_IRL_Win     = [[1996 Indy Racing League|1996]] [[1996 Dura Lube 200|Dura Lube 200]] ([[Phoenix International Raceway|Phoenix]])
+  | Last_IRL_Win      = [[1998 Indy Racing League|1998]] [[1998 Las Vegas 500K|Las Vegas 500K]] ([[Las Vegas Motor Speedway|Las Vegas]])
+  | IRL_Wins          = 4
+  | IRL_Podiums       = 5
+  | IRL_Poles         = 4
+| module3 = 
+  {{Infobox Le Mans driver|embed=yes
+  | years       = 1989
+  | teams       = [[Nissan Motorsport|Nissan]]
+  | best_finish = DNF ({{24hLM|1989}})
+  | class_wins  = 0
+}}}}}}|relatives=[[Arie Luyendyk Jr.]] (son)}}
+
+===== [racing driver] Frankie Muniz =====
+{{Infobox racing driver|embed=yes
+| last_series            = [[Atlantic Championship]]
+| years_active           = [[2007 Atlantic Championship|2007]]–[[2009 Atlantic Championship|2009]]
+| teams                  = [[Jensen MotorSport]], [[Pacific Coast Motorsports]], [[Team Stargate Worlds]]
+| starts                 = 32
+| wins                   = 0
+| poles                  = 0
+| fastest_laps           = 1
+| best_finish            = 9th
+| year                   = [[2009 Atlantic Championship|2009]]
+| prev_series            = &lt;!-- previous series with line breaks --&gt;
+| prev_series_years      =
+| titles                 = [[Toyota Pro/Celebrity Race]] Celebrity Winner
+| title_years            = 2005
+| awards                 =
+| award_years            =
+}}
+
+===== [racing driver] Adam Małysz =====
+{{Infobox racing driver
+| name = Adam Małysz
+| image = 
+| caption = 
+| nationality = 
+| first_year = [[2012 Dakar Rally|2012]]
+| car_number = 
+| starts = 
+| championships = [[Dakar Rally]]
+| best_finish = 13
+| year = [[2014 Dakar Rally|2014]]
+| last_finish = 
+| updated = 21 January 2014
+}}
+
+===== [racing driver] Petter Solberg =====
+{{Infobox racing driver
+| name = Petter Solberg
+| image= EsteringRX-GermanyRX 2017 Petter Solberg.jpg
+| caption = Solberg at the [[2017 World RX of Germany]]
+| nationality = {{flagicon|NOR}} Norwegian
+| birth_date = {{birth date and age|1974|11|18|df=y}}
+| birth_place = [[Spydeberg]], Norway
+| relatives        = [[Henning Solberg]] (brother)&lt;br /&gt;[[Oliver Solberg]] (son)
+|| Active years        = 
+| current_team      = [[PSRX Volkswagen Sweden]]
+| car_number        = 11
+| former_teams      = SDRX, PSRX
+| starts            = 61
+| wins              = 10
+| podiums           = 30
+| spotter = Pernilla Solberg
+| poles             = 
+| fastest_laps      = 
+|last_finish       = 3rd
+| championships = 
+2 ({{WRX|2014}} &amp;ndash;{{WRX|2015}})
+
+| prev_series       =
+| prev_series_years =
+| titles            = 
+| title_years       = 
+| awards            = 
+| award_years       =
+| module1  =
+{{Infobox racing driver|embed=yes
+| former_teams      = PSRX
+| last_series       = [[FIA European Rallycross Championship|FIA ERX Supercar Championship]]
+| first_year        = 
+| car_number        = 11
+| best_finish       = 8th
+|year =  [[2013 European Rallycross Championship season|2013]] 
+| starts            = 9
+| wins              = 0
+| podiums           = 2
+| module2  =
+  {{Infobox WRC driver|subbox=yes
+  | years = [[1998 World Rally Championship|1998]]&amp;ndash;[[2012 World Rally Championship|2012]], [[2018 World Rally Championship|2018]]–[[2019 World Rally Championship|2019]]
+| codriver = {{flagicon|Norway}} Egil Solstad&lt;br /&gt;{{flagicon|Norway}} [[Cato Menkerud]]&lt;br /&gt;{{flagicon|UK}} [[Phil Mills]]&lt;br /&gt;{{flagicon|UK}} [[Fred Gallagher (co-driver)|Fred Gallagher]]&lt;br /&gt;{{flagicon|UK}} [[Chris Patterson (co-driver)|Chris Patterson]]&lt;br /&gt;{{flagicon|Norway}} Veronica Gulbæk Engan
+| teams =  [[Ford World Rally Team|Ford]], [[Subaru World Rally Team|Subaru]], [[Petter Solberg World Rally Team]], [[Volkswagen Motorsport|Volkswagen]]
+| races = 190
+| championships = 1 ([[2003 World Rally Championship|2003]])
+| wins = 13
+| podiums = 52
+| stagewins = 460
+| points = 853
+| first_race = 1998 [[Swedish Rally]]
+| first_win = 2002 [[Rally GB]]
+| last_win = 2005 [[Rally GB]]
+| last_race = 2019 [[Wales Rally GB]]
+  }}
+}}
+|years_active={{WRX|2014}} – {{WRX|2018}}
+}}
+
+===== [rally driver] Tom Gold (rally driver) =====
+{{Infobox rally driver
+| name = Tom Gold
+| image = 
+| caption = 
+| birth_name = Thomas Anderson Gold
+| birth_date = 1932
+| birth_place = Stoke-on-Trent 
+| death_date = 2014
+| death_place = Rhosneigr North Wales
+| nationality = [[England|English]]
+}}
+
+===== [rally driver] Ernest Hiskins =====
+{{Infobox rally driver
+| name = Ernest Hiskins
+| image = 
+| caption = 
+| birth_name = Ernest Norman Hiskins
+| birth_date = {{birth date|1918|5|3|df=yes}}
+| birth_place = [[Ross, Herefordshire]]
+| death_date = September 1972 (aged 54)
+| death_place = [[Lichfield]]
+| nationality = [[England|English]]
+}}
+
+===== [rally driver] Svatopluk Kvaizar =====
+{{Infobox rally driver
+|name=Svatopluk Kvaizar
+|image=Kvaizar Janecek Skoda 1986 Sanremo.jpg
+|caption=Kvaizar on Škoda 130 LR at the 1986 Rallye Sanremo
+|birth_date={{birth date|1947|8|21|df=y}}
+|birth_place=
+|death_date={{death date and age|2025|7|18|1947|8|21|df=y}}
+|death_place=
+|nationality={{Flag|Czech}}
+|current_series=MČSSR
+|years_active=1975–2025
+|current_team=
+|former_teams=[[Škoda Motorsport]]
+|wins=9
+|podiums=24
+|medals={{Medal|3|1976|PMaP}}
+{{Medal|1|1979|MČSSR}}
+{{Medal|3|1980|PMaP}}
+{{Medal|1|1983|PMaP}}
+{{Medal|1|1985|PMaP}}
+{{Medal|1|1985|MČSSR}}
+}}
+
+===== [speedway rider] Kauko Nieminen =====
+{{Infobox speedway rider
+| name          =
+| image         = KaukoNieminen5.jpg
+| nationality   = Finnish
+| birth_date    = {{birth date and age|1979|8|29|df=y}}
+| birth_place   = [[Seinäjoki]], Finland
+| nickname      = Kake, Nemo, Flying Finn 
+
+| career1       = '''Great Britain'''
+| years2        = 2002-05, 2007-08
+| career2       = [[Workington Comets]]
+| years3        = 2006, 2015
+| career3       = [[Glasgow Tigers (speedway)|Glasgow Tigers]]
+| years4        = 2008–2011
+| career4       = [[Lakeside Hammers]] 
+| years5        = 2011–2013
+| career5       = [[Leicester Lions]]
+| years6        = 2013
+| career6       = [[Belle Vue Aces]]
+| career7       = '''Poland'''
+| years8        = 2007 
+| career8       = [[TŻ Lublin|Lublin]] 
+| years9        = 2008-2012
+| career9       = [[PSŻ Poznań|Poznań]]
+| career10      = '''Sweden'''
+| years11        = 2000
+| career11       = [[Smederna]]
+| years12        = 2001-2003
+| career12       = [[Örnarna]]
+| years13        = 2005, 2008, 2015
+| career13       = [[Griparna]]
+| years14        = 2014-2016
+| career14      = [[Rospiggarna]]
+
+| indivyear1    = 1998, 1999, 2000,2016
+| indivhonour1  = Finnish under-21 champion
+| indivyear2    = 2009, 2010, 2011
+| indivhonour2  = [[Finnish Individual Speedway Championship|Finnish champion]]
+| teamyear1     = 2004, 2008
+| teamhonour1   = [[Premier League Four-Team Championship|Premier League Fours Champion]]
+| teamyear2     = 2008
+| teamhonour2   = [[Premier League Pairs Championship|Premier League Pairs Champion]]
+| teamyear3     = 2000
+| teamhonour3   = Finland 1st Division Champion
+| teamyear4 =   [[2001 Swedish speedway season|2001]], [[2004 Swedish speedway season|2004]]
+| teamhonour4 = [[Swedish Speedway Team Championship|Allsvenskan Winner]]
+| teamyear5     = 2009
+| teamhonour5   = [[Elite League KO Cup]]
+}}
+
+===== [speedway rider] Tony Rickardsson =====
+{{Infobox Speedway rider
+| image = File:Tony Rickardsson in Jan 2014.jpg
+| caption = At the Swedish Sports Gala in 2014
+| name = Tony Rickardsson
+| nationality = Swedish
+| birth_date = {{Birth date and age|1970|8|17|df=y}}
+| birth_place = [[Avesta Municipality|Avesta]], [[Sweden]]
+
+| career1 = '''Sweden'''
+| career2 = [[Gamarna]]
+| years2 = 1987
+| career3 = [[Getingarna|Stockholm United]]
+| years3 = 1988–1990
+| career4 = [[Getingarna]]
+| years4 = 1991
+| career5 = [[Rospiggarna]] 
+| years5 = 1992–1993
+| career6 = [[Valsarna]]
+| years6 = 1994–1998 
+| career7 = [[Masarna]]
+| years7 = 1999–2005
+| career8 = '''Great Britain'''
+| career9 = [[Ipswich Witches]]
+| years9 = 1991–1994, 1997–1998 
+| career10 = [[King's Lynn Stars]]
+| years10 = 1999
+| career11 = [[Poole Pirates]]
+| years11 = 2001–2004
+| career12 = [[Arena Essex Hammers]]
+| years12 = 2005
+| career13 = [[Oxford Cheetahs]]
+| years13 = 2006
+| career14 = '''Poland'''
+| career15 = [[Polonia Bydgoszcz]]
+| years15 = 1991
+| career16 = [[TZ Ostrovia Ostrów Wielkopolski|Ostrów Wielkopolski]]
+| years16 = 1992
+| career17 = [[Falubaz Zielona Góra|Zielona Góra]]
+| years17 = 1993
+| career18 = [[Unia Tarnów (motorcycle speedway)|Unia Tarnów]]
+| years18 = 1994–1996, 2004–2006
+| career19 = [[Stal Gorzów Wielkopolski]]
+| years19 = 1997–1998
+| career20 = [[Wybrzeże Gdańsk]]
+| years20 = 1999–2000
+| career21 = [[KS Toruń]]
+| years21 = 2001–2003
+
+| SGP starts = 84
+| SGP finals = 52
+| SGP win    = 20
+
+| indivhonour1 = [[Speedway Swedish Individual Championship|Swedish Champion]]
+| indivyear1 = 1990, 1994, 1997, 1998, 1999, 2001, 2004
+| indivyear2 = 
+| indivhonour2 = 
+| indivyear3 = 
+| indivhonour3 =
+| teamhonour1 = [[Elitserien (speedway)|Elitserien Champion]]
+| teamyear1 = 1989, 1998, 2000
+| teamyear2 = 1987
+| teamhonour2 = [[Allsvenskan (speedway)|Allsvenskan Div 1 Champion]] 
+}}
+
+===== [speedway rider] Roger Frogley =====
+{{Infobox speedway rider
+| name = Roger Frogley
+| image = Roger frogley.jpg
+| nationality = British (English)
+| birth_date = 13 July 1908
+| birth_place = [[Ware, Hertfordshire]], England
+| death_date = 30 June 1974 (aged 65)
+| death_place = Essex, England
+| career1 = [[Crystal Palace Glaziers]]
+| years1 = 1930-1932
+| career2 = [[New Cross Rangers|New Cross Lambs]]
+| years2 = 1935
+| indivhonour1 = [[Star Riders' Championship|Star Riders' Champion]]
+| indivyear1 = 1929
+| teamhonour1 = [[London Cup (speedway)|London Cup]] winner
+| teamyear1 = 1931
+}}
+
+===== [speedway rider] Craig Cook =====
+{{Infobox speedway rider
+| name = Craig Cook
+| image =
+| nationality = British (English)
+| birth_date  = {{Birth date  and age|1987|5|21|df=y}}
+| birth_place =  [[Whitehaven]], England
+| nickname =  Cookie
+
+| career1 = [[Scunthorpe Saints|Scunthorpe]]
+| years1 = 2008
+| career2 = [[Buxton Hitmen|Buxton]]
+| years2 = 2009–2010
+| career3 = [[Workington Comets|Workington]]
+| years3 = 2009–2010, 2017, 2024
+| career4 = [[Peterborough Panthers|Peterborough]]
+| years4 = 2010, 2016
+| career5 = [[Edinburgh Monarchs|Edinburgh]]
+| years5 = 2011–2015, 2023
+| career6 = [[Belle Vue Aces|Belle Vue]]
+| years6 = 2011, 2013–2018
+| career7 = [[Glasgow Tigers (speedway)|Glasgow]]
+| years7 = 2018–2022
+| career8 = [[King's Lynn Stars|King's Lynn]]
+| years8 = 2019–2021
+| career9 = [[Sheffield Tigers|Sheffield]]
+| years9 = 2022
+| career10 = [[Leicester Lions|Leicester]]
+| years10 = 2023–2024
+| career11 = [[Berwick Bandits|Berwick]]
+| years11 = 2025
+| career12 = [[Oxford Spires|Oxford]]
+| years12 = 2025
+
+| SGP No     =
+| SGP starts =13
+| SGP podium =0 (0-0-0)
+| SGP finals =0
+| SGP win    =0
+
+| indivhonour1 = [[Speedway Conference League Riders Championship|National League Riders Champion]]
+| indivyear1 = 2009
+| indivhonour2 = [[Premier League Riders' Championship|Premier League Riders Champion]]
+| indivyear2 = 2012
+| indivhonour3 = [[Scottish Open (speedway)|Scottish Open Champion]]
+| indivyear3 = 2013
+| indivhonour4 = [[British Speedway Championship|British Champion]]
+| indivyear4 = 2017
+| indivhonour5 = [[SGB Championship Riders' Individual Championship|Riders Champion]]
+| indivyear5 = 2018
+| teamhonour1 = Young Shield Winner
+| teamyear1 = 2009
+| teamyear2 = 2019
+| teamhonour2 = [[SGB Championship Pairs Championship|SGB Championship Pairs]]
+| teamhonour3 = [[Premier League Four-Team Championship|Premier League Fours]]
+| teamyear3 = 2013, 2015
+}}
+
+===== [speedway rider] Bruce Penhall =====
+{{Infobox speedway rider
+| name = Bruce Penhall
+| image = Bruce Penhall, US speedway rider 1981.png
+| caption = Bruce Penhall in 1981
+| birth_date = {{Birth date and age|1957|5|10}}
+| birth_place = [[Balboa Island, Newport Beach, California|Balboa Island]], California, U.S.
+| years1 = 1978-1982
+| career1 = [[Cradley Heath Heathens]]
+| indivhonour1 = [[Speedway World Championship|World Champion]]
+| indivyear1 = [[1981 Individual Speedway World Championship|1981]], [[1982 Individual Speedway World Championship|1982]]
+| indivhonour2 = [[AMA National Speedway Championship|North American Champion]]
+| indivyear2 = 1980, 1981
+| indivhonour3 = [[Intercontinental Final|Intercontinental Champion]]
+| indivyear3 = [[1981 Intercontinental Final|1981]]
+| indivhonour4 = [[Skol]] Masters
+| indivyear4 = 1978
+| indivhonour5 = The Laurels
+| indivyear5 = 1979
+| indivhonour6 = Yorkshire TV Trophy
+| indivyear6 = 1981, 1982
+| indivhonour7 = Blue Riband
+| indivyear7 = 1981
+| indivhonour8 = Brandonapolis
+| indivyear8 = 1981
+| teamhonour1 = [[Speedway World Pairs Championship|World Pairs Champion]]
+| teamyear1 = [[1981 Speedway World Pairs Championship|1981]]
+| teamhonour2 = [[Speedway World Team Cup|World Team Cup winner]]
+| teamyear2 = [[1982 Speedway World Team Cup|1982]]
+| teamhonour3 = [[Speedway British League|British League Champion]]
+| teamyear3 = [[1981 British Speedway League|1981]]
+| teamhonour4 = [[British League Knockout Cup]]
+| teamyear4 = 1979, 1980, 1982
+| teamhonour5 = British League Cup
+| teamyear5 = 1982
+| teamhonour6 = [[British League Pairs Championship|British League Pairs Champion]]
+| teamyear6 = 1978
+| teamhonour7 = Midland Cup
+| teamyear7 = 1980
+}}
+
+===== [wrc driver] Possum Bourne =====
+{{Infobox WRC driver
+|name=Possum Bourne
+|image= Possum Bourne.jpg
+|nationality= {{flagicon|NZL}} New Zealander
+|birth_date= {{birth date|1956|04|13|df=y}}
+|birth_place= [[Pukekohe]], New Zealand
+|death_date= {{death date and age|2003|04|30|1956|04|13|df=y}}
+|death_place= [[Dunedin]], New Zealand
+|years= [[1983 World Rally Championship|1983]]–[[2003 World Rally Championship|2003]]
+|codriver =  {{flagicon|NZL}} Ken Fricker&lt;br /&gt;{{flagicon|NZL}} Michael Eggleton&lt;br /&gt;{{flagicon|NZL}} Mike Fletcher&lt;br /&gt;{{flagicon|NZL}} Jim Scott&lt;br /&gt;{{flagicon|NZL}} Kevin Lancaster&lt;br /&gt;{{flagicon|NZL}} [[Rodger Freeth]]&lt;br /&gt;{{flagicon|NZL}} Tony Sircombe&lt;br /&gt;{{flagicon|NZL}} Craig Vincent&lt;br /&gt;{{flagicon|Australia}} Mark Stacey
+|races=42
+|championships= 0
+|wins= 0
+|podiums= 1
+|first_race= 1983 [[Rally New Zealand]]
+|last_race= [[2003 Rally New Zealand]]
+|stagewins= 11
+}}
+
+===== [wrc driver] Henri Toivonen =====
+{{Infobox WRC driver
+| name = Henri Toivonen
+| full_name = Henri Pauli Toivonen
+| image = Henri Toivonen.jpg
+| caption = Henri Toivonen during his [[Martini Racing]] era
+| birth_date = {{birth date|1956|08|25|df=y}}
+| birth_place = [[Jyväskylä]], Finland
+| death_date = {{death date and age|1986|05|02|1956|08|25|df=y}}
+| death_place = [[Corsica]], France
+| nationality = [[Finland|Finnish]]
+| years = [[1975 World Rally Championship season|1975]]–[[1986 World Rally Championship season|1986]]
+| codriver = {{flagicon|Finland}} Antero Lindqvist&lt;br /&gt;{{flagicon|Finland}} Juha Paajanen&lt;br /&gt;{{flagicon|Finland}} Juhani Korhonen&lt;br /&gt;{{flagicon|UK}} Phil Boland&lt;br /&gt;{{flagicon|UK}} Paul White&lt;br /&gt;{{flagicon|UK}} [[Fred Gallagher (co-driver)|Fred Gallagher]]&lt;br /&gt;{{flagicon|Finland}} Juha Piironen&lt;br /&gt;{{flagicon|UK}} Neil Wilson&lt;br /&gt;{{flagicon|USA}} [[Sergio Cresto]]
+| teams =  [[Talbot]], [[Opel]], [[Porsche]], [[Lancia]]
+| races = 40
+| championships = 0
+| wins = 3
+| podiums = 9
+| stagewins = 185
+| points = 194
+| first_race = [[1975 World Rally Championship season|1975]] [[1000 Lakes Rally]]
+| first_win = [[1980 World Rally Championship season|1980]] [[Lombard RAC Rally]]
+| last_win = [[1986 World Rally Championship season|1986]] [[Monte Carlo Rally]]
+| last_race = [[1986 World Rally Championship season|1986]] [[Tour de Corse]]
+}}
+
+===== [wrc driver] Richard Burns =====
+{{Infobox WRC driver
+| name = Richard Burns
+| image= Richard Burns.jpg
+| caption = Burns in 2003, with [[Peugeot Sport]]
+| full_name = Richard Alexander Burns
+| birth_date = {{birth date|1971|01|17|df=y}}
+| birth_place = [[Reading, Berkshire|Reading]], [[Berkshire]], England
+| death_date = {{death date and age|2005|11|25|1971|01|17|df=y}}
+| death_place = [[St John's Wood]], [[London]], England
+| nationality = {{flagicon|GBR}} British
+| years = 1990–2003
+| codriver = {{flagicon|UK}} Wayne Goble&lt;br /&gt;{{flagicon|UK}} [[Robert Reid (co-driver)|Robert Reid]]
+| teams =  [[Subaru]], [[Mitsubishi Motors|Mitsubishi]], [[Peugeot]]
+| races = 104
+| championships = 1 ([[2001 World Rally Championship season|2001]])
+| wins = 10
+| podiums = 34
+| stagewins = 277
+| points = 351
+| first_race = 1990 [[RAC Rally]]
+| first_win = 1998 [[Safari Rally]]
+| last_win = 2001 [[Rally New Zealand]]
+| last_race = 2003 [[Rally Catalunya]]
+}}
+
+===== [wrc driver] Carlos Sainz Sr. =====
+{{Infobox WRC driver|embed=yes
+ | years = {{WRC|1987}}–{{WRC|2005}}
+ | codriver = {{flagicon|ESP}} Antonio Boto&lt;br /&gt;{{flagicon|ESP}} [[Luis Moya]]&lt;br /&gt;{{flagicon|ESP}} [[Marc Martí|Marc Marti]]
+ | teams = [[BP Ford World Rally Team|Ford]], [[Toyota Team Europe|Toyota]], [[Lancia]], [[Subaru World Rally Team|Subaru]], [[Citroën Total World Rally Team|Citroën]]
+ | races = 196
+ | championships = 2 ({{WRC|1990}}, {{WRC|1992}})
+ | wins = 26
+ | podiums = 97
+ | stagewins = 757&lt;ref name=&quot;Sainz stage wins&quot;&gt;According to World Rally Archive, Sainz won 756 stages. Sainz also won one special stage in Safari Rally 1991 (source: Auto Hebdo), that is not yet taken into account by www.juwra.com.&lt;/ref&gt;
+ | points = 1,242
+ | first_race = 1987 [[Rally Portugal]]
+ | first_win =  1990 [[Acropolis Rally]]
+ | last_win =   2004  [[Rally Argentina]]
+ | last_race =  2005 [[Acropolis Rally]]
+ }}
+
+===== [wrc driver] Juha Kankkunen =====
+{{Infobox WRC driver
+| name = Juha Kankkunen
+| image= Juha Kankkunen 2006.jpg
+| caption = Kankkunen in Helsinki in 2006
+| birth_date = {{birth date and age|1959|04|02|df=y}}
+| birth_place = [[Laukaa]], Finland
+| full_name = Juha Matti Pellervo Kankkunen
+| nationality = {{flagicon|Finland}} [[Finland|Finnish]]
+| years = [[1979 World Rally Championship season|1979]], [[1982 World Rally Championship season|1982]]–[[2002 World Rally Championship season|2002]], [[2010 World Rally Championship season|2010]]
+| codriver = {{flagicon|Finland}} Timo Hantunen&lt;br /&gt;{{flagicon|Finland}} Rolf Mesterton&lt;br /&gt;{{flagicon|Finland}} Staffan Pettersson&lt;br /&gt;{{flagicon|UK}} Dave Whittock&lt;br /&gt;{{flagicon|Finland}} Juha Piironen&lt;br /&gt;{{flagicon|UK}} [[Fred Gallagher (co-driver)|Fred Gallagher]]&lt;br /&gt;{{flagicon|UK}} [[Nicky Grist]]&lt;br /&gt;{{flagicon|France}} [[Denis Giraudet]]&lt;br /&gt;{{flagicon|Finland}} Juha Repo
+| teams = [[Toyota Team Europe|Toyota]], [[Peugeot Sport|Peugeot]], [[Lancia]], [[BP Ford World Rally Team|Ford]], [[Subaru World Rally Team|Subaru]], [[Hyundai World Rally Team|Hyundai]]
+| races = 162
+| championships = 4 ([[1986 World Rally Championship season|1986]], [[1987 World Rally Championship season|1987]], [[1991 World Rally Championship season|1991]], [[1993 World Rally Championship season|1993]])
+| wins = 23
+| podiums = 75
+| stagewins = 700&lt;ref name=&quot;Kankkunen stage wins&quot;&gt;Kankkunen also won 5 special stages in annulled Sanremo 1986 (source: Auto Hebdo).&lt;/ref&gt;
+| points = 1140
+| first_race = 1979 [[1000 Lakes Rally]]
+| first_win = 1985 [[Safari Rally]]
+| last_win = 1999 [[Rally Finland]]
+| last_race = [[2010 Rally Finland]]
+}}
+

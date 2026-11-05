@@ -1,9 +1,17 @@
 """
 Spark HTML extractor: data/html/*.html -> ONE wide JSONL (same format as extractor.py produces locally).
 
-    spark-submit spark_jobs/html_extractor.py --input data/html --out data/spark/drivers
-    spark-submit spark_jobs/html_extractor.py --input data/html --out data/spark/drivers \
-                 --single-file data/drivers.jsonl --stats data/spark/extract_stats.json
+    spark-submit spark_jobs/html_extractor.py
+    python spark_jobs/html_extractor.py                      (plain python = local[*] Spark)
+
+Paths are fixed (constants below): data/html -> data/spark/drivers -> data/drivers.jsonl, statistics in
+data/spark/extract_stats.json.
+
+The default is pure Spark + Hadoop: files are read by the Spark `binaryFile` source and the output is written
+by `df.write.json`. The only options are two EXPLICIT fallbacks for environments where the Hadoop file system
+does not work (typically Windows without winutils.exe / hadoop.dll); each of them prints a WARNING:
+    --reader paths     the Python workers read the files themselves (no Hadoop; local/shared folders only)
+    --writer python    the driver writes the output file itself (no Hadoop; not suitable for big outputs)
 
 The regexes are NOT re-implemented: Spark only distributes the work and calls extractor.extract_page()
 on every file (each partition = a group of files processed by one task).
@@ -22,6 +30,7 @@ import json
 import os
 import shutil
 import sys
+import tempfile
 import time
 
 from pyspark import StorageLevel
@@ -41,6 +50,17 @@ def find_root():
 
 
 ROOT = find_root()
+
+# ---------- fixed locations ----------
+# (relative to ROOT = the folder with extractor.py, NOT to the current working directory, so the job behaves the same
+#  from a terminal and from an IDE)
+DATA = os.path.join(ROOT, "data")
+INPUT = os.path.join(DATA, "html")                   # folder with the HTML files
+GLOB = "*.html"                                      # only HTML files are crawled
+OUT = os.path.join(DATA, "spark", "drivers")         # Spark writes part-*.json into this folder
+SINGLE_FILE = os.path.join(DATA, "drivers.jsonl")    # the final single JSONL file
+STATS_FILE = os.path.join(DATA, "spark", "extract_stats.json")   # statistics
+
 STATS = ("starts", "wins", "poles", "podiums")
 STAT_COLS = STATS + ("years",)
 COL_PREFIX = "s__"          # must be the same as in extractor.py
@@ -73,21 +93,55 @@ def parse_partition(rows):
     """Runs on the executors: one call per partition. Yields one tuple (PARSED_SCHEMA) per HTML file."""
     import extractor                                   # shipped with addPyFile, imported on the executor
     n_base, n_diag = len(BASE_FIELDS), len(DIAG_FIELDS)
-    for r in rows:
+    for path, content in rows:
         try:
-            text = bytes(r.content).decode("utf-8", errors="replace")
+            text = bytes(content).decode("utf-8", errors="replace")
             drv, series = extractor.extract_page(text)
         except Exception as e:                         # a broken file must not kill the whole job
-            yield (r.path,) + (None,) * (n_base + 1 + n_diag) + (f"exception: {type(e).__name__}: {e}",)
+            yield (path,) + (None,) * (n_base + 1 + n_diag) + (f"exception: {type(e).__name__}: {e}",)
             continue
         if drv is None:
-            yield (r.path,) + (None,) * (n_base + 1 + n_diag) + ("not_driver_page",)
+            yield (path,) + (None,) * (n_base + 1 + n_diag) + ("not_driver_page",)
             continue
         base = tuple(drv.get(n) for n, _ in BASE_FIELDS)
         srows = [(s["series_id"], s["series_name"] or s["series_id"], s["starts"], s["wins"],
                   s["poles"], s["podiums"], s["years"]) for s in series]
         diag = (drv["_born_prec"], drv["_died_prec"], drv["_real_bio"])
-        yield (r.path,) + base + (srows,) + diag + (None,)
+        yield (path,) + base + (srows,) + diag + (None,)
+
+
+def hadoop_io_ok(spark):
+    """Can Spark use the Hadoop file system here? A real probe (write + list + read of a tiny file) instead of
+    guessing from the presence of winutils.exe / hadoop.dll. Linux/macOS need no native library."""
+    if os.name != "nt":
+        return True
+    tmp = tempfile.mkdtemp(prefix="vinf-hadoop-probe-")
+    try:
+        out = os.path.join(tmp, "p")
+        spark.range(1).coalesce(1).write.json(out)
+        spark.read.format("binaryFile").load(out).count()
+        return True
+    except Exception:
+        return False
+    finally:
+        shutil.rmtree(tmp, ignore_errors=True)
+
+
+def read_partition(paths):
+    """Executor side of the FALLBACK 'paths' reader: read the files with plain Python (no Hadoop file system)."""
+    for path in paths:
+        with open(path, "rb") as f:
+            yield path, f.read()
+
+
+def write_jsonl_local(df, path):
+    """FALLBACK writer: write the rows from the driver with plain Python (no Hadoop file system): one JSONL file."""
+    os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
+    tmp = path + ".tmp"
+    with open(tmp, "w", encoding="utf-8") as f:
+        for row in df.toLocalIterator():                 # streams one partition at a time
+            f.write(json.dumps(row.asDict(recursive=True), ensure_ascii=False) + "\n")
+    os.replace(tmp, path)
 
 
 def build_wide(ok):
@@ -116,33 +170,80 @@ def build_wide(ok):
 
 
 def main():
-    ap = argparse.ArgumentParser(description="Spark HTML extractor (driver pages -> one wide JSONL)")
-    ap.add_argument("--input", default="data/html", help="folder with the HTML files (local, hdfs://, ...)")
-    ap.add_argument("--out", default="data/spark/drivers", help="output folder (Spark writes part-*.json into it)")
-    ap.add_argument("--single-file", default=None,
-                    help="move the part file to this path (local filesystem only), e.g. data/drivers.jsonl")
-    ap.add_argument("--stats", default=None, help="write the statistics to this local JSON file")
-    ap.add_argument("--glob", default="*.html", help="file name filter")
-    ap.add_argument("--partitions", type=int, default=None, help="repartition the input (default: Spark decides)")
+    ap = argparse.ArgumentParser(
+        description="Spark HTML extractor (driver pages -> one wide JSONL). Default: pure Spark + Hadoop.")
+    ap.add_argument("--reader", choices=["spark", "paths"], default="spark",
+                    help="spark = Spark binaryFile source (default); paths = FALLBACK without Hadoop: the Python "
+                         "workers read the files themselves (local/shared folders only)")
+    ap.add_argument("--writer", choices=["spark", "python"], default="spark",
+                    help="spark = df.write.json (default); python = FALLBACK without Hadoop: the driver writes the "
+                         "output file itself")
+    ap.add_argument("--driver-memory", default="4g",
+                    help="driver JVM memory when started with plain `python` (spark-submit uses its own --driver-memory)")
+    ap.add_argument("--partitions", type=int, default=None,
+                    help="number of partitions = tasks = Python worker processes (default: 4 x cores)")
     args = ap.parse_args()
+    reader, writer = args.reader, args.writer
 
     t0 = time.time()
+    # the python workers must find extractor.py and use the same interpreter (set BEFORE Spark starts)
+    os.environ["PYTHONPATH"] = ROOT + os.pathsep + os.environ.get("PYTHONPATH", "")
+    os.environ.setdefault("PYSPARK_PYTHON", sys.executable)
     # master / memory come from spark-submit (cluster) - local[*] is only the fallback for a plain `python`
-    spark = SparkSession.builder.appName("vinf-html-extractor").getOrCreate()
-    spark.sparkContext.addPyFile(os.path.join(ROOT, "extractor.py"))   # code for the executors
+    builder = (SparkSession.builder.appName("vinf-html-extractor")
+               .config("spark.sql.shuffle.partitions", "8"))       # tiny data: 200 default shuffle tasks are pure overhead
+    if "PYSPARK_GATEWAY_PORT" not in os.environ:                   # started by plain `python`, not by spark-submit
+        builder = builder.config("spark.driver.memory", args.driver_memory)
+    spark = builder.getOrCreate()
+    sc = spark.sparkContext
 
-    files = (spark.read.format("binaryFile").option("pathGlobFilter", args.glob)
-             .load(args.input).select("path", "content"))
-    if args.partitions:
-        files = files.repartition(args.partitions)
-    parsed = spark.createDataFrame(files.rdd.mapPartitions(parse_partition), PARSED_SCHEMA)
+    # ---- fallbacks are always announced; Spark/Hadoop that does not work is NOT silently replaced ----
+    if reader == "paths":
+        print("WARNING: FALLBACK reader 'paths' - the Python workers read the files without Spark/Hadoop "
+              "(works only for local / shared folders).")
+    if writer == "python":
+        print("WARNING: FALLBACK writer 'python' - the driver writes the output without Spark/Hadoop "
+              "(not suitable for big outputs).")
+    if (reader == "spark" or writer == "spark") and not hadoop_io_ok(spark):
+        spark.stop()
+        sys.exit("ERROR: Spark cannot use the Hadoop file system here (winutils.exe / hadoop.dll missing?). "
+                 "Fix the environment, or explicitly choose the fallback: --reader paths --writer python")
+    try:
+        sc.addPyFile(os.path.join(ROOT, "extractor.py"))   # ships the code to the executors (cluster)
+    except Exception as e:                                  # e.g. Windows without winutils: PYTHONPATH is enough locally
+        print(f"addPyFile skipped ({type(e).__name__}); local workers use PYTHONPATH={ROOT}")
+
+    # one Python worker process per partition (on Windows PySpark starts a NEW interpreter for every task),
+    # so use few large partitions: a few per core, not hundreds
+    n_parts = args.partitions or sc.defaultParallelism * 4
+    if reader == "spark":
+        files = (spark.read.format("binaryFile").option("pathGlobFilter", GLOB)
+                 .load(INPUT).select("path", "content").coalesce(n_parts))
+        raw = files.rdd.map(lambda r: (r.path, r.content))
+    else:
+        paths = sorted(glob.glob(os.path.join(INPUT, GLOB)))
+        if not paths:
+            spark.stop()
+            sys.exit(f"No files {GLOB} in {INPUT}")
+        raw = sc.parallelize(paths, min(len(paths), n_parts)).mapPartitions(read_partition)
+    parsed = spark.createDataFrame(raw.mapPartitions(parse_partition), PARSED_SCHEMA,
+                                  verifySchema=False)
     parsed = parsed.persist(StorageLevel.MEMORY_AND_DISK)      # parsed once, used by the output and the statistics
 
     ok = parsed.filter("error IS NULL").dropDuplicates(["driver_id"])
     out, sids = build_wide(ok)
-    (out.coalesce(1).write.mode("overwrite")
-        .option("ignoreNullFields", "false")                   # keep "s__f2__wins": null explicitly
-        .json(args.out))
+    if writer == "spark":
+        (out.coalesce(1).write.mode("overwrite")
+            .option("ignoreNullFields", "false")                   # keep "s__f2__wins": null explicitly
+            .json(OUT))
+        part = glob.glob(os.path.join(OUT, "part-*.json"))
+        if len(part) != 1:
+            spark.stop()
+            sys.exit(f"Expected exactly one part file in {OUT}, found {len(part)}.")
+        os.makedirs(os.path.dirname(SINGLE_FILE) or ".", exist_ok=True)
+        shutil.move(part[0], SINGLE_FILE)
+    else:
+        write_jsonl_local(out, SINGLE_FILE)
 
     # ---- statistics (cheap: the data is already cached) ----
     agg = ok.agg(
@@ -160,17 +261,13 @@ def main():
     stats["columns"] = len(out.columns)
     stats["partitions"] = parsed.rdd.getNumPartitions()
     stats["seconds"] = round(time.time() - t0, 1)
+    stats["reader"], stats["writer"] = reader, writer
+    stats["fallback_used"] = reader != "spark" or writer != "spark"
+    stats["single_file"] = SINGLE_FILE
 
-    if args.single_file and "://" not in args.out:             # local filesystem only
-        part = glob.glob(os.path.join(args.out, "part-*.json"))
-        if len(part) == 1:
-            os.makedirs(os.path.dirname(args.single_file) or ".", exist_ok=True)
-            shutil.move(part[0], args.single_file)
-            stats["single_file"] = args.single_file
-    if args.stats:
-        os.makedirs(os.path.dirname(args.stats) or ".", exist_ok=True)
-        with open(args.stats, "w", encoding="utf-8") as f:
-            json.dump(stats, f, ensure_ascii=False, indent=2)
+    os.makedirs(os.path.dirname(STATS_FILE) or ".", exist_ok=True)
+    with open(STATS_FILE, "w", encoding="utf-8") as f:
+        json.dump(stats, f, ensure_ascii=False, indent=2)
     print(json.dumps(stats, ensure_ascii=False, indent=2))
     spark.stop()
 

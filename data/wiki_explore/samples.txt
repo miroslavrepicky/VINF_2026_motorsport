@@ -1,0 +1,477 @@
+===== Tazio Nuvolari =====
+{{Infobox racing driver
+| name        = Tazio Nuvolari
+| image       = TazioNuvolari.jpg
+| image_size  = 
+| caption     = Nuvolari at the Belgrade Grand Prix in 1939
+| nationality = {{flagicon|ITA|1861}} Italian
+| birth_name  = Tazio Giorgio Nuvolari
+| birth_date  = {{Birth date|1892|11|16|df=y}}
+| birth_place = [[Castel d'Ario]], Kingdom of Italy
+| death_date  = {{Death date and age|1953|08|11|1892|11|16|df=y}}
+| death_place = [[Mantua]], Italy
+| titles      = [[Association Internationale des Automobile Clubs Reconnus|AIACR]] [[AIACR European Championship|European Drivers' Championship]] ([[1932 Grand Prix season|1932]]) &lt;br /&gt; '''Major victories''' &lt;br /&gt; [[Monaco Grand Prix]] ([[1932 Monaco Grand Prix|1932]]) &lt;br /&gt; [[24 Hours of Le Mans]] ([[1933 24 Hours of Le Mans|1933]]) &lt;br /&gt; [[Vanderbilt Cup]] ([[1936 Vanderbilt Cup|1936]])
+| module1     =
+{{Infobox racing driver
+  | embed         = yes
+  | last_series   = [[European Championship (auto racing)|European Championship]] career
+  | years_active  = [[1931 Grand Prix season|1931]]–[[1932 Grand Prix season|1932]], [[1935 Grand Prix season|1935]]–[[1939 Grand Prix season|1939]]
+  | teams         = [[Alfa Romeo in motorsport|Alfa Romeo]], [[Scuderia Ferrari|Ferrari]], [[Auto Union]]
+  | championships = 1 &lt;small&gt;([[1932 Grand Prix season|1932]])&lt;/small&gt;
+  | starts        = 26
+  | wins          = 4
+  | poles         = 0
+  | podiums       = 7
+  | fastest_laps  = 4
+  | module2       =
+{{Infobox Champ Car driver
+  | embed             = yes
+  | Total_Champ_Races = 2
+  | Years_In_Champ    = 2
+  | Best_Champ_Pos    = 5th ([[1936 AAA Championship Car season|1936]])
+  | First_Champ_Race  = [[1936 AAA Championship Car season|1936]] [[1936 Vanderbilt Cup|Vanderbilt Cup]] ([[Roosevelt Raceway|Westbury]])
+  | Last_Champ_Race   = [[1937 AAA Championship Car season|1937]] [[1937 Vanderbilt Cup|Vanderbilt Cup]] ([[Roosevelt Raceway|Westbury]])
+  | First_Champ_Win   = [[1936 AAA Championship Car season|1936]] [[1936 Vanderbilt Cup|Vanderbilt Cup]] ([[Roosevelt Raceway|Westbury]])
+  | Champ_Wins        = 1
+  | Champ_Podiums     = 1
+  | Champ_Poles       = 0
+  | module3           =
+{{Infobox Le Mans driver
+  | embed       = yes
+  | years       = {{24hLM|1933}}
+  | teams       = ''[[Raymond Sommer|Sommer]]''
+  | best_finish = 1st &lt;small&gt;({{24hLM|1933}})&lt;/small&gt;
+  | class_wins  = 1 &lt;small&gt;({{24hLM|1933}})&lt;/small&gt;
+}}
+}}
+}}
+}}
+
+===== Fabien Barthez =====
+{{Infobox racing driver|embed=yes
+| racing_licence = [[File:FIA Bronze Driver.png|12px]] FIA Bronze
+}}
+
+===== Jacques Villeneuve =====
+{{Infobox racing driver|embed=yes
+| racing_licence = [[File:FIA Platinum Driver.png|12px]] [[FIA Platinum Categorisation|FIA Platinum]] {{small|(until 2026)}}&lt;br&gt;[[File:FIA Gold Driver.png|12px]] [[FIA Gold Categorisation|FIA Gold]] {{small|(2027–)}}&lt;ref&gt;{{cite web|url=https://www.dailysportscar.com/2026/10/05/provisional-2027-fia-driver-categorisations-released-rossi-promoted-to-gold.html|title=Provisional 2027 FIA Driver Categorisations Released; Rossi Promoted To Gold|website=Dailysportscar|last1=Wane|first1=Ewan|last2=Goodwin|first2=Graham|last3=Kilbey|first3=Stephen|date=5 October 2026|access-date=5 October 2026}}&lt;/ref&gt;
+| titles = [[Championship Auto Racing Teams|CART]] [[Championship Car]] ([[1995 CART season|1995]])&lt;br /&gt;[[Fédération Internationale de l'Automobile|FIA]] [[List of Formula One World Drivers' Champions|World Drivers' Championship]] ({{F1|1997}})&lt;br /&gt; '''Major victories'''&lt;br /&gt;[[Indianapolis 500]] ([[1995 Indianapolis 500|1995]])
+| awards = 
+}}
+
+===== Arie Luyendyk =====
+{{Infobox racing driver
+| name              = Arie Luyendyk
+| image             = Arie Luyendyk 2010 Indy 500 Practice Day 7.JPG
+| caption           = Luyendyk in 2010
+| birth_name        = Arie Luijendijk
+| birth_date        = {{birth date and age|1953|09|21|df=y}}
+| birth_place       = [[Sommelsdijk]], [[South Holland]], Netherlands
+| death_date        = 
+| death_place       = 
+| titles            = '''Major victories''' &lt;br/&gt; [[12 Hours of Sebring]] ([[1989 12 Hours of Sebring|1989]]) &lt;br/&gt; [[Indianapolis 500]] ([[1990 Indianapolis 500|1990]], [[1997 Indianapolis 500|1997]]) &lt;br/&gt; [[24 Hours of Daytona]] ([[1998 24 Hours of Daytona|1998]])
+| awards            = [[Indycar Series]] Most Popular Driver
+| award_years = 1996–97, 1998
+| module1 = 
+  {{Infobox Champ Car driver|embed=yes
+  | Total_Champ_Races = 141
+  | Years_In_Champ    = 13
+  | Best_Champ_Pos    = 6th ([[1991 CART season|1991]])
+  | First_Champ_Race  = [[1984 CART season|1984]] [[Grand Prix of Road America|Provimi Veal 200]] ([[Road America]])
+  | Last_Champ_Race   = [[1997 CART season|1997]] [[1997 Marlboro 500|Marlboro 500]] ([[California Speedway|Fontana]])
+  | First_Champ_Win   = [[1990 CART season|1990]] [[1990 Indianapolis 500|Indianapolis 500]] ([[Indianapolis Motor Speedway|Indianapolis]])
+  | Last_Champ_Win    = [[1991 CART season|1991]] [[Bosch Spark Plug Grand Prix]] ([[Nazareth Speedway|Nazareth]])
+  | Champ_Wins        = 3
+  | Champ_Podiums     = 13
+  | Champ_Poles       = 1
+| module2 = 
+  {{Infobox Champ Car driver|embed=yes
+  | Total_IRL_Races   = 28
+  | Years_In_IRL      = 7
+  | Best_IRL_Pos      = 6th ([[1996–97 Indy Racing League|1997]])
+  | First_IRL_Race    = [[1996 Indy Racing League|1996]] [[Walt Disney World Speedway|Indy 200 at Walt Disney World]] ([[Walt Disney World Speedway|Orlando]])
+  | Last_IRL_Race     = [[2002 Indy Racing League|2002]] [[2002 Michigan Indy 400|Michigan Indy 400]] ([[Michigan International Speedway|Michigan]])
+  | First_IRL_Win     = [[1996 Indy Racing League|1996]] [[1996 Dura Lube 200|Dura Lube 200]] ([[Phoenix International Raceway|Phoenix]])
+  | Last_IRL_Win      = [[1998 Indy Racing League|1998]] [[1998 Las Vegas 500K|Las Vegas 500K]] ([[Las Vegas Motor Speedway|Las Vegas]])
+  | IRL_Wins          = 4
+  | IRL_Podiums       = 5
+  | IRL_Poles         = 4
+| module3 = 
+  {{Infobox Le Mans driver|embed=yes
+  | years       = 1989
+  | teams       = [[Nissan Motorsport|Nissan]]
+  | best_finish = DNF ({{24hLM|1989}})
+  | class_wins  = 0
+}}}}}}|relatives=[[Arie Luyendyk Jr.]] (son)}}
+
+===== Jacky Ickx =====
+{{infobox racing driver
+| embed         = yes
+| last_series   = [[World Sportscar Championship]] career
+| years_active  = [[1966 World Sportscar Championship|1966]]–[[1979 World Sportscar Championship|1979]], [[1982 World Sportscar Championship|1982]]–[[1985 World Sportscar Championship|1985]]
+| teams         = [[Ecurie Francorchamps|Francorchamps]], [[Ford Performance|Ford]], [[Scuderia Ferrari|Ferrari]], [[Alfa Romeo in motorsport|Alfa Romeo]], [[Équipe Ligier|Ligier]], [[BMW in motorsport|BMW]], [[Kauhsen]], [[Gulf Racing|Gulf]], [[Martini Racing|Martini]], [[Porsche in motorsport|Porsche]]
+| starts        = 124
+| championships = 2 ([[1982 World Sportscar Championship|1982]], [[1983 World Sportscar Championship|1983]]){{efn|The ''World Endurance Championship for Drivers'' was only held from [[1981 World Sportscar Championship|1981]] onwards.}}
+| wins          = 39
+| podiums       = 71
+| poles         = 23
+| fastest_laps  = 22
+}}
+
+===== Juan Pablo Montoya =====
+{{Infobox racing driver
+| embed          = yes
+| racing_licence = [[File:FIA Platinum Driver.png|12px]] [[FIA Platinum Categorisation|FIA Platinum]]
+| titles         = {{plainlist|
+* [[IMSA SportsCar]]
+* [[Race of Champions]]
+* [[International F3000]]
+}}
+| title_years    = {{plainlist|
+* [[2019 IMSA SportsCar Championship|2019]]
+* [[2017 Race of Champions|2017]]
+* [[1998 International Formula 3000 Championship|1998]]
+}}
+| awards         = {{plainlist|
+* [[Indycar Series|Indycar Series Most Popular Driver]]
+* [[NASCAR Rookie of the Year#Cup Series|NASCAR Rookie of the Year]]
+* [[Indianapolis 500 Rookie of the Year|Indy 500 Rookie of the Year]]
+* [[Championship Auto Racing Teams#Champions|CART Rookie of the Year]]
+}}
+| award_years    = {{plainlist|
+* [[2014 IndyCar Series|2014]]
+* [[2007 NASCAR Nextel Cup Series|2007]]
+* [[2000 Indianapolis 500|2000]]
+* [[1999 CART season|1999]]
+}}
+}}
+
+===== Frankie Muniz =====
+{{Infobox racing driver|embed=yes
+| last_series            = [[Atlantic Championship]]
+| years_active           = [[2007 Atlantic Championship|2007]]–[[2009 Atlantic Championship|2009]]
+| teams                  = [[Jensen MotorSport]], [[Pacific Coast Motorsports]], [[Team Stargate Worlds]]
+| starts                 = 32
+| wins                   = 0
+| poles                  = 0
+| fastest_laps           = 1
+| best_finish            = 9th
+| year                   = [[2009 Atlantic Championship|2009]]
+| prev_series            = &lt;!-- previous series with line breaks --&gt;
+| prev_series_years      =
+| titles                 = [[Toyota Pro/Celebrity Race]] Celebrity Winner
+| title_years            = 2005
+| awards                 =
+| award_years            =
+}}
+
+===== Adam Małysz =====
+{{Infobox racing driver
+| name = Adam Małysz
+| image = 
+| caption = 
+| nationality = 
+| first_year = [[2012 Dakar Rally|2012]]
+| car_number = 
+| starts = 
+| championships = [[Dakar Rally]]
+| best_finish = 13
+| year = [[2014 Dakar Rally|2014]]
+| last_finish = 
+| updated = 21 January 2014
+}}
+
+===== Valentino Rossi =====
+{{Infobox racing driver
+| embed             = yes
+| current_series    = [[FIA World Endurance Championship]]
+| first_year        = [[2024 FIA World Endurance Championship|2024]]
+| current_team      = [[Team WRT]]
+| racing_licence    = [[File:FIA Silver Driver.png|12px]] FIA Silver {{small|(2012–2026)}}&lt;br&gt;[[File:FIA Gold Driver.png|12px]] [[FIA Gold Categorisation|FIA Gold]] {{small|(2027–)}}&lt;ref&gt;{{cite web|url=https://www.dailysportscar.com/2026/10/05/provisional-2027-fia-driver-categorisations-released-rossi-promoted-to-gold.html|title=Provisional 2027 FIA Driver Categorisations Released; Rossi Promoted To Gold|website=Dailysportscar|last1=Wane|first1=Ewan|last2=Goodwin|first2=Graham|last3=Kilbey|first3=Stephen|date=5 October 2026|access-date=5 October 2026}}&lt;/ref&gt;
+| years_active      = 2024–present
+| car_number        = 46
+| former_teams      = 
+| starts            = 14
+| championships     = 0
+| wins              = 0
+| podiums           = 5
+| poles             = 1
+| fastest_laps      = 0
+| best_finish       = 2nd
+| year              = 2024
+| last_finish       = 
+| prev_series       = [[Monza Rally Show]]&lt;br&gt;[[World Rally Championship]]&lt;br&gt;[[Blancpain Endurance Series]]&lt;br&gt;[[Gulf 12 Hours]]&lt;br&gt;[[24H Series]]&lt;br&gt;[[Intercontinental GT Challenge]]&lt;br&gt;[[Le Mans Cup|Le Mans Cup – GT3]]
+| prev_series_years = [[1998 Monza Rally Show|1998]]–[[2018 Monza Rally Show|2018]]&lt;br&gt;[[2002 World Rally Championship|2002]], [[2006 World Rally Championship|2006]], [[2008 World Rally Championship|2008]]&lt;br&gt;[[2012 Blancpain Endurance Series|2012]]&lt;br&gt;[[2019 Gulf 12 Hours|2019]]–[[2023 Gulf 12 Hours|2023]]&lt;br&gt;[[2023 24H GT Series|2023]]&lt;br&gt;[[2023 Intercontinental GT Challenge|2023]]&lt;br&gt;[[2023 Le Mans Cup|2023]]
+| titles            = Monza Rally Show
+| title_years       = 2006–2007, 2012, 2015–2018
+}}
+
+===== Jim Clark =====
+{{Infobox racing driver
+| embed         = yes
+| last_series   = [[Tasman Series]] career
+| years_active  = [[1965 Tasman Series|1965]]–[[1968 Tasman Series|1968]]
+| teams         = [[Team Lotus|Lotus]]
+| starts        = 32
+| championships = 3 ([[1965 Tasman Series|1965]], [[1967 Tasman Series|1967]], [[1968 Tasman Series|1968]])
+| wins          = 15
+| podiums       = 23
+| poles         = 12
+| fastest_laps  = 11
+}}
+
+===== Petter Solberg =====
+{{Infobox racing driver
+| name = Petter Solberg
+| image= EsteringRX-GermanyRX 2017 Petter Solberg.jpg
+| caption = Solberg at the [[2017 World RX of Germany]]
+| nationality = {{flagicon|NOR}} Norwegian
+| birth_date = {{birth date and age|1974|11|18|df=y}}
+| birth_place = [[Spydeberg]], Norway
+| relatives        = [[Henning Solberg]] (brother)&lt;br /&gt;[[Oliver Solberg]] (son)
+|| Active years        = 
+| current_team      = [[PSRX Volkswagen Sweden]]
+| car_number        = 11
+| former_teams      = SDRX, PSRX
+| starts            = 61
+| wins              = 10
+| podiums           = 30
+| spotter = Pernilla Solberg
+| poles             = 
+| fastest_laps      = 
+|last_finish       = 3rd
+| championships = 
+2 ({{WRX|2014}} &amp;ndash;{{WRX|2015}})
+
+| prev_series       =
+| prev_series_years =
+| titles            = 
+| title_years       = 
+| awards            = 
+| award_years       =
+| module1  =
+{{Infobox racing driver|embed=yes
+| former_teams      = PSRX
+| last_series       = [[FIA European Rallycross Championship|FIA ERX Supercar Championship]]
+| first_year        = 
+| car_number        = 11
+| best_finish       = 8th
+|year =  [[2013 European Rallycross Championship season|2013]] 
+| starts            = 9
+| wins              = 0
+| podiums           = 2
+| module2  =
+  {{Infobox WRC driver|subbox=yes
+  | years = [[1998 World Rally Championship|1998]]&amp;ndash;[[2012 World Rally Championship|2012]], [[2018 World Rally Championship|2018]]–[[2019 World Rally Championship|2019]]
+| codriver = {{flagicon|Norway}} Egil Solstad&lt;br /&gt;{{flagicon|Norway}} [[Cato Menkerud]]&lt;br /&gt;{{flagicon|UK}} [[Phil Mills]]&lt;br /&gt;{{flagicon|UK}} [[Fred Gallagher (co-driver)|Fred Gallagher]]&lt;br /&gt;{{flagicon|UK}} [[Chris Patterson (co-driver)|Chris Patterson]]&lt;br /&gt;{{flagicon|Norway}} Veronica Gulbæk Engan
+| teams =  [[Ford World Rally Team|Ford]], [[Subaru World Rally Team|Subaru]], [[Petter Solberg World Rally Team]], [[Volkswagen Motorsport|Volkswagen]]
+| races = 190
+| championships = 1 ([[2003 World Rally Championship|2003]])
+| wins = 13
+| podiums = 52
+| stagewins = 460
+| points = 853
+| first_race = 1998 [[Swedish Rally]]
+| first_win = 2002 [[Rally GB]]
+| last_win = 2005 [[Rally GB]]
+| last_race = 2019 [[Wales Rally GB]]
+  }}
+}}
+|years_active={{WRX|2014}} – {{WRX|2018}}
+}}
+
+===== Nigel Mansell =====
+{{infobox racing driver
+| embed  = yes
+| titles = [[Fédération Internationale de l'Automobile|FIA]] [[List of Formula One World Drivers' Champions|World Drivers' Championship]] ({{F1|1992}}) &lt;br /&gt; [[Championship Auto Racing Teams|CART]] [[Championship Car]] ([[1993 CART season|1993]]) &lt;br /&gt; '''Major victories''' &lt;br /&gt; [[Michigan 500]] ([[1993 Michigan 500|1993]])
+| awards = 
+}}
+
+===== A. J. Foyt =====
+{{Infobox racing driver
+| name              = A. J. Foyt
+| image             = AJ Foyt at Foyt Wine Vault - 2015 - Sarah Stierch 2.jpg
+| caption           = Foyt in 2015
+| birth_name        = Anthony Joseph Foyt Jr.
+| birth_date        = {{birth date and age|1935|01|16}}
+| birth_place       = [[Houston, Texas]], U.S.
+| death_date        = 
+| death_place       = 
+| titles            = [[United States Auto Club#USAC National Sprint Car Championship|USAC Eastern]] [[Sprint car racing|Sprint Car]] (1960) &lt;br/&gt; [[United States Auto Club|USAC]] [[Championship Car]] &lt;br/&gt; ([[1960 USAC Championship Car season|1960]], [[1961 USAC Championship Car season|1961]], [[1963 USAC Championship Car season|1963]], [[1964 USAC Championship Car season|1964]], [[1967 USAC Championship Car season|1967]], [[1975 USAC Championship Car season|1975]], [[1979 USAC Championship Car season|1979]]) &lt;br/&gt; [[USAC Stock Car]] (1968, 1978, 1979) &lt;br/&gt; [[USAC Silver Crown Series|USAC Silver Crown]] ([[1972 USAC National Dirt Car Championship|1972]]) &lt;br/&gt; '''Major victories''' &lt;br/&gt; [[Indianapolis 500]] ([[1961 Indianapolis 500|1961]], [[1964 Indianapolis 500|1964]], [[1967 Indianapolis 500|1967]], [[1977 Indianapolis 500|1977]]) &lt;br/&gt; [[24 Hours of Le Mans]] ([[1967 24 Hours of Le Mans|1967]]) &lt;br/&gt; [[Daytona 500]] ([[1972 Daytona 500|1972]]) &lt;br/&gt; [[Pocono 500 (IndyCar)|Pocono 500]] ([[1973 Pocono 500|1973]], [[1975 Pocono 500|1975]], [[1979 Pocono 500|1979]], [[1981 Pocono 500|1981]]) &lt;br/&gt; [[California 500 (IndyCar)|California 500]] ([[1975 California 500|1975]]) &lt;br/&gt; [[24 Hours of Daytona]] ([[1983 24 Hours of Daytona|1983]], [[1985 24 Hours of Daytona|1985]]) &lt;br/&gt; [[12 Hours of Sebring]] ([[1985 12 Hours of Sebring|1985]])
+| awards            = 
+| module1 = 
+  {{Infobox Champ Car driver|embed=yes
+  | Total_Champ_Races = 369
+  | Years_In_Champ    = 36
+  | Best_Champ_Pos    = 1st ([[1960 USAC Championship Car season|1960]], [[1961 USAC Championship Car season|1961]], [[1963 USAC Championship Car season|1963]], [[1964 USAC Championship Car season|1964]], [[1967 USAC Championship Car season|1967]], [[1975 USAC Championship Car season|1975]], [[1979 USAC Championship Car season|1979 (USAC)]])
+  | First_Champ_Race  = [[1957 USAC Championship Car season|1957]] [[Illinois State Fairgrounds Racetrack|Springfield 100]] ([[Illinois State Fairgrounds Racetrack|Springfield]])
+  | Last_Champ_Race   = [[1992 CART season|1992]] [[1992 Indianapolis 500|Indianapolis 500]] ([[Indianapolis Motor Speedway|Indianapolis]])
+  | First_Champ_Win   = [[1960 USAC Championship Car season|1960]] [[DuQuoin State Fairgrounds Racetrack|Ted Horn Memorial]] ([[DuQuoin State Fairgrounds Racetrack|DuQuoin]])
+  | Last_Champ_Win    = [[1981-82 USAC Championship Car season|1981]] [[1981 Pocono 500|Pocono 500]] ([[Pocono Raceway|Pocono]])
+  | Champ_Wins        = 67
+  | Champ_Podiums     = 120
+  | Champ_Poles       = 53
+| module2 = 
+  {{Infobox NASCAR driver|embed=yes
+  | Total_Cup_Races   = 128
+  | Years_In_Cup      = 33
+  | Best_Cup_Pos      = 40th ([[1989 NASCAR Winston Cup Series|1989]])
+  | First_Cup_Race    = [[1963 NASCAR Grand National Series|1963]] [[Riverside 500]] ([[Riverside International Raceway|Riverside]])
+  | Last_Cup_Race     = [[1994 NASCAR Winston Cup Series|1994]] [[1994 Brickyard 400|Brickyard 400]] ([[Indianapolis Motor Speedway|Indianapolis]])
+  | First_Cup_Win     = [[1964 NASCAR Grand National Series|1964]] [[1964 Firecracker 400|Firecracker 400]] ([[Daytona International Speedway|Daytona]])
+  | Last_Cup_Win      = [[1972 NASCAR Winston Cup Series|1972]] [[1972 Miller High Life 500|Miller High Life 500]] ([[Ontario Motor Speedway|Ontario]])
+  | Cup_Wins          = 7
+  | Cup_Top_Tens      = 36
+  | Cup_Poles         = 9
+| module3 = 
+  {{Infobox F1 driver|embed=yes
+  | nationality       = {{flagicon|USA}} [[Formula One drivers from the United States|American]]
+  | years             = {{F1|1958}} – {{F1|1960}}
+  | teams             = [[Kuzma (constructor)|Kuzma]], [[Kurtis Kraft]]
+  | races             = 3
+  | championships     = 0
+  | wins              = 0
+  | podiums           = 0
+  | points            = 0
+  | poles             = 0
+  | fastest_laps      = 0
+  | first_race        = [[1958 Indianapolis 500]]
+  | last_race         = [[1960 Indianapolis 500]]
+| module4 = 
+  {{Infobox Le Mans driver|embed=yes
+  | years       = 1967
+  | teams       = [[Carroll Shelby International|Shelby]]-[[Ford Performance|Ford]]
+  | best_finish = 1st ({{24hLM|1967}})
+  | class_wins  = 1 ({{24hLM|1967}})
+}}}}}}}}}}
+
+===== Don Garlits =====
+{{Infobox racing driver
+| name              = Don Garlits
+| image             = Still having fun after all these years (1171261374).jpg
+| image_size        = &lt;!-- defaults to 180px unless a value is entered --&gt;
+| caption           = Garlits in 2007
+| nationality       = &lt;!-- use only when necessary per [[WP:INFONAT]] --&gt;
+| full_name         = Donald Glenn Garlits
+| birth_name        = &lt;!-- Only if different from name --&gt;
+| birth_date        = {{Birth date and age|1932|01|14}}
+| birth_place       = [[Tampa]], [[Florida]], U.S.
+| death_date        = &lt;!-- {{Death date and age|YYYY|MM|DD|YYYY|MM|DD}} (death date then birth date) --&gt;
+| death_place       = 
+| retired           = 2003
+| relatives        = &lt;!-- list of notable relatives with {{plainlist}} or {{unbulleted list}} --&gt; 
+| last_series       = &lt;!-- eg. [[World Touring Car Championship]] --&gt;
+| years_active      = 
+| teams             = 
+| starts            = 
+| wins              = 
+| poles             = 
+| fastest_laps      = &lt;!-- if known --&gt;
+| best_finish       = &lt;!-- if a final championship placing has been recorded --&gt;
+| year              = &lt;!-- use piped link if season article exists --&gt;
+| prev_series       = &lt;!-- previous series with {{plainlist}} or {{unbulleted list}} --&gt;
+| prev_series_years = 
+| titles            = NHRA Top Fuel Champion
+| title_years       = 1975, 1985, 1986
+| awards            = [[Motorsports Hall of Fame of America]]
+| award_years       = 1989
+}}
+
+===== Ray Harroun =====
+{{Infobox racing driver
+| name              = Ray Harroun
+| image             = Ray Harroun circa 1911.jpg
+| caption           = Harroun, circa 1911
+| birth_name        = Ray Wade Harroun
+| birth_date        = {{Birth date|1879|01|12}}
+| birth_place       = [[Spartansburg, Pennsylvania]], U.S.
+| death_date        = {{Death date and age|1968|01|19|1879|01|12}}
+| death_place       = [[Anderson, Indiana]], U.S.
+| titles            = '''Major victories''' &lt;br/&gt; [[Indianapolis 500]] ([[1911 Indianapolis 500|1911]])
+| module1 = 
+  {{Infobox Champ Car driver|embed=yes
+  | Total_Champ_Races = 17
+  | Years_In_Champ    = 3
+  | First_Champ_Race  = [[1909 AAA Championship Car season|1909]] [[G &amp; J Trophy Race|G &amp; J Trophy]] ([[Indianapolis Motor Speedway|Indianapolis]])
+  | Last_Champ_Race   = [[1911 AAA Championship Car season|1911]] [[1911 Indianapolis 500|Indianapolis 500]] ([[Indianapolis Motor Speedway|Indianapolis]])
+  | First_Champ_Win   = [[1910 AAA Championship Car season|1910]] Atlanta Speedway Trophy ([[Atlanta Motordrome|Atlanta]])
+  | Last_Champ_Win    = [[1911 AAA Championship Car season|1911]] [[1911 Indianapolis 500|Indianapolis 500]] ([[Indianapolis Motor Speedway|Indianapolis]])
+  | Champ_Wins        = 4
+  | Champ_Podiums     = 9
+  | Champ_Poles       = 0
+}}}}
+
+===== Fernando Alonso =====
+{{Infobox racing driver|embed=yes
+| last_series        = [[FIA World Endurance Championship]] career
+| years_active       = {{WEC|2018–19}}
+| teams              = [[Toyota Motorsport GmbH|Toyota]]
+| racing_licence     = [[File:FIA Platinum Driver.png|12px]] [[FIA Platinum Categorisation|FIA Platinum]]
+| starts             = 8
+| championships      = 1 ({{WEC|2018–19}})
+| wins               = 5
+| podiums            = 7
+| poles              = 4
+| fastest_laps       = 2
+| best_finish        = 1st
+| year               = {{WEC|2018–19}} &lt;small&gt;([[Le Mans Prototype|LMP1]])&lt;/small&gt;
+}}
+
+===== Emerson Fittipaldi =====
+{{Infobox racing driver
+| embed=yes
+| titles            = [[Fédération Internationale de l'Automobile|FIA]] [[List of Formula One World Drivers' Champions|World Drivers' Championship]] ({{F1|1972}}, {{F1|1974}}) &lt;br/&gt; [[Championship Auto Racing Teams|CART]] [[Championship Car]] ([[1989 CART season|1989]]) &lt;br/&gt; '''Major victories''' &lt;br/&gt; [[Michigan 500]] ([[1985 Michigan 500|1985]]) &lt;br/&gt; [[Indianapolis 500]] ([[1989 Indianapolis 500|1989]], [[1993 Indianapolis 500|1993]])
+}}
+
+===== Stirling Moss =====
+{{infobox racing driver
+| embed        = yes
+| last_series  = [[World Sportscar Championship]] career
+| years_active = [[1953 World Sportscar Championship|1953]]–[[1962 World Sportscar Championship|1962]]
+| teams        = [[Jaguar Cars|Jaguar]], [[O.S.C.A.]], [[Austin-Healey]], [[Mercedes-Benz in motorsport|Mercedes]], [[Maserati in motorsport|Maserati]], [[Porsche in motorsport|Porsche]], [[Aston Martin]], [[Lister Motor Company|Lister]], [[Casner Motor Racing Division|Camoradi]], [[North American Racing Team|NART]]
+| starts       = 39
+| wins         = 12
+| podiums      = 17
+| poles        = 4{{efn|Until the mid-1960s, grid positions at the majority of World Sportscar Championship events were determined by [[engine capacity]].}}
+| fastest_laps = 6
+}}
+
+===== Rubens Barrichello =====
+{{Infobox racing driver
+| embed          = yes
+| racing_licence = [[File:FIA Platinum Driver.png|12px]] [[FIA Platinum Categorisation|FIA Platinum]] {{small|(until 2022)}}&lt;br&gt;[[File:FIA Gold Driver.png|12px]] [[FIA Gold Categorisation|FIA Gold]] {{small|(2023–)}}
+| current_series = [[Stock Car Pro Series]]
+| first_year     = [[2012 Stock Car Brasil season|2012]]
+| current_team   = [[Scuderia Bandeiras|Scuderia Bandeiras Sports]]
+| car_number     = 111
+| engine         = [[Mitsubishi]]
+| former_teams   = [[Full Time Sports]]
+| starts         = 283 &lt;!-- Correct as of 2026 R10 --&gt;
+| championships  = 2 ([[2014 Stock Car Brasil season|2014]], [[2022 Stock Car Pro Series|2022]])
+| wins           = 20
+| podiums        = 57
+| poles          = 12
+| fastest_laps   = 12
+}}
+
+===== Peter Brock =====
+{{Infobox racing driver
+ | child        = yes
+ | last_series  = [[Australian Touring Car Championship|ATCC]] / [[V8 Supercars]]
+ | years_active = 1972–1997, 2002, 2004
+ | teams        = [[Holden Dealer Team]]&lt;br /&gt;Gown-Hindhaugh Racing&lt;br /&gt;[[Team Brock (1976)|Team Brock]]&lt;br /&gt;[[Perkins Engineering]]&lt;br /&gt;[[Advantage Racing]]&lt;br /&gt;[[Holden Racing Team]]&lt;br /&gt;[[Rod Nash Racing]]
+ | starts       = 212
+ | wins         = 48
+ | poles        = 57
+ | fastest_laps = &lt;!-- if known --&gt;
+ | best_finish  = 1st
+ | retired      = 2004
+ | year         = [[1974 Australian Touring Car Championship|1974]], [[1974 Australian Touring Car Championship|1978]], [[1980 Australian Touring Car Championship]]
+ | prev_series_years = 1973&lt;br /&gt;&lt;br /&gt;1996&lt;br /&gt;&lt;br /&gt;2003–2004
+ | prev_series  = [[Australian Formula 2 Championship]]&lt;br /&gt;[[Australian Super Touring Championship]]&lt;br /&gt;[[Australian Nations Cup Championship]]
+ | titles       =
+ | title_years  =
+ | award_years  = 2001
+ | awards       = [[V8 Supercars Hall of Fame]]
+ }}
+

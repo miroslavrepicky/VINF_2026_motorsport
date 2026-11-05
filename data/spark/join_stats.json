@@ -1,0 +1,202 @@
+{
+  "msm_total": 23415,
+  "wiki_total": 14454,
+  "records_total": 31273,
+  "records_by_source": {
+    "msm_only": 16816,
+    "both": 6599,
+    "wiki_only": 7858
+  },
+  "unique_wiki_pages_joined": 6596,
+  "unique_msm_drivers_linked": 6599,
+  "pct_msm_linked": 28.18,
+  "pct_wiki_joined": 45.63,
+  "wiki_pages_with_several_msm_drivers": 3,
+  "linked_by_method": {
+    "date_name": 255,
+    "name_only": 818,
+    "name_year_fuzzy": 92,
+    "name_year": 5431,
+    "name_year+years": 3
+  },
+  "linked_by_confidence": {
+    "low": 82,
+    "high": 5663,
+    "medium": 854
+  },
+  "linked_by_discipline": {
+    "car": 6110,
+    "motorcycle": 339,
+    "unknown": 32,
+    "both": 118
+  },
+  "linked_wiki_kind": {
+    "msm_rescue": 30,
+    "likely_noise": 29,
+    "category": 851,
+    "core": 5689
+  },
+  "msm_only_by_status": {
+    "superseded": 74,
+    "ambiguous": 8,
+    "rejected_by_year": 114,
+    "unmatched": 16613,
+    "ambiguous_tie": 7
+  },
+  "wiki_only_by_discipline": {
+    "motorcycle": 3264,
+    "car": 4448,
+    "both": 141,
+    "unknown": 5
+  },
+  "wiki_only_by_kind": {
+    "likely_noise": 322,
+    "category": 1199,
+    "core": 6336,
+    "msm_rescue": 1
+  },
+  "wiki_only_top_infobox": [
+    [
+      "racing driver",
+      1809
+    ],
+    [
+      "speedway rider",
+      1604
+    ],
+    [
+      "nascar driver",
+      1184
+    ],
+    [
+      "motorcycle rider",
+      1079
+    ],
+    [
+      null,
+      808
+    ],
+    [
+      "wrc driver",
+      378
+    ],
+    [
+      "person",
+      354
+    ],
+    [
+      "motocross rider",
+      227
+    ],
+    [
+      "sportsperson",
+      97
+    ],
+    [
+      "horseracing personality",
+      41
+    ],
+    [
+      "motorcycle racer",
+      39
+    ],
+    [
+      "f1 nationality",
+      32
+    ],
+    [
+      "officeholder",
+      31
+    ],
+    [
+      "football biography",
+      17
+    ],
+    [
+      "musical artist",
+      16
+    ]
+  ],
+  "nationality_on_high": {
+    "agree": 3776,
+    "differ": 84,
+    "not_comparable": 1803
+  },
+  "linked_records_with_attribute": {
+    "wiki_birth_name": 2509,
+    "wiki_born_place": 5648,
+    "wiki_died_date": 1813,
+    "wiki_died_place": 1526,
+    "wiki_number": 1703,
+    "wiki_titles": 1659,
+    "wiki_awards": 694,
+    "wiki_relatives": 589,
+    "wiki_current_team": 1556,
+    "wiki_former_teams": 778,
+    "wiki_lead": 6551,
+    "wiki_series_blocks": 4889,
+    "wiki_series_with_fastest_laps": 2657,
+    "wiki_series_with_championships": 1465,
+    "wiki_series_with_top_tens": 1033,
+    "wiki_series_with_best_pos": 1386,
+    "wiki_series_with_podiums": 2681,
+    "wiki_series_with_poles": 4269,
+    "wiki_series_with_wins": 4463,
+    "wiki_series_with_starts": 4461
+  },
+  "gaps_of_msm_filled_by_wiki": {
+    "gain_born_date_filled": 67,
+    "gain_born_date_more_precise": 20,
+    "gain_died_date_filled": 87,
+    "gain_nationality_filled": 3
+  },
+  "wiki_only_records_with_series": 4079,
+  "msm_status_all": {
+    "superseded": 74,
+    "linked": 6599,
+    "ambiguous_tie": 7,
+    "rejected_by_year": 114,
+    "ambiguous": 8
+  },
+  "msm_without_any_candidate": 16613,
+  "discipline_filter_removed_pairs": 71,
+  "conflict_superseded": 74,
+  "conflict_ties_ambiguous": 7,
+  "reader": "spark",
+  "writer": "spark",
+  "fallback_used": false,
+  "single_file": "C:\\Users\\PC\\PycharmProjects\\VINF_2\\data\\joined_drivers.jsonl",
+  "links_file": "C:\\Users\\PC\\PycharmProjects\\VINF_2\\data\\join_links.jsonl",
+  "output_columns": 531,
+  "seconds": 74.2,
+  "merged_fields_filled": {
+    "all": {
+      "teams": 23633,
+      "series": 24398,
+      "co_drivers": 1966,
+      "categorisation": 1919,
+      "seasons": 20764,
+      "born_place": 11952,
+      "lead": 14315,
+      "bio": 13451,
+      "fastest_laps": 3736,
+      "championships": 2830,
+      "top_tens": 2185,
+      "best_pos": 2520
+    },
+    "both": {
+      "teams": 6510,
+      "series": 6533,
+      "co_drivers": 1810,
+      "categorisation": 1675,
+      "seasons": 6363,
+      "born_place": 5648,
+      "lead": 6551,
+      "bio": 6485,
+      "fastest_laps": 2657,
+      "championships": 1465,
+      "top_tens": 1033,
+      "best_pos": 1383
+    }
+  }
+}
