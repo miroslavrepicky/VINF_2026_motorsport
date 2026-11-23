@@ -129,7 +129,20 @@ def write_jsonl(path, rows):
     os.replace(tmp, path)
 
 
-def parse_date(raw):
+BORN_YEARS = (1800, 2020)                      # a birth outside this range is a typo in the source (e.g. 1070, 2930)
+DIED_YEARS = (1800, datetime.date.today().year)   # (the same limits as in wiki_page.py)
+
+
+def parse_date(raw, kind="born"):
+    """_parse_date + the range check: a year outside BORN_YEARS / DIED_YEARS -> (None, 'out_of_range')."""
+    iso, prec = _parse_date(raw)
+    lo, hi = BORN_YEARS if kind == "born" else DIED_YEARS
+    if iso and not lo <= int(iso[:4]) <= hi:
+        return None, "out_of_range"
+    return iso, prec
+
+
+def _parse_date(raw):
     """
     '2nd November 2005 - Athens' -> ('2005-11-02', 'full').
     The rest (age, place) is ignored. A missing day/month gives a partial date
@@ -143,7 +156,7 @@ def parse_date(raw):
         return None, "unknown"          # 'Unknown' (also 'Unknown - place')
     cm = CIRCA_RE.match(raw)
     if cm:                              # 'circa 1950 - Paris' -> ('1950', 'circa')
-        iso, prec = parse_date(raw[cm.end():])
+        iso, prec = _parse_date(raw[cm.end():])
         return (iso, "circa") if iso else (None, prec)
     if not re.search(r"\d", re.sub(r"\(.*?\)", "", raw)):
         return None, "place_only"       # only a place, no date ('- Athens')
@@ -241,8 +254,8 @@ def extract_page(text):
 
     born_raw = simple_field(box, "Born")
     died_raw = simple_field(box, "Died")
-    born_date, born_prec = parse_date(born_raw)
-    died_date, died_prec = parse_date(died_raw)
+    born_date, born_prec = parse_date(born_raw, "born")
+    died_date, died_prec = parse_date(died_raw, "died")
 
     # biography
     bio = None
@@ -376,9 +389,9 @@ def main():
         st[f"born_{drv['_born_prec']}"] += 1
         st[f"died_{drv['_died_prec']}"] += 1
         for label in ("born", "died"):
-            if drv[f"_{label}_prec"] == "unparsed":
+            if drv[f"_{label}_prec"] in ("unparsed", "out_of_range"):
                 problems.append({"file": os.path.basename(path), "driver_id": drv["driver_id"],
-                                 "issue": f"unparsed_{label}", "raw": drv[f"_{label}_raw"]})
+                                 "issue": f"{drv[f'_{label}_prec']}_{label}", "raw": drv[f"_{label}_raw"]})
         if drv["died_date"] and not drv["born_date"]:
             st["died_without_born"] += 1
         if drv["born_date"] and drv["died_date"] and drv["died_date"] < drv["born_date"]:

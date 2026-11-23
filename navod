@@ -1,0 +1,1 @@
+VINF_DATA=<cesta> spark-submit --py-files wiki_page.py,matching.py,extractor.py <skript>.py

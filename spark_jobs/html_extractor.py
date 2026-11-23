@@ -28,6 +28,7 @@ import argparse
 import glob
 import json
 import os
+import posixpath
 import shutil
 import sys
 import tempfile
@@ -54,12 +55,19 @@ ROOT = find_root()
 # ---------- fixed locations ----------
 # (relative to ROOT = the folder with extractor.py, NOT to the current working directory, so the job behaves the same
 #  from a terminal and from an IDE)
-DATA = os.path.join(ROOT, "data")
-INPUT = os.path.join(DATA, "html")                   # folder with the HTML files
+DATA = os.environ.get("VINF_DATA", os.path.join(ROOT, "data"))   # local folder (default) or hdfs://... on a cluster
+
+
+def dp(*parts):
+    """Path inside DATA; works for a local folder as well as for an hdfs:// / s3a:// URL."""
+    return posixpath.join(DATA, *parts) if "://" in DATA else os.path.join(DATA, *parts)
+
+
+INPUT = dp("html")                   # folder with the HTML files
 GLOB = "*.html"                                      # only HTML files are crawled
-OUT = os.path.join(DATA, "spark", "drivers")         # Spark writes part-*.json into this folder
-SINGLE_FILE = os.path.join(DATA, "drivers.jsonl")    # the final single JSONL file
-STATS_FILE = os.path.join(DATA, "spark", "extract_stats.json")   # statistics
+OUT = dp("spark", "drivers")         # Spark writes part-*.json into this folder
+SINGLE_FILE = dp("drivers.jsonl")    # the final single JSONL file
+STATS_FILE = dp("spark", "extract_stats.json")   # statistics
 
 STATS = ("starts", "wins", "poles", "podiums")
 STAT_COLS = STATS + ("years",)
@@ -125,6 +133,78 @@ def hadoop_io_ok(spark):
         return False
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
+
+
+# ---------- environment independence: local disk or hdfs:// (the code is the same, only VINF_DATA differs) ----------
+def is_local(path):
+    """A plain path = local disk; anything with a scheme (hdfs://, s3a://, file://) goes through the Hadoop file system."""
+    return "://" not in path
+
+
+def _hfs(spark, path):
+    p = spark._jvm.org.apache.hadoop.fs.Path(path)
+    return p, p.getFileSystem(spark._jsc.hadoopConfiguration())
+
+
+def exists(spark, path):
+    if is_local(path):
+        return os.path.exists(path)
+    p, fs = _hfs(spark, path)
+    return fs.exists(p)
+
+
+def write_text(spark, path, text):
+    """Small text file written from the driver: local disk or through the Hadoop file system."""
+    if is_local(path):
+        os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
+        tmp = path + ".tmp"
+        with open(tmp, "w", encoding="utf-8") as f:
+            f.write(text)
+        os.replace(tmp, path)
+        return
+    p, fs = _hfs(spark, path)
+    out = fs.create(p, True)
+    try:
+        out.write(bytearray(text.encode("utf-8")))
+    finally:
+        out.close()
+
+
+def finish_single_file(spark, out_dir, single_file):
+    """Spark wrote exactly ONE part file into out_dir; move it to single_file.
+    Local master + local path: glob + move. Cluster / hdfs://: the same move through the Hadoop file system API
+    (on a cluster the part file is not on the driver's disk, so glob would find nothing)."""
+    if is_local(out_dir) and spark.sparkContext.master.startswith("local"):
+        part = glob.glob(os.path.join(out_dir, "part-*"))
+        if len(part) != 1:
+            spark.stop()
+            sys.exit(f"Expected exactly one part file in {out_dir}, found {len(part)}.")
+        os.makedirs(os.path.dirname(single_file) or ".", exist_ok=True)
+        shutil.move(part[0], single_file)
+        return
+    src, fs = _hfs(spark, out_dir)
+    parts = [s.getPath() for s in fs.listStatus(src) if s.getPath().getName().startswith("part-")]
+    if len(parts) != 1:
+        spark.stop()
+        sys.exit(f"Expected exactly one part file in {out_dir}, found {len(parts)}.")
+    dst = spark._jvm.org.apache.hadoop.fs.Path(single_file)
+    fs.mkdirs(dst.getParent())
+    fs.delete(dst, False)
+    if not fs.rename(parts[0], dst):
+        spark.stop()
+        sys.exit(f"Could not move {parts[0]} to {single_file}.")
+
+
+def ship_code(sc, *names):
+    """Ship the modules to the executors. On a real cluster a failure is fatal (otherwise it shows up later as
+    ModuleNotFoundError on the workers); with a local master PYTHONPATH is enough."""
+    for name in names:
+        try:
+            sc.addPyFile(os.path.join(ROOT, name))
+        except Exception as e:
+            if not sc.master.startswith("local"):
+                raise
+            print(f"addPyFile {name} skipped ({type(e).__name__}); local workers use PYTHONPATH={ROOT}")
 
 
 def read_partition(paths):
@@ -208,10 +288,10 @@ def main():
         spark.stop()
         sys.exit("ERROR: Spark cannot use the Hadoop file system here (winutils.exe / hadoop.dll missing?). "
                  "Fix the environment, or explicitly choose the fallback: --reader paths --writer python")
-    try:
-        sc.addPyFile(os.path.join(ROOT, "extractor.py"))   # ships the code to the executors (cluster)
-    except Exception as e:                                  # e.g. Windows without winutils: PYTHONPATH is enough locally
-        print(f"addPyFile skipped ({type(e).__name__}); local workers use PYTHONPATH={ROOT}")
+    if (reader == "paths" or writer == "python") and not (is_local(INPUT) and is_local(SINGLE_FILE)):
+        spark.stop()
+        sys.exit("The fallbacks --reader paths / --writer python work only with local folders (VINF_DATA is a URL).")
+    ship_code(sc, "extractor.py")
 
     # one Python worker process per partition (on Windows PySpark starts a NEW interpreter for every task),
     # so use few large partitions: a few per core, not hundreds
@@ -236,12 +316,7 @@ def main():
         (out.coalesce(1).write.mode("overwrite")
             .option("ignoreNullFields", "false")                   # keep "s__f2__wins": null explicitly
             .json(OUT))
-        part = glob.glob(os.path.join(OUT, "part-*.json"))
-        if len(part) != 1:
-            spark.stop()
-            sys.exit(f"Expected exactly one part file in {OUT}, found {len(part)}.")
-        os.makedirs(os.path.dirname(SINGLE_FILE) or ".", exist_ok=True)
-        shutil.move(part[0], SINGLE_FILE)
+        finish_single_file(spark, OUT, SINGLE_FILE)
     else:
         write_jsonl_local(out, SINGLE_FILE)
 
@@ -265,9 +340,7 @@ def main():
     stats["fallback_used"] = reader != "spark" or writer != "spark"
     stats["single_file"] = SINGLE_FILE
 
-    os.makedirs(os.path.dirname(STATS_FILE) or ".", exist_ok=True)
-    with open(STATS_FILE, "w", encoding="utf-8") as f:
-        json.dump(stats, f, ensure_ascii=False, indent=2)
+    write_text(spark, STATS_FILE, json.dumps(stats, ensure_ascii=False, indent=2))
     print(json.dumps(stats, ensure_ascii=False, indent=2))
     spark.stop()
 

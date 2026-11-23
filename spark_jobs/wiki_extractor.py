@@ -29,6 +29,7 @@ import argparse
 import glob
 import json
 import os
+import posixpath
 import shutil
 import sys
 import tempfile
@@ -58,12 +59,19 @@ import wiki_page  # noqa: E402  (driver side: plan_ranges)
 # ---------- fixed locations ----------
 # (relative to ROOT = the folder with wiki_page.py, NOT to the current working directory, so the job behaves the same
 #  from a terminal and from an IDE)
-DATA = os.path.join(ROOT, "data")
-DUMP = "C:/Users/PC/Downloads/enwiki-latest-pages-articles.xml"   # the XML dump
-MSM_FILE = os.path.join(DATA, "drivers.jsonl")           # MSM drivers (enables the msm_rescue path)
-OUT = os.path.join(DATA, "spark", "wiki")                # Spark writes part-* into this folder
-SINGLE_FILE = os.path.join(DATA, "wiki_drivers.jsonl")   # the final single JSONL file
-STATS_FILE = os.path.join(DATA, "spark", "wiki_extract_stats.json")     # statistics
+DATA = os.environ.get("VINF_DATA", os.path.join(ROOT, "data"))   # local folder (default) or hdfs://... on a cluster
+
+
+def dp(*parts):
+    """Path inside DATA; works for a local folder as well as for an hdfs:// / s3a:// URL."""
+    return posixpath.join(DATA, *parts) if "://" in DATA else os.path.join(DATA, *parts)
+
+
+DUMP = os.environ.get("VINF_DUMP", dp("wiki", "enwiki-latest-pages-articles.xml"))   # the XML dump
+MSM_FILE = dp("drivers.jsonl")           # MSM drivers (enables the msm_rescue path)
+OUT = dp("spark", "wiki")                # Spark writes part-* into this folder
+SINGLE_FILE = dp("wiki_drivers.jsonl")   # the final single JSONL file
+STATS_FILE = dp("spark", "wiki_extract_stats.json")     # statistics
 
 
 def hadoop_io_ok(spark):
@@ -82,21 +90,99 @@ def hadoop_io_ok(spark):
         shutil.rmtree(tmp, ignore_errors=True)
 
 
-def load_msm_index(path):
+# ---------- environment independence: local disk or hdfs:// (the code is the same, only VINF_DATA differs) ----------
+def is_local(path):
+    """A plain path = local disk; anything with a scheme (hdfs://, s3a://, file://) goes through the Hadoop file system."""
+    return "://" not in path
+
+
+def _hfs(spark, path):
+    p = spark._jvm.org.apache.hadoop.fs.Path(path)
+    return p, p.getFileSystem(spark._jsc.hadoopConfiguration())
+
+
+def exists(spark, path):
+    if is_local(path):
+        return os.path.exists(path)
+    p, fs = _hfs(spark, path)
+    return fs.exists(p)
+
+
+def write_text(spark, path, text):
+    """Small text file written from the driver: local disk or through the Hadoop file system."""
+    if is_local(path):
+        os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
+        tmp = path + ".tmp"
+        with open(tmp, "w", encoding="utf-8") as f:
+            f.write(text)
+        os.replace(tmp, path)
+        return
+    p, fs = _hfs(spark, path)
+    out = fs.create(p, True)
+    try:
+        out.write(bytearray(text.encode("utf-8")))
+    finally:
+        out.close()
+
+
+def finish_single_file(spark, out_dir, single_file):
+    """Spark wrote exactly ONE part file into out_dir; move it to single_file.
+    Local master + local path: glob + move. Cluster / hdfs://: the same move through the Hadoop file system API
+    (on a cluster the part file is not on the driver's disk, so glob would find nothing)."""
+    if is_local(out_dir) and spark.sparkContext.master.startswith("local"):
+        part = glob.glob(os.path.join(out_dir, "part-*"))
+        if len(part) != 1:
+            spark.stop()
+            sys.exit(f"Expected exactly one part file in {out_dir}, found {len(part)}.")
+        os.makedirs(os.path.dirname(single_file) or ".", exist_ok=True)
+        shutil.move(part[0], single_file)
+        return
+    src, fs = _hfs(spark, out_dir)
+    parts = [s.getPath() for s in fs.listStatus(src) if s.getPath().getName().startswith("part-")]
+    if len(parts) != 1:
+        spark.stop()
+        sys.exit(f"Expected exactly one part file in {out_dir}, found {len(parts)}.")
+    dst = spark._jvm.org.apache.hadoop.fs.Path(single_file)
+    fs.mkdirs(dst.getParent())
+    fs.delete(dst, False)
+    if not fs.rename(parts[0], dst):
+        spark.stop()
+        sys.exit(f"Could not move {parts[0]} to {single_file}.")
+
+
+def ship_code(sc, *names):
+    """Ship the modules to the executors. On a real cluster a failure is fatal (otherwise it shows up later as
+    ModuleNotFoundError on the workers); with a local master PYTHONPATH is enough."""
+    for name in names:
+        try:
+            sc.addPyFile(os.path.join(ROOT, name))
+        except Exception as e:
+            if not sc.master.startswith("local"):
+                raise
+            print(f"addPyFile {name} skipped ({type(e).__name__}); local workers use PYTHONPATH={ROOT}")
+
+
+def load_msm_index(spark, path):
     """{name key: [birth years]} from drivers.jsonl (name and full_name of every driver)."""
+    def rows():
+        if is_local(path):
+            with open(path, "r", encoding="utf-8") as f:
+                for line in f:
+                    line = line.strip()
+                    if line:
+                        yield json.loads(line)
+        else:                                       # hdfs:// etc.: read through Spark
+            for r in spark.read.json(path).select("name", "full_name", "born_date").toLocalIterator():
+                yield r.asDict()
+
     out = {}
-    with open(path, "r", encoding="utf-8") as f:
-        for line in f:
-            line = line.strip()
-            if not line:
-                continue
-            d = json.loads(line)
-            bd = d.get("born_date") or ""
-            year = int(bd[:4]) if bd[:4].isdigit() else None
-            for nm in (d.get("name"), d.get("full_name")):
-                key = wiki_page.norm_key(nm or "")
-                if key and year:
-                    out.setdefault(key, set()).add(year)
+    for d in rows():
+        bd = d.get("born_date") or ""
+        year = int(bd[:4]) if bd[:4].isdigit() else None
+        for nm in (d.get("name"), d.get("full_name")):
+            key = wiki_page.norm_key(nm or "")
+            if key and year:
+                out.setdefault(key, set()).add(year)
     return {k: sorted(v) for k, v in out.items()}
 
 
@@ -174,8 +260,8 @@ def main():
     reader = args.reader
 
     t0 = time.time()
-    if not os.path.exists(DUMP):
-        sys.exit(f"The dump was not found: {DUMP}")
+    if is_local(DUMP) and not os.path.exists(DUMP):      # for hdfs:// Spark reports a missing file itself
+        sys.exit(f"The dump was not found: {DUMP} (set VINF_DUMP or put it into data/wiki/)")
     # the python workers must find wiki_page.py and use the same interpreter (set BEFORE Spark starts)
     os.environ["PYTHONPATH"] = ROOT + os.pathsep + os.environ.get("PYTHONPATH", "")
     os.environ.setdefault("PYSPARK_PYTHON", sys.executable)
@@ -199,14 +285,11 @@ def main():
         spark.stop()
         sys.exit("ERROR: Spark cannot use the Hadoop file system here (winutils.exe / hadoop.dll missing?). "
                  "Fix the environment (diagnose with: python spark_jobs/check_spark_env.py).")
-    try:
-        sc.addPyFile(os.path.join(ROOT, "wiki_page.py"))
-    except Exception as e:
-        print(f"addPyFile skipped ({type(e).__name__}); local workers use PYTHONPATH={ROOT}")
+    ship_code(sc, "wiki_page.py")
 
     msm_bc = None
-    if os.path.exists(MSM_FILE):
-        msm = load_msm_index(MSM_FILE)
+    if exists(spark, MSM_FILE):
+        msm = load_msm_index(spark, MSM_FILE)
         msm_bc = sc.broadcast(msm)
         print(f"msm_rescue enabled: {len(msm)} name keys from {MSM_FILE}")
     else:
@@ -214,6 +297,9 @@ def main():
 
     part_bytes = int(args.part_mb * 1024 * 1024)
     if reader == "ranges":
+        if not is_local(DUMP):
+            spark.stop()
+            sys.exit("--reader ranges needs a local / shared file, DUMP is a URL: use the default reader hadoop.")
         size = os.path.getsize(DUMP)
         total_gb = size / 1e9
         if args.limit_mb:
@@ -248,17 +334,11 @@ def main():
     recs = (df.filter("kind = 'rec'")
               .withColumn("pid", F.get_json_object("payload", "$.page_id").cast("long"))
               .orderBy("pid").select("payload"))
-    os.makedirs(os.path.dirname(SINGLE_FILE) or ".", exist_ok=True)
     # the JSON lines are written as text: the layout (explicit nulls, nested series) stays exactly as made by
     # wiki_page.py; coalesce(1) after orderBy keeps the order
     recs.coalesce(1).write.mode("overwrite").text(OUT)
-    part = glob.glob(os.path.join(OUT, "part-*"))
-    if len(part) != 1:
-        spark.stop()
-        sys.exit(f"Expected exactly one part file in {OUT}, found {len(part)}.")
-    shutil.move(part[0], SINGLE_FILE)
-    with open(SINGLE_FILE, "r", encoding="utf-8") as f:
-        n_rec = sum(1 for _ in f)
+    finish_single_file(spark, OUT, SINGLE_FILE)
+    n_rec = df.filter("kind = 'rec'").count()                  # df is cached
 
     # ---- statistics (the data is cached) ----
     total = Counter()
@@ -270,9 +350,7 @@ def main():
                   "reader": reader, "writer": "spark", "fallback_used": reader != "hadoop",
                   "msm_rescue": msm_bc is not None, "single_file": SINGLE_FILE,
                   "bytes_processed": size, "seconds": round(time.time() - t0, 1)})
-    os.makedirs(os.path.dirname(STATS_FILE) or ".", exist_ok=True)
-    with open(STATS_FILE, "w", encoding="utf-8") as f:
-        json.dump(stats, f, ensure_ascii=False, indent=2)
+    write_text(spark, STATS_FILE, json.dumps(stats, ensure_ascii=False, indent=2))
     print(json.dumps(stats, ensure_ascii=False, indent=2))
     spark.stop()
 

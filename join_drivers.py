@@ -15,13 +15,16 @@ environments where the Hadoop file system does not work (typically Windows witho
 The matching rules are implemented here as DataFrame joins; the shared helper functions (nat_set, name_similar,
 wiki_span, series_kind) live in matching.py and are called from UDFs:
   1. candidates      MSM x wiki pairs that share a name key (norm_key of name / full_name  x  title_key / name / birth_name)
-  2. tier per pair   0 = same birth year, 1 = year missing on one side, 2 = years differ by exactly 1 (and the nationality
-                     does not contradict), 3 = rejected. Per MSM driver only the best tier counts:
+  2. tier per pair   0 = same birth year, 1 = year missing on one side (but NOT when the nationality differs AND the career
+                     years do not overlap), 2 = years differ by exactly 1 (and the nationality does not contradict),
+                     3 = rejected. Per MSM driver only the best tier counts; among the pairs of the best tier a page whose
+                     TITLE is the driver's name beats pages that only carry the name in the infobox (sub-articles):
                        tier 0 -> name_year (high) | tier 1 -> name_only (medium, low if no year at all) |
                        tier 2 -> name_year_fuzzy (medium / low) | tier 3 -> rejected_by_year
                      several pairs in the best tier -> the career years (MSM series x wiki infobox) must overlap in exactly
                      one of them ('+years'), otherwise 'ambiguous'
-  3. date_name       drivers WITHOUT any name candidate: same FULL birth date + a similar name (high / medium)
+  3. date_name       drivers WITHOUT any name candidate: same FULL birth date + the same surname / an almost equal name
+                     (high; medium when the nationality or the career years contradict)
   Discipline check: every pair except an exact name+year match (and a high date_name) must be consistent: a wiki
                      motorcycle page only for MSM drivers that raced a motorcycle series (or have unknown / mixed series), a wiki
                      car page not for MSM drivers that raced only motorcycle series. The removed pairs are counted in the stats.
@@ -222,9 +225,10 @@ def merged_stats(out):
 # ---------- matching ----------
 def name_candidates(m, w):
     """Steps 1 + 2: one decision per MSM driver that has at least one name candidate."""
+    # t_exact = 1 when the shared key is the page TITLE (not only the name written in the infobox)
     pairs = (m.select("m_id", F.explode("m_keys").alias("key"))
-              .join(w.select("w_id", F.explode("w_keys").alias("key")), "key")
-              .select("m_id", "w_id").distinct())
+              .join(w.select("w_id", "w_tkey", F.explode("w_keys").alias("key")), "key")
+              .groupBy("m_id", "w_id").agg(F.max((F.col("key") == F.col("w_tkey")).cast("int")).alias("t_exact")))
     c = (pairs.join(m.select("m_id", "m_year", "m_nat", "m_lo", "m_hi", "m_kind"), "m_id")
               .join(w.select("w_id", "w_year", "w_nat", "w_lo", "w_hi", "w_disc"), "w_id"))
     # discipline check: only an exact name+year pair is exempt
@@ -232,17 +236,23 @@ def name_candidates(m, w):
     removed = c.filter(~keep).select("m_id", "w_id")
     c = c.filter(keep)
     agree = nat_agree_expr()
-    ov = F.coalesce(overlap_expr("m_lo", "m_hi", "w_lo", "w_hi"), F.lit(False))
+    ov_known = overlap_expr("m_lo", "m_hi", "w_lo", "w_hi")                 # NULL when a career is unknown
+    ov = F.coalesce(ov_known, F.lit(False))
     exact = F.coalesce(F.col("m_year") == F.col("w_year"), F.lit(False))
     compat = F.col("m_year").isNull() | F.col("w_year").isNull()
     diff1 = F.coalesce(F.abs(F.col("m_year") - F.col("w_year")) == 1, F.lit(False))
-    tier = (F.when(exact, 0).when(compat, 1)
+    # a year-less pair is only a namesake when BOTH are known and contradict: other nationality AND no overlapping career
+    contra = F.coalesce(~agree, F.lit(False)) & F.coalesce(~ov_known, F.lit(False))
+    tier = (F.when(exact, 0).when(compat, F.when(contra, 3).otherwise(1))
              .when(diff1 & (agree.isNull() | agree), 2).otherwise(3))
     c = (c.withColumn("tier", tier)
           .withColumn("ov", ov)
           .withColumn("support", F.coalesce(agree, F.lit(False)) | ov)
           .withColumn("best", F.min("tier").over(Window.partitionBy("m_id"))))
     pool = c.filter(F.col("tier") == F.col("best"))
+    # a page titled exactly like the driver beats pages that only carry the name in the infobox ('Early life and career of X')
+    pool = (pool.withColumn("has_title", F.max("t_exact").over(Window.partitionBy("m_id")))
+                .filter((F.col("has_title") == 0) | (F.col("t_exact") == 1)))
     a = pool.groupBy("m_id").agg(
         F.first("best").alias("tier"), F.count("*").alias("n"),
         F.sum(F.col("ov").cast("int")).alias("n_ov"),
@@ -283,18 +293,17 @@ def date_candidates(m, w, named_ids, udfs):
         F.col("m_lo").isNotNull() & F.col("w_lo").isNotNull()
         & ~overlap_expr("m_lo", "m_hi", "w_lo", "w_hi"))
     j = j.withColumn("contra", contra.cast("int"))
-    # discipline check: only a high date_name (strong name + nothing contradicting) is exempt
-    keep = ((F.col("sim") == "strong") & (F.col("contra") == 0)) | discipline_ok_expr()
+    # discipline check: only a high date_name (nothing contradicting) is exempt
+    keep = (F.col("contra") == 0) | discipline_ok_expr()
     removed = j.filter(~keep).select("m_id", "w_id")
     a = j.filter(keep).groupBy("m_id").agg(
-        F.count("*").alias("n"), F.max("w_id").alias("one_page"), F.max("sim").alias("sim"),
+        F.count("*").alias("n"), F.max("w_id").alias("one_page"),
         F.max("contra").alias("contra"), F.collect_list("w_id").alias("cand_pages"))
     unique = F.col("n") == 1
     return a.select(
         "m_id",
         F.when(unique, "date_name").otherwise("ambiguous").alias("method"),
-        F.when(unique, F.when((F.col("sim") == "strong") & (F.col("contra") == 0), "high")
-                        .otherwise("medium")).alias("conf"),
+        F.when(unique, F.when(F.col("contra") == 0, "high").otherwise("medium")).alias("conf"),
         F.when(unique, F.col("one_page")).cast("long").alias("page"),
         "cand_pages"), removed
 
@@ -453,6 +462,7 @@ def main():
     w = (wiki.select(
             F.col("page_id").alias("w_id"),
             udfs["keys3"]("title_key", "name", "birth_name").alias("w_keys"),
+            F.col("title_key").alias("w_tkey"),
             F.col("born_year").cast("int").alias("w_year"),
             F.when(F.length("born_date") == 10, F.col("born_date")).alias("w_full"),
             udfs["nat"]("nationality").alias("w_nat"),

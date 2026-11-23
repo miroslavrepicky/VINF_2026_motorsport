@@ -170,17 +170,19 @@ def clean_wikitext(s):
     if not s:
         return ""
     s = REF_RE.sub("", COMMENT_RE.sub("", s))
+    # links FIRST: _tpl_text splits a template on every '|', which would cut '[[Newcastle, NSW|Newcastle]]' in the middle
+    # when the link is an argument of {{nowrap|...}} and leave a '[[' in the text
+    s = FILE_LINK_RE.sub("", s)
+    s = CATEGORY_LINK_RE.sub("", s)
+    s = LINK_RE.sub(lambda m: m.group(2) or m.group(1), s)
     prev = None
     while prev != s:                              # innermost templates first
         prev = s
         s = INNER_TPL_RE.sub(_tpl_text, s)
-    s = FILE_LINK_RE.sub("", s)
-    s = CATEGORY_LINK_RE.sub("", s)
-    s = LINK_RE.sub(lambda m: m.group(2) or m.group(1), s)
     s = EXT_LINK_RE.sub(lambda m: m.group(1) or "", s)
     s = BR_RE.sub("; ", s)
     s = TAG_RE.sub("", s)
-    s = s.replace("'''", "").replace("''", "").replace("\xa0", " ")
+    s = s.replace("'''", "").replace("''", "").replace("\xa0", " ").replace("[[", "").replace("]]", "")
     s = re.sub(r"\s+", " ", s)
     s = re.sub(r"(?:;\s*){2,}", "; ", s)
     return s.strip(" ;,")
@@ -238,10 +240,28 @@ def parse_text_date(s, circa=False):
     return None, "unparsed"
 
 
-def parse_wiki_date(raw):
+BORN_YEARS = (1800, 2020)                      # a birth outside this range is a typo, not a driver (same in extractor.py)
+DIED_YEARS = (1800, datetime.date.today().year)
+
+
+def year_ok(year, kind):
+    """Is the year plausible for a birth ('born') or a death ('died')?"""
+    lo, hi = BORN_YEARS if kind == "born" else DIED_YEARS
+    return lo <= year <= hi
+
+
+def parse_wiki_date(raw, kind="born"):
+    """_parse_wiki_date + the range check: a year outside BORN_YEARS / DIED_YEARS -> (None, 'out_of_range')."""
+    iso, prec = _parse_wiki_date(raw)
+    if iso and not year_ok(int(iso[:4]), kind):
+        return None, "out_of_range"
+    return iso, prec
+
+
+def _parse_wiki_date(raw):
     """
     Value of birth_date / death_date -> (iso, precision). iso is 'YYYY-MM-DD', 'YYYY-MM' or 'YYYY';
-    precision: full | month | year | circa | unknown | empty | missing | unparsed.
+    precision: full | month | year | circa | unknown | empty | missing | unparsed (out_of_range is added by parse_wiki_date).
     Handles {{birth date|1892|11|16|df=y}}, {{birth date and age|...}}, {{bda|...}}, {{death date and age|d|m|y|b...}}
     (the first three numbers are the date itself), {{birth-date|19 April 1895}}, {{birth year and age|1952}},
     {{circa|...}}, {{nowrap|...}} and plain text dates.
@@ -281,12 +301,12 @@ def parse_wiki_date(raw):
 def page_birth_year(text, cats):
     """Birth year of a page: from the 'YYYY births' category (every biography), else from birth_date."""
     for c in cats:
-        if c.endswith(" births") and c[:4].isdigit():
+        if c.endswith(" births") and c[:4].isdigit() and year_ok(int(c[:4]), "born"):
             return int(c[:4])
     m = BIRTH_FIELD_RE.search(text)
     if m:
         y = YEAR_RE.search(m.group(1))
-        if y:
+        if y and year_ok(int(y.group(1)), "born"):
             return int(y.group(1))
     return None
 
@@ -611,8 +631,8 @@ def extract_wiki_page(raw, msm=None):
     def text_of(*keys):
         return clean_wikitext(_first(ordered, keys)) or None
 
-    born_date, born_prec = parse_wiki_date(_first(ordered, ("birth_date",)))
-    died_date, died_prec = parse_wiki_date(_first(ordered, ("death_date",)))
+    born_date, born_prec = parse_wiki_date(_first(ordered, ("birth_date",)), "born")
+    died_date, died_prec = parse_wiki_date(_first(ordered, ("death_date",)), "died")
     moto = bool(names & MOTO_INFOBOXES) or any(MOTO_CAT_RE.search(c) for c in cats)
     car = bool(names & (TARGET_INFOBOXES - MOTO_INFOBOXES)) or any(is_driver_category(c) for c in cats)
     series = [s for b in ordered for s in series_blocks(b)]

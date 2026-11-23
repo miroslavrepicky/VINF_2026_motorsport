@@ -3,7 +3,7 @@ matching.py - shared helpers of the MSM x Wikipedia join (stdlib only).
 
 Used by join_drivers.py (Spark UDFs + constants), indexer.py and searcher.py (nationality filter):
   nat_set(text)         nationality text -> set of normalized keys (England / UK / GBR -> british)
-  name_similar(a, b)    'strong' | 'weak' | None - similarity of two sets of name keys
+  name_similar(a, b)    'strong' | None - the two sets of name keys share the surname (Jr / Sr / II ignored) or are almost equal
   wiki_span(rec)        (first year, last year) of the career years written in the wiki infobox series blocks
   series_kind(names)    {series_id: name} of an MSM driver -> none | moto | car | mixed
   TOLERANCE             years of tolerance when comparing career ranges
@@ -121,20 +121,25 @@ def nat_set(text):
     return out
 
 
+NAME_SUFFIXES = frozenset(["jr", "sr", "ii", "iii", "iv", "junior", "senior"])
+
+
+def _surname(tokens):
+    """Last token that is not a generational suffix (so 'John Brown Jr' and 'Mike Smith Jr' do not share 'jr')."""
+    return next((t for t in reversed(tokens) if t not in NAME_SUFFIXES), tokens[-1])
+
+
 def name_similar(mkeys, wkeys):
-    """'strong' = same surname or similar whole name, 'weak' = only a shared / prefix word (4+ letters), else None."""
-    best = None
+    """'strong' = same surname or almost the same whole name, else None.
+    A weaker rule (one shared / prefix first name, e.g. alex / alexandre, a shared middle name) used to be accepted too.
+    It is NOT: date_name has nothing but the birth date as other evidence, and many pairs share a birth date by chance."""
     for a in mkeys:
         ta = a.split()
         for b in wkeys:
             tb = b.split()
-            if not ta or not tb:
-                continue
-            if ta[-1] == tb[-1] or SequenceMatcher(None, a, b).ratio() >= 0.85:
+            if ta and tb and (_surname(ta) == _surname(tb) or SequenceMatcher(None, a, b).ratio() >= 0.85):
                 return "strong"
-            if any(len(x) >= 4 and len(y) >= 4 and (x.startswith(y) or y.startswith(x)) for x in ta for y in tb):
-                best = "weak"
-    return best
+    return None
 
 # ---------- merge of ONE MSM record + ONE wiki record into the final joined record ----------
 MSM_ONLY = ("gender", "tagline", "last_race_slug", "last_race_name", "bio", "seasons")
