@@ -20,7 +20,7 @@ from tokenizer import tokenize
 
 # field -> weight (document score = sum of weight * score in the field)
 FIELDS = {
-    "name": 5.0, "full_name": 3.0, "nationality": 3.0, "teams": 2.0, "series": 2.0, "seasons": 2.0,
+    "name": 5.0, "nationality": 3.0, "teams": 3.0, "series": 2.0, "seasons": 2.0,
     "tagline": 2.0, "gender": 2.0, "discipline": 2.0, "born_place": 2.0, "titles": 2.0,
     "died_place": 1.0, "bio": 1.0, "lead": 1.0, "awards": 1.0, "relatives": 1.0, "categories": 1.0,
     "co_drivers": 1.0,

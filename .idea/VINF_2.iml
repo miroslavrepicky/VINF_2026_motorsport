@@ -4,8 +4,9 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/.venv" />
       <excludeFolder url="file://$MODULE_DIR$/check_links.py" />
+      <excludeFolder url="file://$MODULE_DIR$/data/html" />
     </content>
-    <orderEntry type="jdk" jdkName="~\PycharmProjects\VINF_2\.venv" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="~\PycharmProjects\VINF_2026_V2\.venv" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

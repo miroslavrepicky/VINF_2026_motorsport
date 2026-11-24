@@ -1,1 +1,37 @@
 VINF_DATA=<cesta> spark-submit --py-files wiki_page.py,matching.py,extractor.py <skript>.py
+docker build -t pylucene .
+docker run -it --rm -v "${PWD}:/work" pylucene bash
+python indexer.py --joined data/joined_drivers.jsonl --out data/index
+python pylucene_indexer.py --joined data/joined_drivers.jsonl --out data/index_lucene
+python compare.py
+
+
+AND (všetky slová musia byť v dokumente, v ľubovoľných poliach):
+
+ferrari AND monaco
+female AND british
+motorcycle AND champion
+
+OR (stačí jedno slovo):
+
+ferrari OR maserati
+senna OR prost OR lauda
+hamilton OR verstappen
+
+AND aj OR spolu (v Lucene treba zátvorky, inak parser všetko zmení na AND):
+
+(female AND american) OR (female AND italian)
+(ferrari OR maserati) AND italian
+
+Range (nad rokom narodenia, born_year, funguje len v PyLucene; hranice sú vrátane):
+
+born_year:[1950 TO 1960]
+ferrari AND born_year:[1930 TO 1939]
+italian AND born_year:[1940 TO 1949]
+
+Phrase (slová musia stáť vedľa seba v tom istom poli, funguje len v PyLucene):
+
+"red bull"
+"formula one"
+"le mans"
+"formula one" AND italian
